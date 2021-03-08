@@ -1,0 +1,67 @@
+//Vientos : 東 Este , 南 Sur , 西 Oeste , 北 Norte
+$primero : #FFFF00
+$segundo : #DAD6CB
+$tercero : #CC6633
+$cuarto : #FFFFFF
+
+$norte : #ff0000
+$sur : #00ff00
+$este : #0000ff
+$oeste : #FFFF00
+
+
+.tarjetaspuntos
+    margin: auto 0px
+    .tarjeta
+        padding: 20px
+        margin: 40px 0px
+        border-radius: 15%
+        .viento,.jugador,.puntos,.simbolo
+            display: flex
+            justify-content: center
+            align-items: center
+            font-size: 2.5rem
+            font-weight: 700
+        .puntos
+            letter-spacing: 15px
+            font-size: 4rem !important
+            margin: -15px !important
+        .viento
+            display: flex
+            flex-direction: column
+            flex-wrap: nowrap
+            align-items: center
+            justify-content: center
+            .nombre
+                margin-top: -15px
+                font-size: 1.2rem
+
+.primero
+    border: 4px solid $primero
+    .puntos
+        color: $primero
+.segundo
+    border: 4px solid $segundo
+    .puntos
+        color: $segundo
+.tercero
+    border: 4px solid $tercero
+    .puntos
+        color: $tercero
+.cuarto
+    border: 4px solid $cuarto
+    .puntos
+        color: $cuarto
+
+.este
+    .simbolo,.nombre
+        color: $este
+.sur
+    .simbolo,.nombre
+        color: $sur
+.oeste
+    .simbolo,.nombre
+        color: $oeste
+.norte
+    .simbolo,.nombre
+        color: $norte

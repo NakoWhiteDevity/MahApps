@@ -1,0 +1,409 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  color: #000000;
+}
+
+body {
+  background: purple;
+  margin: 20px;
+}
+
+.tarjetaspuntos {
+  margin: auto 0px;
+}
+
+.tarjetaspuntos .tarjeta {
+  padding: 20px;
+  margin: 40px 0px;
+  border-radius: 15%;
+}
+
+.tarjetaspuntos .tarjeta .viento, .tarjetaspuntos .tarjeta .jugador, .tarjetaspuntos .tarjeta .puntos, .tarjetaspuntos .tarjeta .simbolo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.tarjetaspuntos .tarjeta .puntos {
+  letter-spacing: 15px;
+  font-size: 4rem !important;
+  margin: -15px !important;
+}
+
+.tarjetaspuntos .tarjeta .viento {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tarjetaspuntos .tarjeta .viento .nombre {
+  margin-top: -15px;
+  font-size: 1.2rem;
+}
+
+.primero {
+  border: 4px solid #FFFF00;
+}
+
+.primero .puntos {
+  color: #FFFF00;
+}
+
+.segundo {
+  border: 4px solid #DAD6CB;
+}
+
+.segundo .puntos {
+  color: #DAD6CB;
+}
+
+.tercero {
+  border: 4px solid #CC6633;
+}
+
+.tercero .puntos {
+  color: #CC6633;
+}
+
+.cuarto {
+  border: 4px solid #FFFFFF;
+}
+
+.cuarto .puntos {
+  color: #FFFFFF;
+}
+
+.este .simbolo, .este .nombre {
+  color: #0000ff;
+}
+
+.sur .simbolo, .sur .nombre {
+  color: #00ff00;
+}
+
+.oeste .simbolo, .oeste .nombre {
+  color: #FFFF00;
+}
+
+.norte .simbolo, .norte .nombre {
+  color: #ff0000;
+}
+
+.posicionsillas {
+  margin-top: 65px;
+}
+
+.posicionsillas .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.posicionsillas .posjugador {
+  padding: 15px;
+  margin: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 50%;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.posicionsillas .superior, .posicionsillas .izquierdo, .posicionsillas .derecho, .posicionsillas .inferior {
+  border-radius: 100%;
+}
+
+.posicionsillas .superior {
+  border-top-left-radius: 15% !important;
+  border-top-right-radius: 15% !important;
+}
+
+.posicionsillas .izquierdo {
+  border-top-left-radius: 15% !important;
+  border-bottom-left-radius: 15% !important;
+}
+
+.posicionsillas .derecho {
+  border-top-right-radius: 15% !important;
+  border-bottom-right-radius: 15% !important;
+}
+
+.posicionsillas .inferior {
+  border-bottom-left-radius: 15% !important;
+  border-bottom-right-radius: 15% !important;
+}
+
+.numeronda {
+  margin: 50px 0px;
+}
+
+.numeronda .col {
+  margin: 15px;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.numeronda .botonhu {
+  border: 5px solid red;
+  font-size: 2rem !important;
+  border-radius: 15%;
+  background-color: none;
+  margin-top: 40px;
+  color: white;
+}
+
+.numeronda .este {
+  color: #0000ff;
+}
+
+.numeronda .sur {
+  color: #00ff00;
+}
+
+.numeronda .oeste {
+  color: #FFFF00;
+}
+
+.numeronda .norte {
+  color: #ff0000;
+}
+
+.huformulario p {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.huformulario label {
+  border: 1px solid white;
+  padding: 10px;
+  margin: 5px;
+  min-width: 45%;
+  text-align: center;
+  background-color: #00000080;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.huformulario .filaform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 50px auto;
+}
+
+.huformulario .filaform input[type="radio"] {
+  display: none;
+}
+
+.huformulario .filaform input[type="radio"]:checked + .label-radio {
+  color: yellow;
+  border: 1px solid yellow;
+}
+
+.huformulario .filaform input[type="text"], .huformulario .filaform button {
+  border: 1px solid yellow;
+  padding: 20px;
+  background-color: #00000080;
+  font-weight: 700;
+  font-size: 1.5rem;
+  max-width: 30%;
+  text-align: center;
+  color: white;
+}
+
+.tabla {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.tabla .esquina {
+  border-top: none !important;
+  border-left: none !important;
+  background: none !important;
+}
+
+.tabla .nombres td {
+  min-width: 100px;
+  font-weight: 700;
+  background-color: #57236480;
+}
+
+.tabla .viento {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.tabla td {
+  padding: 8px 15px;
+  border: 2px solid white;
+  text-align: center;
+  background-color: #000000B3;
+  font-weight: 700;
+}
+
+.Seste {
+  background-color: #0000FF80 !important;
+}
+
+.Ssur {
+  background-color: #00FF0080 !important;
+}
+
+.Soeste {
+  background-color: #FFFF0080 !important;
+}
+
+.Snorte {
+  background-color: #FF000080 !important;
+}
+
+.inputjugadores {
+  max-width: 49%;
+}
+
+.disposicion {
+  max-width: 49%;
+}
+
+.finicio {
+  margin-top: 30px;
+}
+
+.finicio .col {
+  min-width: 100%;
+}
+
+.finicio p {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.finicio input[type="text"] {
+  min-width: 100%;
+  margin: 20px;
+  padding: 20px;
+  background-color: #00000080;
+  color: white;
+  border: none;
+  max-height: 30px;
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 2rem;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+}
+
+.finicio input[type="text"]:focus {
+  border: 1px solid yellow;
+  color: yellow;
+}
+
+.finicio button {
+  border: 2px solid white;
+  color: white;
+  background-color: #00000080;
+  min-width: 50%;
+  letter-spacing: 5px;
+  font-size: 2rem;
+  margin: 15px 25%;
+}
+
+.repartirsillas .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.repartirsillas .col p {
+  font-size: 1.7rem;
+}
+
+.repartirsillas .col .posicionsillas {
+  margin-top: 10px;
+}
+
+.repartirsillas .col .posicionsillas .posjugador {
+  padding: 10px;
+  font-size: 3rem;
+}
+
+.repartirsillas button {
+  border: 2px solid white;
+  color: white;
+  background-color: #00000080;
+  min-width: 50%;
+  letter-spacing: 5px;
+  font-size: 2rem;
+  margin: 15px 0px;
+}
+/*# sourceMappingURL=estilos.css.map */
