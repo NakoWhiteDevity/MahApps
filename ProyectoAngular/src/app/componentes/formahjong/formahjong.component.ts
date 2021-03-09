@@ -48,7 +48,7 @@ export class FormahjongComponent implements OnInit {
 
   submitvalido():boolean{
     let caso:boolean;
-    if(this.forma.value.ganamano != "" && this.forma.value.dealer != "" && this.forma.value.puntuacion >= 8){
+    if(this.forma.value.ganamano != "" && this.forma.value.dealer != "" && this.forma.value.puntuacion >= 8 && this.forma.value.puntuacion <= 1100){
       caso = false;
     } else {
       caso = true;

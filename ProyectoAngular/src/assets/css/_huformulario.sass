@@ -1,16 +1,17 @@
 .huformulario
     input[type=number]::-webkit-inner-spin-button
         -webkit-appearance: none
-         margin: 0
+        margin: 0
     input[type=number]::-webkit-outer-spin-button
         -webkit-appearance: none
-         margin: 0
+        margin: 0
     p
         width: 100%
         text-align: center
         font-size: 1.5rem
     label
         border: 2px solid white
+        color: white
         padding: 10px
         margin: 5px
         min-width: 100%
@@ -19,19 +20,21 @@
         border-radius: 5px
         font-size: 1.5rem
     .filaform
+        div
+            min-width: 48%
         display: flex
         justify-content: space-around
         align-items: center
         flex-wrap: wrap
-        margin: 50px auto
+        margin: 25px auto
         input[type="radio"]
             display: none
             &:checked + .label-radio
                 color: yellow
                 border: 2px solid yellow
         input[type="text"],button
-            border: 2px solid yellow
-            padding: 20px
+            border: 2px solid white
+            padding: 10px
             background-color: #00000080
             font-weight: 700
             font-size: 1.5rem
@@ -39,14 +42,15 @@
             text-align: center
             color: white
         input[type="number"],button
-            border: 2px solid yellow
-            padding: 20px
+            border: 2px solid white
+            padding: 10px
             background-color: #00000080
             font-weight: 700
             font-size: 1.5rem
             max-width: 30%
             text-align: center
             color: white
+            outline: none
         .botonconfirmar:disabled
             border: 2px solid grey
             color: grey

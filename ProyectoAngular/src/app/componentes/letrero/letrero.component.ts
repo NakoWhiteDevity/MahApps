@@ -38,6 +38,8 @@ export class LetreroComponent implements OnInit{
     }
     this.cambiosillas = caso;
   }
+
+  //[disabled]="submitvalido()"
   
   vientoderonda(){
     let numeronda = (this.numemano / 4.001) + 1 ;numeronda = Math.floor(numeronda);
