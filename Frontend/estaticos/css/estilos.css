@@ -372,6 +372,14 @@ body {
   margin: 15px 25%;
 }
 
+.repartirsillas {
+  margin: 10% auto;
+}
+
+.repartirsillas .texto p {
+  text-align: justify;
+}
+
 .repartirsillas .col {
   display: -webkit-box;
   display: -ms-flexbox;
