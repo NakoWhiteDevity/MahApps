@@ -68,7 +68,7 @@ export class FormahjongComponent implements OnInit {
           victima.puntuacion.push((victima.puntuacion[victima.puntuacion.length - 1]) - pago);
         }
       }
-      sujeto.puntuacion.push(epuntos);
+      sujeto.puntuacion.push((sujeto.puntuacion[sujeto.puntuacion.length - 1]) + epuntos);
     }
 
     const sumadedealer = (sujeto:Jugador) => {
@@ -87,7 +87,7 @@ export class FormahjongComponent implements OnInit {
           }
         }
       }
-      sujeto.puntuacion.push(epuntos);
+      sujeto.puntuacion.push((sujeto.puntuacion[sujeto.puntuacion.length - 1]) + epuntos);
     }
     
     for(let jugador in this.squad){
@@ -99,18 +99,9 @@ export class FormahjongComponent implements OnInit {
         }
       }
     }
-    
+
     this._nm.incrementarnumemano();
     this._router.navigate(['/letrero']);
-
-    /*
-    PRIMERAS LINEAS DE LA FUNCION DE GUARDADO:
-    La razón de porque no importamos los jugadores directamente del servicio y generamos un array nuevo es porque este componente necesita un array de los jugadores, no un objeto de jugadores.
-    this.squad = [];
-    for(let jugador in this._gj.squad){
-      this.squad.push(this._gj.squad[jugador]);
-    }
-    */
     
   }
 
