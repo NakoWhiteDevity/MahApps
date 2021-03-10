@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Jugador } from 'src/app/modulos/jugador.class';
 import { GenerarjugadoresService } from 'src/app/servicios/generarjugadores.service';
 import { NumemanoService } from 'src/app/servicios/numemano.service';
 
@@ -13,6 +14,7 @@ export class LetreroComponent implements OnInit{
   numemano:number = this._nm.numemano;
   vientoronda:string[] = [];
   cambiosillas:string[] = [];
+  des:boolean = false;
   
   constructor( private _gj:GenerarjugadoresService , private _router:Router , private _nm:NumemanoService ){}
 
@@ -26,20 +28,19 @@ export class LetreroComponent implements OnInit{
   
   quitarpopup(){
     this.cambiosillas[0] = "";
+    this.des = false;
   }
   
   cambiodesillas(){
     let caso:string[];
     switch(this.numemano){
       //cambio con el de la derecha
-      case 5: case 13: { caso = ["ATENCIÓN: Antes de comenzar la mano, el que esta sentado en la silla referenciada, se cambia con el de su derecha, y los otros dos entre si.","csderecha"] ; break ; }
-      case 9: { caso = ["ATENCIÓN: Antes de comenzar la mano, el que esta sentado en la silla referenciada, se cambia con el de en frente, y los otros dos entre si.","csfrente"] ; break ; }
+      case 5: case 13: { caso = ["ATENCIÓN: Antes de comenzar la mano, el que esta sentado en la silla referenciada, se cambia con el de su derecha, y los otros dos entre si.","csderecha"] ; this.des = true ; break ; }
+      case 9: { caso = ["ATENCIÓN: Antes de comenzar la mano, el que esta sentado en la silla referenciada, se cambia con el de en frente, y los otros dos entre si.","csfrente"] ; this.des = true ; break ; }
       default: { caso = ["",""] ; break ; }
     }
     this.cambiosillas = caso;
   }
-
-  //[disabled]="submitvalido()"
   
   vientoderonda(){
     let numeronda = (this.numemano / 4.001) + 1 ;numeronda = Math.floor(numeronda);
@@ -59,12 +60,13 @@ export class LetreroComponent implements OnInit{
     let evaluables:any[] = [];
     let trueEvaluables:any[] = [];
 
-    const puntuado = (sujeto:any):number => {
+    //Funciones que determinan los valores de los jugadores "blandos".
+    const puntuado = (sujeto:Jugador):number => {
       return sujeto.puntuacion[sujeto.puntuacion.length - 1];
     }
 
 
-    const superaa = (sujeto:any):number => {
+    const superaa = (sujeto:Jugador):number => {
       let retornable = 0;
       let sujeto1 = { nombre : sujeto.nombre , puntos : puntuado(sujeto) }
       for(let jugador in this._gj.squad){
@@ -76,12 +78,12 @@ export class LetreroComponent implements OnInit{
     return retornable;
     }
 
-    const viento = (sujeto:any):string => {
+    const viento = (sujeto:Jugador):string => {
       return sujeto.arrayvientos[this.numemano - 1]
     }
     
     for(let jugador in this._gj.squad){
-      let sujeto:any = this._gj.squad[jugador];
+      let sujeto:Jugador = this._gj.squad[jugador];
       let evaluado = {
         nombre : sujeto.nombre,
         puntos : puntuado(sujeto),

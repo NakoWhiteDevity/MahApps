@@ -6,6 +6,7 @@ class Jugador {
     nombre:string;
     puntuacion:number[];
     arrayvientos:string[];
+    
     private static cuentainstancias:number = 1;
     private static arraysillas:any[] = _.shuffle([1,2,3,4])
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Jugador } from 'src/app/modulos/jugador.class';
 import { GenerarjugadoresService } from 'src/app/servicios/generarjugadores.service';
 import { NumemanoService } from 'src/app/servicios/numemano.service';
 import { LetreroComponent } from '../letrero/letrero.component';
@@ -12,7 +13,7 @@ import { LetreroComponent } from '../letrero/letrero.component';
 export class FormahjongComponent implements OnInit {
 
   forma:FormGroup;
-  squad:any[] = []
+  squad:Jugador[] = [];
   numemano:number = this._nm.numemano;
   
   constructor( private _router : Router , private _gj:GenerarjugadoresService , private _nm:NumemanoService , private _fb : FormBuilder){
@@ -22,30 +23,26 @@ export class FormahjongComponent implements OnInit {
       puntuacion : ['',Validators.required]
     })
   }
-  
-  iraletrero(){
-    this._router.navigate(['/letrero']);
-  }
 
-  indicadormuro(nombre:string,rid?:boolean):string{
-    let caso:string;
-    if (nombre == this.forma.value.ganamano){
-      caso = "DE MURO";
-    } else {
-      switch(rid){
-        case true : { caso = `${nombre}R` ; break ; }
-        default : { caso = nombre ; break ; }
-      }
-    }
-    return caso;
-  }
-  
   ngOnInit(): void {
     for(let jugador in this._gj.squad){
       this.squad.push(this._gj.squad[jugador]);
     }
   }
+  
+  iraletrero(){
+    this._router.navigate(['/letrero']);
+  }
 
+  indicadormuro(nombre:string):string{
+    let caso:string;
+    if (nombre == this.forma.value.ganamano){
+      caso = "DE MURO";
+      return caso
+    }
+    return nombre;
+  }
+  
   submitvalido():boolean{
     let caso:boolean;
     if(this.forma.value.ganamano != "" && this.forma.value.dealer != "" && this.forma.value.puntuacion >= 8 && this.forma.value.puntuacion <= 1100){
@@ -59,16 +56,17 @@ export class FormahjongComponent implements OnInit {
   //Rutina principal:
   guardar(){
 
+    //La razón de porque no importamos los jugadores directamente del servicio y generamos un array nuevo es porque este componente necesita un array de los jugadores, no un objeto de jugadores.
     this.squad = [];
     for(let jugador in this._gj.squad){
       this.squad.push(this._gj.squad[jugador]);
     }
     
     let datosform = this.forma.value,
-        demuro:boolean,
-        sujeto:any;
+        sujeto:Jugador = datosform.ganamano,
+        demuro:boolean = (datosform.ganamano == datosform.dealer) ? true : false ;
 
-    const sumademuro = (sujeto:any) => {
+    const sumademuro = (sujeto:Jugador) => {
       let epuntos:number = 0;
       for (let jugador in this.squad){
         if(sujeto.nombre !== this.squad[jugador].nombre){
@@ -81,7 +79,7 @@ export class FormahjongComponent implements OnInit {
       sujeto.puntuacion.push(epuntos);
     }
 
-    const sumadedealer = (sujeto:any) => {
+    const sumadedealer = (sujeto:Jugador) => {
       let epuntos:number = 0;
       for(let jugador in this.squad){
         if(sujeto.nombre !== this.squad[jugador].nombre){
@@ -100,21 +98,15 @@ export class FormahjongComponent implements OnInit {
       sujeto.puntuacion.push(epuntos);
     }
     
-    if ( datosform.ganamano == datosform.dealer ){
-      demuro = true;
-    } else {
-      demuro = false;
+    switch(demuro){
+      case true : { sumademuro(sujeto) ; break ; }
+      case false : { sumadedealer(sujeto) ; break ; }
     }
     
     for(let jugador in this.squad){
       if (datosform.ganamano == this.squad[jugador].nombre){
         sujeto = this.squad[jugador];
       }
-    }
-
-    switch(demuro){
-      case true : { sumademuro(sujeto) ; break ; }
-      case false : { sumadedealer(sujeto) ; break ; }
     }
     
     this._nm.incrementarnumemano();

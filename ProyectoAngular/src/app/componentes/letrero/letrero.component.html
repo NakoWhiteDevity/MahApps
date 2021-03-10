@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [ngClass]="{'deshabilitado':des}">
     <div class="row">
         <div class="col-8 tarjetaspuntos">
             
@@ -21,7 +21,7 @@
                     <div class="col ronda">{{numemano}}/16</div>
                 </div>
                 <div class="row">
-                    <button class="col botonhu btn" (click)="iratabla()" >MahJong!</button>
+                    <button class="col botonhu btn" (click)="iratabla()" [disabled]="des">MahJong!</button>
                 </div>
                 <div class="row" *ngIf="cambiosillas[0] != ''" >
                     <p class="avisocambiodesillas {{cambiosillas[1]}}">{{cambiosillas[0]}}</p>
