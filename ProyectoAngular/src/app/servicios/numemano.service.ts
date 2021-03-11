@@ -1,22 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NumemanoService {
 
-  numemano:number = 15;
+  numemano:number = 16;
   
-  constructor(private _router : Router) { }
+  constructor(){}
 
   incrementarnumemano(){
     this.numemano++;
-    if(this.numemano == 17){
-      this._router.navigate(['/findejuego']);
-    } else {
-      this._router.navigate(['/letrero']);
-    }
   }
 
 }

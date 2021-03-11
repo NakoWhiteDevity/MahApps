@@ -101,6 +101,7 @@ export class LetreroComponent implements OnInit{
     //La lista de jugadores es el objeto que consume el letrero para renderizar luego el letrero. Igualalo a la colección que quieres crear para usarla.
     this.listajugadores = trueEvaluables;
     this._gj.squadfin = trueEvaluables;
+    if (this.numemano == 17) {this._router.navigate(['/findejuego']);};
     this.vientoderonda();
     this.cambiodesillas();
   }

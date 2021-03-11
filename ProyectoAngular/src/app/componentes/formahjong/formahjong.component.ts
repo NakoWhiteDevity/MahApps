@@ -101,6 +101,7 @@ export class FormahjongComponent implements OnInit {
     }
 
     this._nm.incrementarnumemano();
+    this._router.navigate(['/letrero']);
   
   }
 
