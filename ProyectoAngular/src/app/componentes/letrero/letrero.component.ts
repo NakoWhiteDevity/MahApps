@@ -65,17 +65,16 @@ export class LetreroComponent implements OnInit{
       return sujeto.puntuacion[sujeto.puntuacion.length - 1];
     }
 
-
-    const superaa = (sujeto:Jugador):number => {
-      let retornable = 0;
-      let sujeto1 = { nombre : sujeto.nombre , puntos : puntuado(sujeto) }
+    const superado = (sujeto:Jugador):number => {
+      let caso = 0;
+      let sujeto1 = { nombre : sujeto.nombre , puntos : puntuado(sujeto) };
       for(let jugador in this._gj.squad){
         if( sujeto1.nombre !== this._gj.squad[jugador].nombre ){
           let sujeto2 = { puntos : this._gj.squad[jugador].puntuacion[this._gj.squad[jugador].puntuacion.length - 1] };
-          ( sujeto1.puntos > sujeto2.puntos ) ? retornable++ : retornable = retornable ;
+          (sujeto1.puntos < sujeto2.puntos) ? caso++ : caso = caso;
         }
       }
-    return retornable;
+      return caso;
     }
 
     const viento = (sujeto:Jugador):string => {
@@ -87,20 +86,21 @@ export class LetreroComponent implements OnInit{
       let evaluado = {
         nombre : sujeto.nombre,
         puntos : puntuado(sujeto),
-        superandos : superaa(sujeto),
+        superaa : superado(sujeto),
         viento : viento(sujeto)
       }
       evaluables.push(evaluado);
     }
 
-    for(let i=4;i>=0;i--){
+    for(let i=0;i<4;i++){
       evaluables.forEach( jugador => {
-        if(jugador.superandos == i){ trueEvaluables.push(jugador) }
+        if(jugador.superaa == i){ trueEvaluables.push(jugador) }
       });
     }
 
     //La lista de jugadores es el objeto que consume el letrero para renderizar luego el letrero. Igualalo a la colección que quieres crear para usarla.
     this.listajugadores = trueEvaluables;
+    this._gj.squadfin = trueEvaluables;
     this.vientoderonda();
     this.cambiodesillas();
   }

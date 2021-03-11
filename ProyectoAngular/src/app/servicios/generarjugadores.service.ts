@@ -9,6 +9,7 @@ import { Jugador } from 'src/app/modulos/jugador.class'
 export class GenerarjugadoresService {
   
   squad:any;
+  squadfin:any;
   
   constructor(){
     console.log("servicio de generar jugadores listo.");

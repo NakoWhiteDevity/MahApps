@@ -8,10 +8,10 @@ export class PosicionPipe implements PipeTransform {
   transform(value:number): string {
     let caso:string = "";
     switch(value){
-      case 3 : { caso = "primero" ; break ; }
-      case 2 : { caso = "segundo" ; break ; }
-      case 1 : { caso = "tercero" ; break ; }
-      case 0 : { caso = "cuarto" ; break ; }
+      case 0 : { caso = "primero" ; break ; }
+      case 1 : { caso = "segundo" ; break ; }
+      case 2 : { caso = "tercero" ; break ; }
+      case 3 : { caso = "cuarto" ; break ; }
     }
     return caso;
   }
