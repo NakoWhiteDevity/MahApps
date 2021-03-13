@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { GenerarjugadoresService } from 'src/app/servicios/generarjugadores.service';
@@ -8,7 +8,7 @@ import { ValidarformularioinicioService } from 'src/app/servicios/validarformula
   selector: 'app-forinicio',
   templateUrl: './forinicio.component.html'
 })
-export class ForinicioComponent{
+export class ForinicioComponent implements OnInit{
 
   forinicio : FormGroup;
   validado = false;
@@ -20,6 +20,10 @@ export class ForinicioComponent{
       jugador3 : ['',[Validators.required,Validators.minLength(3),Validators.maxLength(10)]],
       jugador4 : ['',[Validators.required,Validators.minLength(3),Validators.maxLength(10)]]
     });
+  }
+
+  ngOnInit(){
+    //localStorage.clear();
   }
 
   mostrar(){

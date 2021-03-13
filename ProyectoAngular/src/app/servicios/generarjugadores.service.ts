@@ -21,13 +21,15 @@ export class GenerarjugadoresService {
           j3 = new Jugador( objetodenombres.jugador3 ),
           j4 = new Jugador( objetodenombres.jugador4 );
     this.squad = {j1,j2,j3,j4};
-    /*
-    for(let objeto in this.squad){
-      let instancia = this.squad[objeto];
-      console.log(instancia.nombre);
-    }
-    */
+    //this.setStorage( this.squad );
   }
+
+  /*
+  setStorage( squad:any ){
+    JSON.stringify( squad );
+    localStorage.setItem('squad',squad)
+  }
+  */
 
 
 
