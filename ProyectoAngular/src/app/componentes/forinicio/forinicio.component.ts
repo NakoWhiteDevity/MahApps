@@ -23,7 +23,7 @@ export class ForinicioComponent implements OnInit{
   }
 
   ngOnInit(){
-    //localStorage.clear();
+    localStorage.clear();
   }
 
   mostrar(){

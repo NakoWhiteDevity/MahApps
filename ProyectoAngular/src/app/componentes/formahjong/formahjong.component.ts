@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { Jugador } from 'src/app/modulos/jugador.class';
 import { GenerarjugadoresService } from 'src/app/servicios/generarjugadores.service';
 import { NumemanoService } from 'src/app/servicios/numemano.service';
-import { any } from 'underscore';
 
 @Component({
   selector: 'app-formahjong',

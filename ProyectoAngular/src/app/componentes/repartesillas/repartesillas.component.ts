@@ -9,7 +9,7 @@ import { Jugador } from 'src/app/modulos/jugador.class';
 })
 export class RepartesillasComponent{
 
-  squadarray:Jugador[] = [this._gj.squad.j1,this._gj.squad.j2,this._gj.squad.j3,this._gj.squad.j4];
+  squadarray:Jugador[] = [this._gj.squad[0],this._gj.squad[1],this._gj.squad[2],this._gj.squad[3]];
   jE:string = ""; jS:string = ""; jW:string = ""; jN:string = "";
   
   constructor( private _gj:GenerarjugadoresService , private _router:Router ) {

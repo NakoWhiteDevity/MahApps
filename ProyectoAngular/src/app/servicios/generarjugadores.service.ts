@@ -20,7 +20,7 @@ export class GenerarjugadoresService {
           j2 = new Jugador( objetodenombres.jugador2 ),
           j3 = new Jugador( objetodenombres.jugador3 ),
           j4 = new Jugador( objetodenombres.jugador4 );
-    this.squad = {j1,j2,j3,j4};
+    this.squad = [j1,j2,j3,j4];
     //this.setStorage( this.squad );
   }
 
