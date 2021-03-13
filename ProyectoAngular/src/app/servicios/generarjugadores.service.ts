@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';;
 import { Jugador } from 'src/app/modulos/jugador.class'
+import { NumemanoService } from './numemano.service';
 
 //https://desarrolloweb.com/articulos/recorridos-propiedades-objetos-javascript-forin.html
 
@@ -10,8 +11,9 @@ export class GenerarjugadoresService {
   
   squad:any;
   squadfin:any;
+  squadtest:any;
   
-  constructor(){
+  constructor( private _nm:NumemanoService ){
     console.log("servicio de generar jugadores listo.");
   }
   
@@ -21,15 +23,18 @@ export class GenerarjugadoresService {
           j3 = new Jugador( objetodenombres.jugador3 ),
           j4 = new Jugador( objetodenombres.jugador4 );
     this.squad = [j1,j2,j3,j4];
-    //this.setStorage( this.squad );
+    this.setStorage(JSON.stringify(this.squad));
   }
 
-  /*
   setStorage( squad:any ){
-    JSON.stringify( squad );
-    localStorage.setItem('squad',squad)
+    sessionStorage.setItem('squad',squad);
+    sessionStorage.setItem('mano',`${this._nm.numemano}`);
   }
-  */
+  
+  getStorage(){
+    this.squadtest = JSON.parse(`${sessionStorage.getItem('squad')}`);
+    console.log(this.squadtest);
+  }
 
 
 

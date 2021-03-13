@@ -20,6 +20,7 @@ export class LetreroComponent implements OnInit{
 
   ngOnInit(){
     this.ordenarjugadores();
+    this._gj.getStorage();
   }
   
   iratabla(){

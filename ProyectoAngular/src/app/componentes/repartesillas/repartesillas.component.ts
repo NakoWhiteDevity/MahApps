@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GenerarjugadoresService } from 'src/app/servicios/generarjugadores.service';
 import { Jugador } from 'src/app/modulos/jugador.class';
