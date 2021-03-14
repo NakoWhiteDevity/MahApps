@@ -10,10 +10,16 @@ export class FindejuegoComponent implements OnInit {
   squad:any;
   ganador:string = "";
   
-  constructor( private _gj:GenerarjugadoresService) { }
+  constructor( private _gj:GenerarjugadoresService){}
 
   ngOnInit(): void {
-    this.squad = this._gj.squadfin;
+    let finstorage = JSON.parse(`${sessionStorage.getItem('squadfin')}`);
+    if(finstorage == null){
+      this.squad = this._gj.squadfin;
+      sessionStorage.setItem('squadfin',JSON.stringify(this.squad));
+    } else {
+      this.squad = finstorage;
+    }
     this.ganador = this.squad[0].nombre;
   }
 

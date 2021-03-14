@@ -24,6 +24,7 @@ export class FormahjongComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this._gj.getStorage();
     for(let jugador in this._gj.squad){
       this.squad.push(this._gj.squad[jugador]);
     }
@@ -100,6 +101,7 @@ export class FormahjongComponent implements OnInit {
     }
 
     this._nm.incrementarnumemano();
+    this._gj.setStorage(JSON.stringify(this._gj.squad));
     this._router.navigate(['/letrero']);
   
   }

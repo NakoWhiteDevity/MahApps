@@ -3,9 +3,9 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class NumemanoService {
+export class NumemanoService{
 
-  numemano:number = 16;
+  numemano:number = 1;
   
   constructor(){}
 

@@ -11,16 +11,17 @@ import { NumemanoService } from 'src/app/servicios/numemano.service';
 export class LetreroComponent implements OnInit{
 
   listajugadores:any[] = [];
-  numemano:number = this._nm.numemano;
+  numemano:number = this._gj.getNumemano();
   vientoronda:string[] = [];
   cambiosillas:string[] = [];
   des:boolean = false;
   
-  constructor( private _gj:GenerarjugadoresService , private _router:Router , private _nm:NumemanoService ){}
+  constructor( private _gj:GenerarjugadoresService , private _router:Router , private _nm:NumemanoService ){
+  }
 
   ngOnInit(){
-    this.ordenarjugadores();
     this._gj.getStorage();
+    this.ordenarjugadores();
   }
   
   iratabla(){

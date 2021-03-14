@@ -11,7 +11,6 @@ export class GenerarjugadoresService {
   
   squad:any;
   squadfin:any;
-  squadtest:any;
   
   constructor( private _nm:NumemanoService ){
     console.log("servicio de generar jugadores listo.");
@@ -32,9 +31,25 @@ export class GenerarjugadoresService {
   }
   
   getStorage(){
+    this.squad = JSON.parse(`${sessionStorage.getItem('squad')}`);
+    this._nm.numemano = JSON.parse(`${sessionStorage.getItem('mano')}`);
+  }
+
+  getfin(){
+    return JSON.parse(`${sessionStorage.getItem('squadfin')}`);
+  }
+
+  getNumemano(){
+    return JSON.parse(`${sessionStorage.getItem('mano')}`);
+  }
+  
+  /*
+  Forma de parsear el storage:
+  getStorage(){
     this.squadtest = JSON.parse(`${sessionStorage.getItem('squad')}`);
     console.log(this.squadtest);
   }
+  */
 
 
 
