@@ -23,7 +23,12 @@ export class ForinicioComponent implements OnInit{
   }
 
   ngOnInit(){
-    sessionStorage.clear();
+    let squadstorage = this._gj.checkStorage();
+    if (squadstorage == null){
+      return
+    } else {
+      this._router.navigate(['/letrero']);
+    }
   }
 
   mostrar(){

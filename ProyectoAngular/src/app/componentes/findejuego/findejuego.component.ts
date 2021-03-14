@@ -13,10 +13,10 @@ export class FindejuegoComponent implements OnInit {
   constructor( private _gj:GenerarjugadoresService){}
 
   ngOnInit(): void {
-    let finstorage = JSON.parse(`${sessionStorage.getItem('squadfin')}`);
+    let finstorage = JSON.parse(`${localStorage.getItem('squadfin')}`);
     if(finstorage == null){
       this.squad = this._gj.squadfin;
-      sessionStorage.setItem('squadfin',JSON.stringify(this.squad));
+      localStorage.setItem('squadfin',JSON.stringify(this.squad));
     } else {
       this.squad = finstorage;
     }

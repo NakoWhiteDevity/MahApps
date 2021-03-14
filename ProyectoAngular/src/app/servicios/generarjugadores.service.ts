@@ -3,6 +3,7 @@ import { Jugador } from 'src/app/modulos/jugador.class'
 import { NumemanoService } from './numemano.service';
 
 //https://desarrolloweb.com/articulos/recorridos-propiedades-objetos-javascript-forin.html
+//sessionStorage.clear();
 
 @Injectable({
   providedIn: 'root'
@@ -26,27 +27,27 @@ export class GenerarjugadoresService {
   }
 
   setStorage( squad:any ){
-    sessionStorage.setItem('squad',squad);
-    sessionStorage.setItem('mano',`${this._nm.numemano}`);
+    localStorage.setItem('squad',squad);
+    localStorage.setItem('mano',`${this._nm.numemano}`);
   }
   
   getStorage(){
-    this.squad = JSON.parse(`${sessionStorage.getItem('squad')}`);
-    this._nm.numemano = JSON.parse(`${sessionStorage.getItem('mano')}`);
+    this.squad = JSON.parse(`${localStorage.getItem('squad')}`);
+    this._nm.numemano = JSON.parse(`${localStorage.getItem('mano')}`);
   }
 
-  getfin(){
-    return JSON.parse(`${sessionStorage.getItem('squadfin')}`);
+  checkStorage(){
+    return JSON.parse(`${localStorage.getItem('squad')}`);
   }
 
   getNumemano(){
-    return JSON.parse(`${sessionStorage.getItem('mano')}`);
+    return JSON.parse(`${localStorage.getItem('mano')}`);
   }
   
   /*
   Forma de parsear el storage:
   getStorage(){
-    this.squadtest = JSON.parse(`${sessionStorage.getItem('squad')}`);
+    this.squadtest = JSON.parse(`${localStorage.getItem('squad')}`);
     console.log(this.squadtest);
   }
   */
