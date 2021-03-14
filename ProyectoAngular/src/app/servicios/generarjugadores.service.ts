@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';;
+import { Injectable } from '@angular/core';import { Router } from '@angular/router';
+;
 import { Jugador } from 'src/app/modulos/jugador.class'
 import { NumemanoService } from './numemano.service';
 
@@ -13,7 +14,7 @@ export class GenerarjugadoresService {
   squad:any;
   squadfin:any;
   
-  constructor( private _nm:NumemanoService ){
+  constructor( private _nm:NumemanoService , private _router:Router ){
     console.log("servicio de generar jugadores listo.");
   }
   
@@ -38,6 +39,10 @@ export class GenerarjugadoresService {
 
   checkStorage(){
     return JSON.parse(`${localStorage.getItem('squad')}`);
+  }
+
+  nukeStorage(){
+    localStorage.clear();
   }
 
   getNumemano(){
