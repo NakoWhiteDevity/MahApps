@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { GenerarjugadoresService } from 'src/app/servicios/generarjugadores.service';
 import { Jugador } from 'src/app/modulos/jugador.class';
@@ -7,12 +7,13 @@ import { Jugador } from 'src/app/modulos/jugador.class';
   selector: 'app-repartesillas',
   templateUrl: './repartesillas.component.html'
 })
-export class RepartesillasComponent{
+export class RepartesillasComponent {
 
-  squadarray:Jugador[] = [this._gj.squad[0],this._gj.squad[1],this._gj.squad[2],this._gj.squad[3]];
+  squadarray:Jugador[] = [];
   jE:string = ""; jS:string = ""; jW:string = ""; jN:string = "";
   
-  constructor( private _gj:GenerarjugadoresService , private _router:Router ) {
+  constructor( private _router:Router ) {
+    this.squadarray = JSON.parse(`${localStorage.getItem('squad')}`);
     this.squadarray.forEach( jugador => {
       switch(jugador.arrayvientos[0]){
         case "E" : { this.jE = jugador.nombre;break; }

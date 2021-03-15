@@ -24,11 +24,8 @@ export class ForinicioComponent implements OnInit{
 
   ngOnInit(){
     let squadstorage = this._gj.checkStorage();
-    if (squadstorage == null){
-      this._gj.nukeStorage();
-    } else {
-      this._router.navigate(['/letrero']);
-    }
+    if (squadstorage[1] == true){ localStorage.clear() ; window.location.reload() ; };
+    if (squadstorage[0] !== null){ this._router.navigate(['/letrero']) ; }
   }
 
   mostrar(){

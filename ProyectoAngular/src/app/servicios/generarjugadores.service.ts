@@ -38,11 +38,7 @@ export class GenerarjugadoresService {
   }
 
   checkStorage(){
-    return JSON.parse(`${localStorage.getItem('squad')}`);
-  }
-
-  nukeStorage(){
-    localStorage.clear();
+    return [ JSON.parse(`${localStorage.getItem('squad')}`) , JSON.parse(`${localStorage.getItem('nuke')}`) ];
   }
 
   getNumemano(){
