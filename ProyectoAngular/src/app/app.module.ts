@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ForinicioComponent } from './componentes/forinicio/forinicio.component';
@@ -14,6 +13,7 @@ import { FormahjongComponent } from './componentes/formahjong/formahjong.compone
 import { RidfinalPipe } from './tuberias/ridfinal.pipe';
 import { FindejuegoComponent } from './componentes/findejuego/findejuego.component';
 import { ReseteadorComponent } from './componentes/comun/reseteador/reseteador.component';
+import { AvisadorComponent } from './componentes/comun/avisador/avisador.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import { ReseteadorComponent } from './componentes/comun/reseteador/reseteador.c
     FormahjongComponent,
     RidfinalPipe,
     FindejuegoComponent,
-    ReseteadorComponent
+    ReseteadorComponent,
+    AvisadorComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,4 +39,4 @@ import { ReseteadorComponent } from './componentes/comun/reseteador/reseteador.c
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
