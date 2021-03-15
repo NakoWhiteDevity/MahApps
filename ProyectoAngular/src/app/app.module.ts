@@ -13,7 +13,6 @@ import { FormahjongComponent } from './componentes/formahjong/formahjong.compone
 import { RidfinalPipe } from './tuberias/ridfinal.pipe';
 import { FindejuegoComponent } from './componentes/findejuego/findejuego.component';
 import { ReseteadorComponent } from './componentes/comun/reseteador/reseteador.component';
-import { AvisadorComponent } from './componentes/comun/avisador/avisador.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +27,6 @@ import { AvisadorComponent } from './componentes/comun/avisador/avisador.compone
     RidfinalPipe,
     FindejuegoComponent,
     ReseteadorComponent,
-    AvisadorComponent,
   ],
   imports: [
     BrowserModule,
