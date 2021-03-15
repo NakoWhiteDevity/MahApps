@@ -1,0 +1,17 @@
+<div class="finicio container">
+        <div class="row">
+            <div class="col inputjugadores">
+                <p>Indica el nombre de los 4 jugadores:</p>
+                <form autocomplete="off" [formGroup]="forinicio" (ngSubmit)="mostrar()" >
+                    <input type="text" formControlName="jugador1">
+                    <input type="text" formControlName="jugador2">
+                    <input type="text" formControlName="jugador3">
+                    <input type="text" formControlName="jugador4">
+                    <p *ngIf="validado" class="advertencia">
+                        Debe de insertar 4 nombres diferentes, de entre 3 y 10 carácteres.
+                    </p>
+                    <button type="submit">Repartir asientos</button>
+                </form>
+            </div>
+        </div>
+    </div>

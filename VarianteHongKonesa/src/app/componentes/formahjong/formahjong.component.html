@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <div class="col huformulario">
+            <form autocomplete="off" [formGroup]="forma" (ngSubmit)="guardar()">
+                <div class="filaform">
+                    <p>¿quien la gano la mano {{numemano}} / 16?</p>
+                    <div *ngFor="let jugador of squad">
+                        <input  type="radio"
+                                name="ganamano"
+                                value="{{jugador.nombre}}"
+                                id="{{jugador.nombre}}"
+                                formControlName="ganamano"
+                                required>
+                        <label  class="label-radio" for="{{jugador.nombre}}">{{jugador.nombre}}</label>
+                    </div>
+                </div>
+                <div class="filaform">
+                    <p>¿quien dio la ultima ficha?</p>
+                    <div *ngFor="let jugador of squad">
+                        <input  type="radio"
+                                name="dealer"
+                                value="{{jugador.nombre}}"
+                                id="{{jugador.nombre | ridfinal}}"
+                                formControlName="dealer"
+                                required>
+                        <label class="label-radio" for="{{jugador.nombre | ridfinal}}">{{indicadormuro(jugador.nombre)}}</label>
+                    </div>
+                </div>
+                <div class="filaform">
+                    <p>Puntuación de la mano mas flores:</p>
+                    <button (click)="iraletrero()">Retroceder</button>
+                    <input  type="number"
+                            name="puntuacion"
+                            formControlName="puntuacion"
+                            placeholder="Valor"
+                            required>
+                    <button type="submit"
+                            [disabled]="submitvalido()"
+                            class="botonconfirmar">Confirmar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

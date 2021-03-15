@@ -1,0 +1,97 @@
+.huformulario
+    input[type=number]::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+    input[type=number]::-webkit-outer-spin-button
+        -webkit-appearance: none
+        margin: 0
+    p
+        width: 100%
+        text-align: center
+        font-size: 1.5rem
+    label
+        border: 2px solid white
+        color: white
+        padding: 10px
+        margin: 5px
+        min-width: 100%
+        text-align: center
+        background-color: #00000080
+        border-radius: 5px
+        font-size: 1.5rem
+    .filaform
+        div
+            min-width: 48%
+        display: flex
+        justify-content: space-around
+        align-items: center
+        flex-wrap: wrap
+        margin: 25px auto
+        input[type="radio"]
+            display: none
+            &:checked + .label-radio
+                color: yellow
+                border: 2px solid yellow
+        input[type="text"],button
+            border: 2px solid white
+            padding: 10px
+            background-color: #00000080
+            font-weight: 700
+            font-size: 1.5rem
+            max-width: 30%
+            text-align: center
+            color: white
+        input[type="number"],button
+            border: 2px solid white
+            padding: 10px
+            background-color: #00000080
+            font-weight: 700
+            font-size: 1.5rem
+            max-width: 30%
+            text-align: center
+            color: white
+            outline: none
+        .botonconfirmar:disabled
+            border: 2px solid grey
+            color: grey
+
+$rojo : #FF000080
+$verde : #00FF0080
+$azul : #0000FF80
+$amarillo : #FFFF0080
+$morado : #57236480
+    
+.tabla
+    display: flex
+    justify-content: center
+    align-items: center
+    min-width: 100%
+    min-height: 100%
+    .esquina
+        border-top: none !important
+        border-left: none !important
+        background: none !important
+    .nombres
+        td
+            min-width: 100px
+            font-weight: 700
+            background-color: $morado
+    .viento
+        font-size: 1.5rem
+        font-weight: 700
+    td
+        padding: 8px 15px
+        border: 2px solid white
+        text-align: center
+        background-color: #000000B3
+        font-weight: 700
+
+//colores
+.Seste
+    background-color: $azul !important
+.Ssur
+    background-color: $verde !important
+.Soeste
+    background-color: $amarillo !important
+.Snorte
+    background-color: $rojo !important
