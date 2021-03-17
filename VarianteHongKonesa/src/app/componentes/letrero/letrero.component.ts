@@ -15,6 +15,9 @@ export class LetreroComponent implements OnInit{
   vientoronda:string[] = [];
   cambiosillas:string[] = [];
   des:boolean = false;
+
+  //A exportar a hijo:
+  plusarray:string[] = [];
   
   constructor( private _gj:GenerarjugadoresService , private _router:Router , private _nm:NumemanoService ){
   }
@@ -24,6 +27,7 @@ export class LetreroComponent implements OnInit{
     this.ordenarjugadores();
   }
   
+  //Funciones del componente
   iratabla(){
     this._router.navigate(['/tabla']);
   }
@@ -54,6 +58,16 @@ export class LetreroComponent implements OnInit{
       case 4 : { caso = ["norte","北"] ; break ; }
     }
     this.vientoronda = caso;
+  }
+
+  //Funciones con el hijo manosplus:
+  manomuerta(){
+    let pop = confirm(`¿Se declara la mano ${this.numemano} mano muerta?`);
+    if (pop == true){
+      //DH significa Dead Hand.
+      this.plusarray.push("DH");
+      localStorage.setItem('plus',`${this.plusarray}`);
+    }
   }
   
   //Rutina principal:

@@ -20,8 +20,10 @@
                     <div class="col viento {{vientoronda[0]}}">{{vientoronda[1]}}</div>
                     <div class="col ronda">{{numemano}}/16</div>
                 </div>
+                <app-manosplus class="manosplus" [pshijo]="plusarray"></app-manosplus>
                 <div class="row">
                     <button class="col botonhu btn" (click)="iratabla()" [disabled]="des">MahJong!</button>
+                    <button class="col botonhu btn" (click)="manomuerta()" [disabled]="des">Mano Muerta</button>
                 </div>
                 <div class="row" *ngIf="cambiosillas[0] != ''" >
                     <p class="avisocambiodesillas {{cambiosillas[1]}}">{{cambiosillas[0]}}</p>
