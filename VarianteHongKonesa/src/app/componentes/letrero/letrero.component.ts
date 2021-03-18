@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Jugador } from 'src/app/modulos/jugador.class';
 import { GenerarjugadoresService } from 'src/app/servicios/generarjugadores.service';
+import { ManosplusService } from 'src/app/servicios/manosplus.service';
 import { NumemanoService } from 'src/app/servicios/numemano.service';
 
 @Component({
@@ -16,10 +17,9 @@ export class LetreroComponent implements OnInit{
   cambiosillas:string[] = [];
   des:boolean = false;
 
-  //A exportar a hijo:
-  plusarray:string[] = this.getplus();
+  prueba = this._mp.manosplus;
   
-  constructor( private _gj:GenerarjugadoresService , private _router:Router , private _nm:NumemanoService ){
+  constructor( private _gj:GenerarjugadoresService , private _router:Router , private _nm:NumemanoService , private _mp:ManosplusService ){
   }
 
   ngOnInit(){
@@ -60,23 +60,12 @@ export class LetreroComponent implements OnInit{
     this.vientoronda = caso;
   }
 
-  //Funciones con el hijo manosplus:
   manomuerta(){
-    let pop = confirm(`¿Se declara la mano ${this.numemano} mano muerta?`);
+    let pop = confirm(`¿Se declara la mano ${this._nm.numemano} mano muerta?`);
     if (pop == true){
       //DH significa Dead Hand.
-      this.plusarray.push("DH");
-      localStorage.setItem('plus',`${this.plusarray}`);
-      localStorage.getItem('plus')?.split(",");
-    }
-  }
-
-  getplus(){
-    let retornable = localStorage.getItem('plus')?.split(",");
-    if (retornable == undefined){
-      return [];
-    } else {
-      return retornable;
+      this._mp.manosplus.push("DH");
+      localStorage.setItem('plus',`${this._mp.manosplus}`);
     }
   }
   

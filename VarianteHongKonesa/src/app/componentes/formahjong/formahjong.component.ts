@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { Jugador } from 'src/app/modulos/jugador.class';
 import { GenerarjugadoresService } from 'src/app/servicios/generarjugadores.service';
+import { ManosplusService } from 'src/app/servicios/manosplus.service';
 import { NumemanoService } from 'src/app/servicios/numemano.service';
 
 @Component({
@@ -15,7 +16,7 @@ export class FormahjongComponent implements OnInit {
   squad:Jugador[] = [];
   numemano:number = this._nm.numemano;
   
-  constructor( private _router : Router , private _gj:GenerarjugadoresService , private _nm:NumemanoService , private _fb : FormBuilder){
+  constructor( private _router : Router , private _gj:GenerarjugadoresService , private _nm:NumemanoService , private _fb : FormBuilder , private _mp:ManosplusService){
     this.forma = this._fb.group({
       ganamano : new FormControl('',Validators.required),
       dealer : new FormControl('',Validators.required),
@@ -59,7 +60,7 @@ export class FormahjongComponent implements OnInit {
         demuro:boolean = (ganador == dealer) ? true : false;
 
     const categorias = (fan:number,demuro:boolean):number => {
-      fan = fan + 1;
+      fan = fan - 1;
       let categorias:number[] = [1,2,4,8,16,32,64];
       switch(demuro){
         case true : if (fan == 1){ return 0 } else { return (categorias[fan] * 2); }
@@ -100,7 +101,7 @@ export class FormahjongComponent implements OnInit {
     }
 
     const esEste = (sujeto:Jugador):boolean => {
-      if (sujeto.arrayvientos[sujeto.arrayvientos.length - 1] = "E"){ return true } else { return false };
+      if (sujeto.arrayvientos[sujeto.arrayvientos.length - 1] == "E"){ return true } else { return false };
     }
     
     for(let jugador in this.squad){
@@ -110,20 +111,20 @@ export class FormahjongComponent implements OnInit {
           case true : { hongSumademuro(sujeto) ; break ; }
           case false : { hongSumadedealer(sujeto) ; break ; }
         }
-        if (esEste(sujeto)){
+        if (esEste(sujeto) == true){
           this._gj.setStorage(JSON.stringify(this._gj.squad));
-          
+          this._mp.manosplus.push("EW");
+          localStorage.setItem('plus',`${this._mp.manosplus}`);
+          this._router.navigate(['/letrero']);
         } else {
           this._gj.setStorage(JSON.stringify(this._gj.squad));
+          localStorage.removeItem('plus');
+          this._nm.incrementarnumemano();
           this._router.navigate(['/letrero']);
         }
       }
     }
-
-    this._nm.incrementarnumemano();
-    this._gj.setStorage(JSON.stringify(this._gj.squad));
-    this._router.navigate(['/letrero']);
-  
+    
   }
 
 }

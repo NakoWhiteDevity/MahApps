@@ -1,20 +1,18 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
+import { ManosplusService } from 'src/app/servicios/manosplus.service';
+import { NumemanoService } from 'src/app/servicios/numemano.service';
 
 @Component({
   selector: 'app-manosplus',
   templateUrl: './manosplus.component.html'
 })
-export class ManosplusComponent implements OnInit {
+export class ManosplusComponent implements OnInit{
   
-  @Input() pshijo:string[] = [];
+  manosplus:string[] = this._mp.getplus();
   
-  constructor() { }
-
+  constructor( private _mp:ManosplusService, private _nm:NumemanoService ) {}
+  
   ngOnInit(): void {
   }
-
-
-
-
-
+  
 }
