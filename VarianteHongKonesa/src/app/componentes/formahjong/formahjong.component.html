@@ -26,14 +26,18 @@
                         <label class="label-radio" for="{{jugador.nombre | ridfinal}}">{{indicadormuro(jugador.nombre)}}</label>
                     </div>
                 </div>
-                <div class="filaform">
-                    <p>Puntuación de la mano mas flores:</p>
+                <div class="confirmacion">
+                    <p>Puntuación de la mano:</p>
                     <button (click)="iraletrero()">Retroceder</button>
-                    <input  type="number"
-                            name="puntuacion"
-                            formControlName="puntuacion"
-                            placeholder="Valor"
-                            required>
+                    
+                    <div class="divcategorias"><input type="radio" name="categoria" value="1" id="1" formControlName="categoria" required><label class="label-radio" for="1">0</label></div>
+                    <div class="divcategorias"><input type="radio" name="categoria" value="2" id="2" formControlName="categoria" required><label class="label-radio" for="2">1</label></div>
+                    <div class="divcategorias"><input type="radio" name="categoria" value="3" id="3" formControlName="categoria" required><label class="label-radio" for="3">2</label></div>
+                    <div class="divcategorias"><input type="radio" name="categoria" value="4" id="4" formControlName="categoria" required><label class="label-radio" for="4">3</label></div>
+                    <div class="divcategorias"><input type="radio" name="categoria" value="5" id="5" formControlName="categoria" required><label class="label-radio" for="5">4,5,6</label></div>
+                    <div class="divcategorias"><input type="radio" name="categoria" value="6" id="6" formControlName="categoria" required><label class="label-radio" for="6">7,8,9</label></div>
+                    <div class="divcategorias"><input type="radio" name="categoria" value="7" id="7" formControlName="categoria" required><label class="label-radio" for="7">10 +</label></div>
+                    
                     <button type="submit"
                             [disabled]="submitvalido()"
                             class="botonconfirmar">Confirmar</button>

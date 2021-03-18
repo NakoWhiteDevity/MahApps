@@ -10,18 +10,16 @@ import { NumemanoService } from 'src/app/servicios/numemano.service';
   templateUrl: './formahjong.component.html'
 })
 export class FormahjongComponent implements OnInit {
-  
-  categorias:number[] = [1,2,4,8,16,32,64];
+
   forma:FormGroup;
   squad:Jugador[] = [];
   numemano:number = this._nm.numemano;
-  esEste:string = "";
   
   constructor( private _router : Router , private _gj:GenerarjugadoresService , private _nm:NumemanoService , private _fb : FormBuilder){
     this.forma = this._fb.group({
       ganamano : new FormControl('',Validators.required),
       dealer : new FormControl('',Validators.required),
-      puntuacion : ['',Validators.required]
+      categoria : new FormControl('',Validators.required)
     })
   }
 
@@ -57,27 +55,24 @@ export class FormahjongComponent implements OnInit {
     let datosform = this.forma.value,
         ganador:string = datosform.ganamano,
         dealer:string = datosform.dealer,
-        puntos:number = datosform.puntuacion,
+        categoria:number = datosform.categoria,
         demuro:boolean = (ganador == dealer) ? true : false;
-        
-    const esEste = () => {
-      this.esEste = "";
-      let caso = "";
-      for(let jugador in this.squad){
-        let sujeto:Jugador = this.squad[jugador];
-        if (sujeto.arrayvientos[this.numemano - 1] == "E"){
-          caso = sujeto.nombre;
-        }
+
+    const categorias = (fan:number,demuro:boolean):number => {
+      fan = fan + 1;
+      let categorias:number[] = [1,2,4,8,16,32,64];
+      switch(demuro){
+        case true : if (fan == 1){ return 0 } else { return (categorias[fan] * 2); }
+        case false : return categorias[fan];
       }
-      this.esEste = caso;
     }
     
-    const sumademuro = (sujeto:Jugador) => {
+    const hongSumademuro = (sujeto:Jugador) => {
       let epuntos:number = 0;
       for (let jugador in this.squad){
         if(sujeto.nombre !== this.squad[jugador].nombre){
           let victima:Jugador = this.squad[jugador];
-          let pago:number = (puntos + 8);
+          let pago:number = categorias(2,true);
           epuntos = epuntos + pago;
           victima.puntuacion.push((victima.puntuacion[victima.puntuacion.length - 1]) - pago);
         }
@@ -85,17 +80,17 @@ export class FormahjongComponent implements OnInit {
       sujeto.puntuacion.push((sujeto.puntuacion[sujeto.puntuacion.length - 1]) + epuntos);
     }
 
-    const sumadedealer = (sujeto:Jugador) => {
+    const hongSumadedealer = (sujeto:Jugador) => {
       let epuntos:number = 0;
       for(let jugador in this.squad){
-        if(sujeto.nombre !== this.squad[jugador].nombre){
+        if (sujeto.nombre !== this.squad[jugador].nombre){
           let victima:Jugador = this.squad[jugador];
           if (victima.nombre == dealer){
-            let pago:number = (puntos + 8);
+            let pago:number = (categorias(2,false) * 2);
             epuntos = epuntos + pago;
             victima.puntuacion.push( (victima.puntuacion[victima.puntuacion.length - 1]) - pago );
           } else {
-            let pago:number = 8;
+            let pago:number = categorias(2,false);
             epuntos = epuntos + pago;
             victima.puntuacion.push( (victima.puntuacion[victima.puntuacion.length - 1]) - pago );
           }
@@ -108,8 +103,8 @@ export class FormahjongComponent implements OnInit {
       if (ganador == this.squad[jugador].nombre){
         let sujeto:Jugador = this.squad[jugador];
         switch(demuro){
-          case true : { sumademuro(sujeto) ; break ; }
-          case false : { sumadedealer(sujeto) ; break ; }
+          case true : { hongSumademuro(sujeto) ; break ; }
+          case false : { hongSumadedealer(sujeto) ; break ; }
         }
       }
     }
