@@ -10,10 +10,12 @@ import { NumemanoService } from 'src/app/servicios/numemano.service';
   templateUrl: './formahjong.component.html'
 })
 export class FormahjongComponent implements OnInit {
-
+  
+  categorias:number[] = [1,2,4,8,16,32,64];
   forma:FormGroup;
   squad:Jugador[] = [];
   numemano:number = this._nm.numemano;
+  esEste:string = "";
   
   constructor( private _router : Router , private _gj:GenerarjugadoresService , private _nm:NumemanoService , private _fb : FormBuilder){
     this.forma = this._fb.group({
@@ -57,7 +59,19 @@ export class FormahjongComponent implements OnInit {
         dealer:string = datosform.dealer,
         puntos:number = datosform.puntuacion,
         demuro:boolean = (ganador == dealer) ? true : false;
-
+        
+    const esEste = () => {
+      this.esEste = "";
+      let caso = "";
+      for(let jugador in this.squad){
+        let sujeto:Jugador = this.squad[jugador];
+        if (sujeto.arrayvientos[this.numemano - 1] == "E"){
+          caso = sujeto.nombre;
+        }
+      }
+      this.esEste = caso;
+    }
+    
     const sumademuro = (sujeto:Jugador) => {
       let epuntos:number = 0;
       for (let jugador in this.squad){

@@ -17,12 +17,13 @@ export class LetreroComponent implements OnInit{
   des:boolean = false;
 
   //A exportar a hijo:
-  plusarray:string[] = [];
+  plusarray:string[] = this.getplus();
   
   constructor( private _gj:GenerarjugadoresService , private _router:Router , private _nm:NumemanoService ){
   }
 
   ngOnInit(){
+    console.log(this.getplus());
     this._gj.getStorage();
     this.ordenarjugadores();
   }
@@ -67,6 +68,16 @@ export class LetreroComponent implements OnInit{
       //DH significa Dead Hand.
       this.plusarray.push("DH");
       localStorage.setItem('plus',`${this.plusarray}`);
+      localStorage.getItem('plus')?.split(",");
+    }
+  }
+
+  getplus(){
+    let retornable = localStorage.getItem('plus')?.split(",");
+    if (retornable == undefined){
+      return [];
+    } else {
+      return retornable;
     }
   }
   

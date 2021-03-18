@@ -45,15 +45,4 @@ export class GenerarjugadoresService {
     return JSON.parse(`${localStorage.getItem('mano')}`);
   }
   
-  /*
-  Forma de parsear el storage:
-  getStorage(){
-    this.squadtest = JSON.parse(`${localStorage.getItem('squad')}`);
-    console.log(this.squadtest);
-  }
-  */
-
-
-
-
 }
