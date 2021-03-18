@@ -23,7 +23,6 @@ export class LetreroComponent implements OnInit{
   }
 
   ngOnInit(){
-    console.log(this.getplus());
     this._gj.getStorage();
     this.ordenarjugadores();
   }

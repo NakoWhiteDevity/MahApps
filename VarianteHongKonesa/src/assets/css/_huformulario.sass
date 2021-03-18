@@ -42,13 +42,11 @@
             text-align: center
             color: white
             outline: none
-        .botonconfirmar:disabled
+        &:disabled
             border: 2px solid grey
             color: grey
     .confirmacion
-        div
-            max-width: 10%
-            min-width: 10%
+        max-width: 80%
         display: flex
         justify-content: space-around
         align-items: center
@@ -56,11 +54,10 @@
         margin: 25px auto
         input[type="radio"]
             display: none
-            padding: 5px !important
             &:checked + .label-radio
                 color: yellow
                 border: 2px solid yellow
-        input[type="number"],button
+        button
             border: 2px solid white
             padding: 10px
             background-color: #00000080
@@ -70,9 +67,11 @@
             text-align: center
             color: white
             outline: none
-        .botonconfirmar:disabled
-            border: 2px solid grey
-            color: grey
+            &:disabled
+                border: 2px solid grey
+                color: grey
+    .botoneside
+        margin: 0px 30px !important
 
 $rojo : #FF000080
 $verde : #00FF0080

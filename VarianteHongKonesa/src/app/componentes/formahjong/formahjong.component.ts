@@ -46,7 +46,7 @@ export class FormahjongComponent implements OnInit {
   
   submitvalido():boolean{
     let caso:boolean;
-    if(this.forma.value.ganamano != "" && this.forma.value.dealer != "" && this.forma.value.puntuacion >= 8 && this.forma.value.puntuacion <= 1100){ caso = false; } else { caso = true; } return caso;
+    if(this.forma.value.ganamano != "" && this.forma.value.dealer != "" && this.forma.value.categoria) { caso = false; } else { caso = true; } return caso;
   }
   
   //Rutina principal:
@@ -72,7 +72,7 @@ export class FormahjongComponent implements OnInit {
       for (let jugador in this.squad){
         if(sujeto.nombre !== this.squad[jugador].nombre){
           let victima:Jugador = this.squad[jugador];
-          let pago:number = categorias(2,true);
+          let pago:number = categorias(categoria,true);
           epuntos = epuntos + pago;
           victima.puntuacion.push((victima.puntuacion[victima.puntuacion.length - 1]) - pago);
         }
@@ -86,17 +86,21 @@ export class FormahjongComponent implements OnInit {
         if (sujeto.nombre !== this.squad[jugador].nombre){
           let victima:Jugador = this.squad[jugador];
           if (victima.nombre == dealer){
-            let pago:number = (categorias(2,false) * 2);
+            let pago:number = (categorias(categoria,false) * 2);
             epuntos = epuntos + pago;
             victima.puntuacion.push( (victima.puntuacion[victima.puntuacion.length - 1]) - pago );
           } else {
-            let pago:number = categorias(2,false);
+            let pago:number = categorias(categoria,false);
             epuntos = epuntos + pago;
             victima.puntuacion.push( (victima.puntuacion[victima.puntuacion.length - 1]) - pago );
           }
         }
       }
       sujeto.puntuacion.push((sujeto.puntuacion[sujeto.puntuacion.length - 1]) + epuntos);
+    }
+
+    const esEste = (sujeto:Jugador):boolean => {
+      if (sujeto.arrayvientos[sujeto.arrayvientos.length - 1] = "E"){ return true } else { return false };
     }
     
     for(let jugador in this.squad){
@@ -105,6 +109,13 @@ export class FormahjongComponent implements OnInit {
         switch(demuro){
           case true : { hongSumademuro(sujeto) ; break ; }
           case false : { hongSumadedealer(sujeto) ; break ; }
+        }
+        if (esEste(sujeto)){
+          this._gj.setStorage(JSON.stringify(this._gj.squad));
+          
+        } else {
+          this._gj.setStorage(JSON.stringify(this._gj.squad));
+          this._router.navigate(['/letrero']);
         }
       }
     }
