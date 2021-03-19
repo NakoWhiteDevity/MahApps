@@ -15,6 +15,7 @@ export class FormahjongComponent implements OnInit {
   forma:FormGroup;
   squad:Jugador[] = [];
   numemano:number = this._nm.numemano;
+
   
   constructor( private _router : Router , private _gj:GenerarjugadoresService , private _nm:NumemanoService , private _fb : FormBuilder , private _mp:ManosplusService){
     this.forma = this._fb.group({
@@ -28,7 +29,7 @@ export class FormahjongComponent implements OnInit {
     this._gj.getStorage();
     for(let jugador in this._gj.squad){
       this.squad.push(this._gj.squad[jugador]);
-    }
+    }   
   }
   
   iraletrero(){
@@ -44,6 +45,8 @@ export class FormahjongComponent implements OnInit {
     }
     return nombre;
   }
+
+  
   
   submitvalido():boolean{
     let caso:boolean;
@@ -67,6 +70,22 @@ export class FormahjongComponent implements OnInit {
         case false : return categorias[fan];
       }
     }
+
+    const salida = (sujeto:Jugador) =>{
+      
+      if ( sujeto.arrayvientos[this.numemano - 1] == "E" ){
+        this._gj.setStorage(JSON.stringify(this._gj.squad));
+        this._mp.manosplus.push("EW");
+        localStorage.setItem('plus',`${this._mp.manosplus}`);
+        this._router.navigate(['/letrero']);
+      } else {
+        this._gj.setStorage(JSON.stringify(this._gj.squad));
+        localStorage.removeItem('plus');
+        this._nm.incrementarnumemano();
+        this._router.navigate(['/letrero']);
+      }
+    
+    }
     
     const hongSumademuro = (sujeto:Jugador) => {
       let epuntos:number = 0;
@@ -79,6 +98,7 @@ export class FormahjongComponent implements OnInit {
         }
       }
       sujeto.puntuacion.push((sujeto.puntuacion[sujeto.puntuacion.length - 1]) + epuntos);
+      salida(sujeto);
     }
 
     const hongSumadedealer = (sujeto:Jugador) => {
@@ -98,29 +118,15 @@ export class FormahjongComponent implements OnInit {
         }
       }
       sujeto.puntuacion.push((sujeto.puntuacion[sujeto.puntuacion.length - 1]) + epuntos);
+      salida(sujeto);
     }
 
-    const esEste = (sujeto:Jugador):boolean => {
-      if (sujeto.arrayvientos[sujeto.arrayvientos.length - 1] == "E"){ return true } else { return false };
-    }
-    
     for(let jugador in this.squad){
       if (ganador == this.squad[jugador].nombre){
         let sujeto:Jugador = this.squad[jugador];
         switch(demuro){
           case true : { hongSumademuro(sujeto) ; break ; }
           case false : { hongSumadedealer(sujeto) ; break ; }
-        }
-        if (esEste(sujeto) == true){
-          this._gj.setStorage(JSON.stringify(this._gj.squad));
-          this._mp.manosplus.push("EW");
-          localStorage.setItem('plus',`${this._mp.manosplus}`);
-          this._router.navigate(['/letrero']);
-        } else {
-          this._gj.setStorage(JSON.stringify(this._gj.squad));
-          localStorage.removeItem('plus');
-          this._nm.incrementarnumemano();
-          this._router.navigate(['/letrero']);
         }
       }
     }

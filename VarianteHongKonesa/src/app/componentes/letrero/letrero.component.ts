@@ -12,12 +12,10 @@ import { NumemanoService } from 'src/app/servicios/numemano.service';
 export class LetreroComponent implements OnInit{
 
   listajugadores:any[] = [];
-  numemano:number = this._gj.getNumemano();
+  numemano:number = this._nm.numemano;
   vientoronda:string[] = [];
   cambiosillas:string[] = [];
   des:boolean = false;
-
-  prueba = this._mp.manosplus;
   
   constructor( private _gj:GenerarjugadoresService , private _router:Router , private _nm:NumemanoService , private _mp:ManosplusService ){
   }

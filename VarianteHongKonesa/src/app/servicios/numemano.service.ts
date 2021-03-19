@@ -10,7 +10,8 @@ export class NumemanoService{
   constructor(){}
 
   incrementarnumemano(){
-    this.numemano++;
+    let viejamano = JSON.parse(`${localStorage.getItem('mano')}`);
+    localStorage.setItem('mano',`${viejamano + 1}`);
   }
 
 }

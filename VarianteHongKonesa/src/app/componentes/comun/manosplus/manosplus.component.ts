@@ -13,6 +13,7 @@ export class ManosplusComponent implements OnInit{
   constructor( private _mp:ManosplusService, private _nm:NumemanoService ) {}
   
   ngOnInit(): void {
+    this.manosplus = this._mp.getplus();
   }
   
 }
