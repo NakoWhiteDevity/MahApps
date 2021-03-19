@@ -80,7 +80,6 @@ export class FormahjongComponent implements OnInit {
         this._router.navigate(['/letrero']);
       } else {
         this._gj.setStorage(JSON.stringify(this._gj.squad));
-        localStorage.removeItem('plus');
         this._nm.incrementarnumemano();
         this._router.navigate(['/letrero']);
       }

@@ -37,11 +37,15 @@ export class LetreroComponent implements OnInit{
   
   cambiodesillas(){
     let caso:string[];
-    switch(this.numemano){
-      //cambio con el de la derecha
-      case 5: case 13: { caso = ["ATENCIÓN: Antes de comenzar la mano, el que esta sentado en la silla referenciada, se cambia con el de su derecha, y los otros dos entre si.","csderecha"] ; this.des = true ; break ; }
-      case 9: { caso = ["ATENCIÓN: Antes de comenzar la mano, el que esta sentado en la silla referenciada, se cambia con el de en frente, y los otros dos entre si.","csfrente"] ; this.des = true ; break ; }
-      default: { caso = ["",""] ; break ; }
+    if( this._nm.rerondaencambio ){
+      switch(this.numemano){
+        //cambio con el de la derecha
+        case 5: case 13: { caso = ["ATENCIÓN: Antes de comenzar la mano, el que esta sentado en la silla referenciada, se cambia con el de su derecha, y los otros dos entre si.","csderecha"] ; this.des = true ; this._nm.rerondaencambio = true ; break ; }
+        case 9: { caso = ["ATENCIÓN: Antes de comenzar la mano, el que esta sentado en la silla referenciada, se cambia con el de en frente, y los otros dos entre si.","csfrente"] ; this.des = true ; this._nm.rerondaencambio = true ; break ; }
+        default: { caso = ["",""] ; break ; }
+      }
+    } else {
+      caso = ["",""];
     }
     this.cambiosillas = caso;
   }
@@ -64,6 +68,7 @@ export class LetreroComponent implements OnInit{
       //DH significa Dead Hand.
       this._mp.manosplus.push("DH");
       localStorage.setItem('plus',`${this._mp.manosplus}`);
+      location.reload();
     }
   }
   

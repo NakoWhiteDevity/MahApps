@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';import { Router } from '@angular/router';
 ;
 import { Jugador } from 'src/app/modulos/jugador.class'
+import { ManosplusService } from './manosplus.service';
 import { NumemanoService } from './numemano.service';
 
 //https://desarrolloweb.com/articulos/recorridos-propiedades-objetos-javascript-forin.html
@@ -14,7 +15,7 @@ export class GenerarjugadoresService {
   squad:any;
   squadfin:any;
   
-  constructor( private _nm:NumemanoService , private _router:Router ){
+  constructor( private _nm:NumemanoService , private _mp:ManosplusService){
     console.log("servicio de generar jugadores listo.");
   }
   
@@ -34,15 +35,12 @@ export class GenerarjugadoresService {
   
   getStorage(){
     this.squad = JSON.parse(`${localStorage.getItem('squad')}`);
-    this._nm.numemano = JSON.parse(`${localStorage.getItem('mano')}`);
+    this._nm.numemano = this._nm.getnumemano();
+    this._mp.manosplus = this._mp.getplus();
   }
 
   checkStorage(){
     return [ JSON.parse(`${localStorage.getItem('squad')}`) , JSON.parse(`${localStorage.getItem('nuke')}`) ];
-  }
-
-  getNumemano(){
-    return JSON.parse(`${localStorage.getItem('mano')}`);
   }
   
 }

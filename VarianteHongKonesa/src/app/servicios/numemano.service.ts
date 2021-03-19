@@ -5,13 +5,25 @@ import { Injectable } from '@angular/core';
 })
 export class NumemanoService{
 
-  numemano:number = 1;
+  numemano:number = this.getnumemano();
+  rerondaencambio:boolean = false;
   
   constructor(){}
 
   incrementarnumemano(){
-    let viejamano = JSON.parse(`${localStorage.getItem('mano')}`);
-    localStorage.setItem('mano',`${viejamano + 1}`);
+    this.rerondaencambio = false;
+    this.numemano++;
+    localStorage.setItem('mano',`${this.numemano}`);
+    localStorage.removeItem('plus');
+  }
+
+  getnumemano(){
+    let retornable = JSON.parse(`${localStorage.getItem('mano')}`);
+    if (retornable == undefined){
+      return 1
+    } else {
+      return retornable;
+    }
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ManosplusService } from 'src/app/servicios/manosplus.service';
 import { NumemanoService } from 'src/app/servicios/numemano.service';
 
@@ -14,6 +14,7 @@ export class ManosplusComponent implements OnInit{
   
   ngOnInit(): void {
     this.manosplus = this._mp.getplus();
+    console.log(this.manosplus);
   }
   
 }
