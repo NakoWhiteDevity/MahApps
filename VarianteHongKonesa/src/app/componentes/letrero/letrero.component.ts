@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewChecked, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Jugador } from 'src/app/modulos/jugador.class';
 import { GenerarjugadoresService } from 'src/app/servicios/generarjugadores.service';
@@ -9,20 +9,25 @@ import { NumemanoService } from 'src/app/servicios/numemano.service';
   selector: 'app-letrero',
   templateUrl: './letrero.component.html'
 })
-export class LetreroComponent implements OnInit {
+export class LetreroComponent implements OnInit , AfterViewChecked {
 
   listajugadores:any[] = [];
   numemano:number = this._nm.numemano;
   vientoronda:string[] = [];
-  despadre:boolean = false;
+  despadre:boolean;
   
-  constructor( private _gj:GenerarjugadoresService , private _router:Router , private _nm:NumemanoService , private _mp:ManosplusService ){}
+  constructor( private _gj:GenerarjugadoresService , private _router:Router , private _nm:NumemanoService , private _mp:ManosplusService , private _cdr:ChangeDetectorRef ){
+    this.despadre = false;
+  }
 
+  //La linea que resuelve el problema: NG0100: Expression has changed after it was checked. Basicamente lo que hace es tras llegar a esta fase del ciclo de vida, aplicar los cambios sucedidos desde el init, en vez de llorarte por los cambios como niño tras hacerle pedorreta.
+  ngAfterViewChecked(){this._cdr.detectChanges();}
+  
   ngOnInit(){
     this._gj.getStorage();
     this.ordenarjugadores();
   }
-  
+
   //Funciones del componente
   deshabilita(evento:boolean){
     this.despadre = evento;

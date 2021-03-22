@@ -27,8 +27,8 @@ export class CambiosillasComponent implements OnInit {
       
     switch(numemano){
         //cambio con el de la derecha
-        case 5: case 13: { caso = array1 ; this.cambiosillas = caso ; this.deshijo.emit(true); break ; }
-        case 9: { caso = array2 ; this.cambiosillas = caso ; this.deshijo.emit(true); break ; }
+        case 5: case 13: { this.deshijo.emit(true) ; caso = array1 ; this.cambiosillas = caso ; break ; }
+        case 9: { this.deshijo.emit(true) ; caso = array2 ; this.cambiosillas = caso ; break ; }
         default: { caso = array3 ; this.cambiosillas = caso ; break ; }
       }
   }
