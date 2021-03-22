@@ -9,15 +9,14 @@ import { NumemanoService } from 'src/app/servicios/numemano.service';
   selector: 'app-letrero',
   templateUrl: './letrero.component.html'
 })
-export class LetreroComponent implements OnInit{
+export class LetreroComponent implements OnInit {
 
   listajugadores:any[] = [];
   numemano:number = this._nm.numemano;
   vientoronda:string[] = [];
   despadre:boolean = false;
   
-  constructor( private _gj:GenerarjugadoresService , private _router:Router , private _nm:NumemanoService , private _mp:ManosplusService ){
-  }
+  constructor( private _gj:GenerarjugadoresService , private _router:Router , private _nm:NumemanoService , private _mp:ManosplusService ){}
 
   ngOnInit(){
     this._gj.getStorage();
@@ -26,7 +25,6 @@ export class LetreroComponent implements OnInit{
   
   //Funciones del componente
   deshabilita(evento:boolean){
-    console.log(evento);
     this.despadre = evento;
   }
   

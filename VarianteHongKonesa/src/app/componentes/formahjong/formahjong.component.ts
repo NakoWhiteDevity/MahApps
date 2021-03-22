@@ -63,11 +63,10 @@ export class FormahjongComponent implements OnInit {
         demuro:boolean = (ganador == dealer) ? true : false;
 
     const categorias = (fan:number,demuro:boolean):number => {
-      fan = fan - 1;
       let categorias:number[] = [1,2,4,8,16,32,64];
       switch(demuro){
-        case true : if (fan == 1){ return 0 } else { return (categorias[fan] * 2); }
-        case false : return categorias[fan];
+        case true : if (fan == 1){ return 0 } else { return (categorias[fan - 1] * 2); }
+        case false : return categorias[fan - 1];
       }
     }
 

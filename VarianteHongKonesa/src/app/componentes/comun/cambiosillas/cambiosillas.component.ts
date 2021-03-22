@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NumemanoService } from 'src/app/servicios/numemano.service';
 
 @Component({
@@ -35,6 +35,7 @@ export class CambiosillasComponent implements OnInit {
 
   emitirfalse(){
     this.deshijo.emit(false);
+    this.cambiosillas = ["",""];
   }
 
 }

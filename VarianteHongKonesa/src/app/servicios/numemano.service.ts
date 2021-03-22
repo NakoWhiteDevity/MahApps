@@ -18,7 +18,7 @@ export class NumemanoService{
   getnumemano(){
     let retornable = JSON.parse(`${localStorage.getItem('mano')}`);
     if (retornable == undefined){
-      return 4
+      return 1
     } else {
       return retornable;
     }
