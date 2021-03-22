@@ -14,8 +14,7 @@ export class LetreroComponent implements OnInit{
   listajugadores:any[] = [];
   numemano:number = this._nm.numemano;
   vientoronda:string[] = [];
-  cambiosillas:string[] = [];
-  des:boolean = false;
+  despadre:boolean = false;
   
   constructor( private _gj:GenerarjugadoresService , private _router:Router , private _nm:NumemanoService , private _mp:ManosplusService ){
   }
@@ -26,28 +25,13 @@ export class LetreroComponent implements OnInit{
   }
   
   //Funciones del componente
+  deshabilita(evento:boolean){
+    console.log(evento);
+    this.despadre = evento;
+  }
+  
   iratabla(){
     this._router.navigate(['/tabla']);
-  }
-  
-  quitarpopup(){
-    this.cambiosillas[0] = "";
-    this.des = false;
-  }
-  
-  cambiodesillas(){
-    let caso:string[];
-    if( this._nm.rerondaencambio ){
-      switch(this.numemano){
-        //cambio con el de la derecha
-        case 5: case 13: { caso = ["ATENCIÓN: Antes de comenzar la mano, el que esta sentado en la silla referenciada, se cambia con el de su derecha, y los otros dos entre si.","csderecha"] ; this.des = true ; this._nm.rerondaencambio = true ; break ; }
-        case 9: { caso = ["ATENCIÓN: Antes de comenzar la mano, el que esta sentado en la silla referenciada, se cambia con el de en frente, y los otros dos entre si.","csfrente"] ; this.des = true ; this._nm.rerondaencambio = true ; break ; }
-        default: { caso = ["",""] ; break ; }
-      }
-    } else {
-      caso = ["",""];
-    }
-    this.cambiosillas = caso;
   }
   
   vientoderonda(){
@@ -60,6 +44,10 @@ export class LetreroComponent implements OnInit{
       case 4 : { caso = ["norte","北"] ; break ; }
     }
     this.vientoronda = caso;
+  }
+
+  prueba(dato:boolean){
+    console.log(dato);
   }
 
   manomuerta(){
@@ -121,6 +109,6 @@ export class LetreroComponent implements OnInit{
     this._gj.squadfin = trueEvaluables;
     if (this.numemano == 17) {this._router.navigate(['/findejuego']);};
     this.vientoderonda();
-    this.cambiodesillas();
+    //this.cambiodesillas();
   }
 }

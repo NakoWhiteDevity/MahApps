@@ -14,6 +14,7 @@ import { RidfinalPipe } from './tuberias/ridfinal.pipe';
 import { FindejuegoComponent } from './componentes/findejuego/findejuego.component';
 import { ReseteadorComponent } from './componentes/comun/reseteador/reseteador.component';
 import { ManosplusComponent } from './componentes/comun/manosplus/manosplus.component';
+import { CambiosillasComponent } from './componentes/comun/cambiosillas/cambiosillas.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ManosplusComponent } from './componentes/comun/manosplus/manosplus.comp
     FindejuegoComponent,
     ReseteadorComponent,
     ManosplusComponent,
+    CambiosillasComponent,
   ],
   imports: [
     BrowserModule,

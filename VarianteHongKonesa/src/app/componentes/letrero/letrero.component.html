@@ -1,4 +1,4 @@
-<div class="container" [ngClass]="{'deshabilitado':des}">
+<div class="container" [ngClass]="{'deshabilitado':despadre}">
     <div class="row">
         <div class="col-8 tarjetaspuntos">
             
@@ -22,13 +22,10 @@
                 </div>
                 <app-manosplus class="manosplus"></app-manosplus>
                 <div class="row">
-                    <button class="col botonhu btn" (click)="iratabla()" [disabled]="des">MahJong!</button>
-                    <button class="col botonhu btn" (click)="manomuerta()" [disabled]="des">Mano Muerta</button>
+                    <button class="col botonhu btn" (click)="iratabla()" [disabled]="despadre">MahJong!</button>
+                    <button class="col botonhu btn" (click)="manomuerta()" [disabled]="despadre">Mano Muerta</button>
                 </div>
-                <div class="row" *ngIf="cambiosillas[0] != ''" >
-                    <p class="avisocambiodesillas {{cambiosillas[1]}}">{{cambiosillas[0]}}</p>
-                    <button class="{{cambiosillas[1]}} entendidoboton" (click)="quitarpopup()">Entendido</button>
-                </div>
+                <app-cambiosillas (deshijo)="deshabilita($event)"></app-cambiosillas>
             </div>
         </div>
     </div>
