@@ -8,11 +8,14 @@ import { JsonhandlerService } from 'src/app/servicios/jsonhandler.service';
 })
 export class MainComponent implements OnInit {
   
-  jugadas:Chinaface[] = this._jh.chinaJSON;
+  jugadas:Chinaface[] = [];
   
-  constructor( private _jh:JsonhandlerService ) {}
+  constructor( private _jh:JsonhandlerService ) {
+    this._jh.getJSON().subscribe( (resp:Chinaface[]) => this.jugadas = resp );
+  }
 
   ngOnInit(): void {
+    console.log(this._jh.getJSON().subscribe(resp => console.log(resp)));
   }
 
 }
