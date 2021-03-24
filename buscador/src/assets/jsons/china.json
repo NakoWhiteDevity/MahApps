@@ -3,16 +3,9 @@
         "id":82,
         "puntos":1,
         "tipos":[],
+        "packs":0,
         "pareja":false,
         "nombre":"Flores",
         "detalles":"Se suman a la mano tras cantar MahJong y antes del cobro de puntos. Tienen el kanji negro"
-    },
-    {
-        "id":79,
-        "puntos":1,
-        "tipos":["chi","accion"],
-        "pareja":false,
-        "nombre":"Espera cerrada",
-        "detalles":"Cerrar con la ficha cerrada que esperaba un chi un solo paquete. Las esperas se excluyen entre si"
     }
 ]
