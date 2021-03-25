@@ -1,5 +1,44 @@
-<ul>
-    <li *ngFor="let jugada of jugadas">
-        {{jugada.nombre}}
-    </li>
-</ul>
+<!--
+<div class="container tablafans">
+    <table>
+          <tr>
+            <th>Pts</th>
+            <th>Nº</th>
+            <th>Tipos</th>
+            <th>packs</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+          </tr>
+          <tr *ngFor="let jugada of jugadas" >
+            <td>{{jugada.puntos}}</td>
+            <td>{{jugada.id}}</td>
+            <td>{{jugada.tipos}}</td>
+            <td>{{jugada.packs}}{{jugada.pareja}}</td>
+            <td>{{jugada.nombre}}</td>
+            <td>{{jugada.detalles}}</td>
+          </tr>
+      </table>
+</div>
+-->
+
+<!-- Recuerda que en la tabla original, en tipos de fan esta el array de packs y pareja -->
+
+<div class="container tablafans">
+    <div class="row">
+        <div class="col pts header">Pts</div>
+        <div class="col nº header">Nº</div>
+        <div class="col tipos header">tipos</div>
+        <div class="col packs header">packs</div>
+        <div class="col nombre header">nombre</div>
+        <div class="col desc header">descripción</div>
+    </div>
+    <div class="row" *ngFor="let jugada of jugadas">
+        <div class="col pts">{{jugada.puntos}}</div>
+        <div class="col nº">{{jugada.id}}</div>
+        <div class="col tipos">{{jugada.tipos}}</div>
+        <div class="col packs">{{jugada.packs}}/{{jugada.pareja}}</div>
+        <div class="col nombre">{{jugada.nombre}}</div>
+        <div class="col desc">{{jugada.detalles}}</div>
+    </div>
+</div>
+

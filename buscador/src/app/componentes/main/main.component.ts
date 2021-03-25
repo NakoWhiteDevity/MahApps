@@ -14,8 +14,6 @@ export class MainComponent implements OnInit {
     this._jh.getJSON().subscribe( (resp:Chinaface[]) => this.jugadas = resp );
   }
 
-  ngOnInit(): void {
-    console.log(this._jh.getJSON().subscribe(resp => console.log(resp)));
-  }
+  ngOnInit(): void {}
 
 }
