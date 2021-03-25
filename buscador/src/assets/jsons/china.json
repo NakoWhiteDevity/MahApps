@@ -359,4 +359,383 @@
         "nombre":"Mano del pollo.",
         "detalles":"Mano que no posee ningún punto (flores aparte) tras empacarla completamente."
     },
+    {
+        "id":42,
+        "puntos":8,
+        "tipos":[4,8],
+        "packs":3,
+        "pareja":false,
+        "nombre":"3 pong/kong consecutivos mixtos.",
+        "detalles":"#EJ : [111] [2222] [333]."
+    },
+    {
+        "id":41,
+        "puntos":8,
+        "tipos":[1,8],
+        "packs":3,
+        "pareja":false,
+        "nombre":"Triple chi mixto.",
+        "detalles":"#EJ : [123] [123] [123]."
+    },
+    {
+        "id":40,
+        "puntos":8,
+        "tipos":[6,8,13],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Filtro del espejo.",
+        "detalles":"#Mano empacada solo con: 1234589 D 245689 (bolas, dragón blanco y bambús respectivamente)."
+    },
+    {
+        "id":39,
+        "puntos":8,
+        "tipos":[1,8],
+        "packs":3,
+        "pareja":false,
+        "nombre":"3 chis consecutivos mixtos.",
+        "detalles":"#EJ : [123] [456] [789]."
+    },
+    {
+        "id":38,
+        "puntos":12,
+        "tipos":[4,12],
+        "packs":3,
+        "pareja":false,
+        "nombre":"3 pong/kong de vientos.",
+        "detalles":"3 Pong/Kong de vientos."
+    },
+    {
+        "id":37,
+        "puntos":12,
+        "tipos":[6,8],
+        "packs":null,
+        "pareja":false,
+        "nombre":"Filtro de las 4 inferiores.",
+        "detalles":"Mano empacada solo con fichas del 1 al 4."
+    },
+    {
+        "id":36,
+        "puntos":12,
+        "tipos":[6,8],
+        "packs":null,
+        "pareja":false,
+        "nombre":"Filtro de las 4 superiores.",
+        "detalles":"Mano empacada solo con fichas del 6 al 9."
+    },
+    {
+        "id":35,
+        "puntos":12,
+        "tipos":[7,8],
+        "packs":3,
+        "pareja":false,
+        "nombre":"Fichas cosidas.",
+        "detalles":"# EJ : [147] [258] [369]."
+    },
+    {
+        "id":34,
+        "puntos":12,
+        "tipos":[7,8,11],
+        "packs":null,
+        "pareja":false,
+        "nombre":"Cosidas con pocos honores.",
+        "detalles":"# 8 o 9 cosidas (fan 35) y el resto honores diferentes. La mano puede ser oculta."
+    },
+    {
+        "id":33,
+        "puntos":16,
+        "tipos":[2],
+        "packs":3,
+        "pareja":false,
+        "nombre":"3 pongs ocultos.",
+        "detalles":"# Mano que incluye 3 pong ocultos (no cuentan los kongs ocultos)."
+    },
+    {
+        "id":32,
+        "puntos":16,
+        "tipos":[4,8],
+        "packs":3,
+        "pareja":false,
+        "nombre":"Triple pong/kong.",
+        "detalles":"# EJ : [111] [111] [1111]."
+    },
+    {
+        "id":31,
+        "puntos":16,
+        "tipos":[6,9],
+        "packs":null,
+        "pareja":false,
+        "nombre":"Filtro de todo paquete y pareja con un 5.",
+        "detalles":"Mano en la que todo paquete y la pareja contiene un 5."
+    },
+    {
+        "id":30,
+        "puntos":16,
+        "tipos":[1,8],
+        "packs":3,
+        "pareja":false,
+        "nombre":"3 chis escalonados puros.",
+        "detalles":"# EJ : [123] [234] [345] o [123] [345] [567]."
+    },
+    {
+        "id":29,
+        "puntos":16,
+        "tipos":[1,8],
+        "packs":4,
+        "pareja":true,
+        "nombre":"2 chis puros de terminales diferentes de las tres familias.",
+        "detalles":"# EJ : [123] [789] [123] [789] y la pareja de 5 de la familia restante."
+    },
+    {
+        "id":28,
+        "puntos":16,
+        "tipos":[1,8],
+        "packs":3,
+        "pareja":false,
+        "nombre":"3 chis consecutivos puros.",
+        "detalles":"EJ : [123] [456] [789]."
+    },
+    {
+        "id":27,
+        "puntos":24,
+        "tipos":[6,8],
+        "packs":null,
+        "pareja":false,
+        "nombre":"Filtro de las 3 inferiores.",
+        "detalles":"Mano empacada solo con fichas del 1 al 3."
+    },
+    {
+        "id":26,
+        "puntos":24,
+        "tipos":[6,8],
+        "packs":null,
+        "pareja":false,
+        "nombre":"Filtro de las 3 centrales.",
+        "detalles":"Mano empacada solo con fichas del 4 al 6."
+    },
+    {
+        "id":25,
+        "puntos":24,
+        "tipos":[6,8],
+        "packs":null,
+        "pareja":false,
+        "nombre":"Filtro de las 3 superiores.",
+        "detalles":"Mano empacada solo con fichas del 7 al 9."
+    },
+    {
+        "id":24,
+        "puntos":24,
+        "tipos":[4,8],
+        "packs":3,
+        "pareja":false,
+        "nombre":"3 pong/kong consecutivos puros.",
+        "detalles":"# EJ : [1111] [222] [333]."
+    },
+    {
+        "id":23,
+        "puntos":24,
+        "tipos":[1],
+        "packs":3,
+        "pareja":false,
+        "nombre":"Triple chi puro.",
+        "detalles":"# EJ : [123] [123] [123]."
+    },
+    {
+        "id":22,
+        "puntos":24,
+        "tipos":[6,8],
+        "packs":null,
+        "pareja":false,
+        "nombre":"Filtro de mano pura.",
+        "detalles":"Mano empacada solo con fichas de una familia."
+    },
+    {
+        "id":21,
+        "puntos":24,
+        "tipos":[4,6,9],
+        "packs":null,
+        "pareja":false,
+        "nombre":"Filtro de todo pong/kong de pares.",
+        "detalles":"Mano formada por pong/kongs y la pareja de fichas pares."
+    },
+    {
+        "id":20,
+        "puntos":24,
+        "tipos":[7,8,12,13],
+        "packs":null,
+        "pareja":false,
+        "nombre":"Cosidas con grandes honores.",
+        "detalles":"Mano formada por 7 de las 9 cosidas (fan 35) y los siete honores."
+    },
+    {
+        "id":19,
+        "puntos":24,
+        "tipos":[7],
+        "packs":null,
+        "pareja":false,
+        "nombre":"7 pares.",
+        "detalles":"Mano formada por 7 parejas de fichas."
+    },
+    {
+        "id":18,
+        "puntos":32,
+        "tipos":[6,10,11],
+        "packs":null,
+        "pareja":false,
+        "nombre":"filtro de todo honores y terminales.",
+        "detalles":null
+    },
+    {
+        "id":17,
+        "puntos":32,
+        "tipos":[3],
+        "packs":3,
+        "pareja":false,
+        "nombre":"3 kongs.",
+        "detalles":"Pueden ser ocultos y/o mostrados."
+    },
+    {
+        "id":16,
+        "puntos":32,
+        "tipos":[1,8],
+        "packs":4,
+        "pareja":false,
+        "nombre":"4 chis escalonados puros.",
+        "detalles":"# EJ : [123] [234] [345] [456] o [123] [345] [567] [789]."
+    },
+    {
+        "id":15,
+        "puntos":48,
+        "tipos":[4,8],
+        "packs":4,
+        "pareja":false,
+        "nombre":"4 pong/kong consecutivos puros.",
+        "detalles":"# EJ : [111] [222] [333] [444]."
+    },
+    {
+        "id":14,
+        "puntos":48,
+        "tipos":[1,8],
+        "packs":4,
+        "pareja":false,
+        "nombre":"Cuadruple chi puro.",
+        "detalles":"# EJ : [123] [123] [123] [123]."
+    },
+    {
+        "id":13,
+        "puntos":64,
+        "tipos":[1],
+        "packs":4,
+        "pareja":true,
+        "nombre":"2 chis puros de terminales diferentes de una familia.",
+        "detalles":"# EJ : [123] [789] [123] [789] [55]."
+    },
+    {
+        "id":12,
+        "puntos":64,
+        "tipos":[3],
+        "packs":4,
+        "pareja":false,
+        "nombre":"Tesoro escondido.",
+        "detalles":"4 pong/kong ocultos."
+    },
+    {
+        "id":11,
+        "puntos":64,
+        "tipos":[6,11],
+        "packs":null,
+        "pareja":false,
+        "nombre":"Filtro de todo honores.",
+        "detalles":"Mano completamente empacada solo con fichas de honores."
+    },
+    {
+        "id":10,
+        "puntos":64,
+        "tipos":[4,13],
+        "packs":2,
+        "pareja":true,
+        "nombre":"Tres pequeños dragones.",
+        "detalles":"Dos pong/kong y la pareja de dragones."
+    },
+    {
+        "id":9,
+        "puntos":64,
+        "tipos":[4,12],
+        "packs":3,
+        "pareja":true,
+        "nombre":"Cuatro pequeños vientos.",
+        "detalles":"Tres pong/kong y la pareja de vientos."
+    },
+    {
+        "id":8,
+        "puntos":64,
+        "tipos":[6,10],
+        "packs":null,
+        "pareja":false,
+        "nombre":"Cabezas y colas.",
+        "detalles":"Mano empacada solo con terminales."
+    },
+    {
+        "id":7,
+        "puntos":88,
+        "tipos":[7,10,12,13],
+        "packs":null,
+        "pareja":false,
+        "nombre":"Trece huerfanos.",
+        "detalles":"Todos los honores y terminales, y la segunda copia de uno de ellos."
+    },
+    {
+        "id":6,
+        "puntos":88,
+        "tipos":[8],
+        "packs":null,
+        "pareja":false,
+        "nombre":"7 pares consecutivos puros.",
+        "detalles":"7 parejas de fichas de la misma familia escalonadas entre si."
+    },
+    {
+        "id":5,
+        "puntos":88,
+        "tipos":[3],
+        "packs":4,
+        "pareja":false,
+        "nombre":"4 kongs.",
+        "detalles":"Pueden ser ocultos y/o expuestos."
+    },
+    {
+        "id":4,
+        "puntos":88,
+        "tipos":[7],
+        "packs":null,
+        "pareja":false,
+        "nombre":"9 puertas.",
+        "detalles":"111-2-3-4-5-6-7-8-999, y una copia adicional de cualquiera de las fichas, todo del mismo palo."
+    },
+    {
+        "id":3,
+        "puntos":88,
+        "tipos":[6,9,13],
+        "packs":null,
+        "pareja":false,
+        "nombre":"Filtro de todo verde.",
+        "detalles":"Mano empacada solo 23468 y D de bambú."
+    },
+    {
+        "id":2,
+        "puntos":88,
+        "tipos":[4,13],
+        "packs":3,
+        "pareja":false,
+        "nombre":"Tres grandes dragones.",
+        "detalles":"3 pong/kong de dragones."
+    },
+    {
+        "id":1,
+        "puntos":88,
+        "tipos":[4,12],
+        "packs":4,
+        "pareja":false,
+        "nombre":"4 grandes vientos.",
+        "detalles":"4 pong/kong de cada uno de los vientos."
+    }
+
 ]
