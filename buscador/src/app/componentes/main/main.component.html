@@ -22,6 +22,7 @@
 -->
 
 <!-- Recuerda que en la tabla original, en tipos de fan esta el array de packs y pareja -->
+<!---->
 
 <div class="container tablafans">
     <div class="row">
@@ -35,8 +36,9 @@
     <div class="row" *ngFor="let jugada of jugadas">
         <div class="col pts">{{jugada.puntos}}</div>
         <div class="col nº">{{jugada.id}}</div>
-        <div class="col tipos">{{jugada.tipos}}</div>
-        <div class="col packs">{{jugada.packs}}/{{jugada.pareja}}</div>
+        <!-- <div class="col tipos">{{jugada.tipos}}</div> -->
+        <div class="col tipos"><ul><li *ngFor="let tipo of tiposprint(jugada.tipos)">{{tipo}}</li></ul></div>
+        <div class="col packs">{{packsprint(jugada.packs,jugada.pareja)}}</div>
         <div class="col nombre">{{jugada.nombre}}</div>
         <div class="col desc">{{jugada.detalles}}</div>
     </div>

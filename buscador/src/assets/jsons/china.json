@@ -13,7 +13,7 @@
         "puntos":1,
         "tipos":[],
         "packs":null,
-        "pareja":0,
+        "pareja":false,
         "nombre":"Cerrar del muro",
         "detalles":null
     },
@@ -381,7 +381,7 @@
         "id":40,
         "puntos":8,
         "tipos":[6,8,13],
-        "packs":0,
+        "packs":false,
         "pareja":false,
         "nombre":"Filtro del espejo.",
         "detalles":"#Mano empacada solo con: 1234589 D 245689 (bolas, dragón blanco y bambús respectivamente)."
