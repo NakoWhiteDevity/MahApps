@@ -6,8 +6,9 @@
         "packs":0,
         "pareja":false,
         "nombre":"Flores",
-        "detalles":"#Se suman a la mano tras cantar MahJong y antes del cobro de puntos. Tienen el kanji negro.",
-        "detallesHTML":"ENTRANDO EN DETALLESHTML"
+        "detalles":"Se suman a la mano tras cantar MahJong y antes del cobro de puntos. Tienen el kanji negro.",
+        "detallesHTML":"Se suman a la mano tras cantar MahJong y antes del cobro de puntos.<b class='negrita'>Tiene el kanji negro.</b>"
+
     },
     {
         "id":81,
@@ -34,7 +35,8 @@
         "packs":1,
         "pareja":false,
         "nombre":"Espera cerrada.",
-        "detalles":"#Cerrar con la ficha central que esperaba un chi un solo paquete. Las esperas se excluyen entre si."
+        "detalles":"Cerrar con la ficha central que esperaba un chi un solo paquete. Las esperas se excluyen entre si.",
+        "detallesHTML":"Cerrar con la ficha central que esperaba un chi <b class='negrita'>un solo paquete</b>. Las esperas se excluyen entre si."
     },
     {
         "id":78,
@@ -43,7 +45,8 @@
         "packs":1,
         "pareja":false,
         "nombre":"Espera de borde.",
-        "detalles":"Cerrar con el 3 o 7 de un chi terminal un solo paquete. Las esperas se excluyen entre si."
+        "detalles":"Cerrar con el 3 o 7 de un chi terminal un solo paquete. Las esperas se excluyen entre si.",
+        "detallesHTML":"Cerrar con el 3 o 7 de un chi terminal <b class='negrita'>un solo paquete</b>. Las esperas se excluyen entre si."
     },
     {
         "id":77,
@@ -88,7 +91,8 @@
         "packs":2,
         "pareja":false,
         "nombre":"2 chis puros de terminales diferentes.",
-        "detalles":"#EJ : [123] [789]."
+        "detalles":"EJ : [123] [789].",
+        "detallesHTML":"<b class='negrita'>EJ : </b><b class='rojo'>[123] [789] <b class='negrita'>.</b>"
     },
     {
         "id":72,
@@ -97,7 +101,8 @@
         "packs":2,
         "pareja":false,
         "nombre":"2 chis consecutivos puros.",
-        "detalles":"#EJ : [123] [456]."
+        "detalles":"EJ : [123] [456].",
+        "detallesHTML":"<b class='negrita'>EJ : </b><b class='verde'>[123] [456] <b class='negrita'>.</b>"
     },
     {
         "id":71,
@@ -106,7 +111,8 @@
         "packs":2,
         "pareja":false,
         "nombre":"Doble chi mixto.",
-        "detalles":"#EJ : [123] [123]."
+        "detalles":"EJ : [123] [123].",
+        "detallesHTML":"<b class='negrita'>EJ : </b><b class='azul'>[123]</b> <b class='rojo'>[123]</b> <b class='negrita'>.</b>"
     },
     {
         "id":70,
@@ -115,7 +121,8 @@
         "packs":2,
         "pareja":false,
         "nombre":"Doble chi puro.",
-        "detalles":"#EJ : [123] [123]."
+        "detalles":"EJ : [123] [123].",
+        "detallesHTML": "<b class='negrita'>EJ :</b> <b class='azul'>[123] [123]</b> <b class='negrita'>.</b>"
     },
     {
         "id":69,
@@ -151,7 +158,8 @@
         "packs":2,
         "pareja":false,
         "nombre":"Doble pong.",
-        "detalles":"#EJ : [222] [222]."
+        "detalles":"EJ : [222] [222].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='rojo'>[123] [123]</b> <b class='negrita'>.</b>"
     },
     {
         "id":65,
@@ -160,7 +168,8 @@
         "packs":0,
         "pareja":false,
         "nombre":"Ficha acaparada.",
-        "detalles":"#Usar las 4 fichas de un kong sin declarar para otros fan. Ej: 4 fichas de 1 para [111] y [123]."
+        "detalles":"Usar las 4 fichas de un kong sin declarar para otros fan. Ej: 4 fichas de 1 para [111] y [123].",
+        "detallesHTML":"Usar las 4 fichas de un kong sin declarar para otros fan. <b class='negrita'>Ej: 4 fichas de 1 para</b> <b class='rojo'>[111]</b> <b class='negrita'>y</b> <b class='rojo'>[123]</b> <b class='negrita'>.</b>"
     },
     {
         "id":64,
@@ -286,7 +295,7 @@
         "packs":3,
         "pareja":false,
         "nombre":"3 chis escalonados mixtos.",
-        "detalles":"#EJ : [123] [234] [345]."
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='rojo'>[123] [234] [345]</b> <b class='negrita'>.</b>"
     },
     {
         "id":50,
@@ -367,7 +376,8 @@
         "packs":3,
         "pareja":false,
         "nombre":"3 pong/kong consecutivos mixtos.",
-        "detalles":"#EJ : [111] [2222] [333]."
+        "detalles":"EJ : [111] [2222] [333].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='rojo'>[111] [2222] [333]</b> <b class='negrita'>.</b>"
     },
     {
         "id":41,
@@ -376,7 +386,8 @@
         "packs":3,
         "pareja":false,
         "nombre":"Triple chi mixto.",
-        "detalles":"#EJ : [123] [123] [123]."
+        "detalles":"EJ : [123] [123] [123].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='azul'>[123]</b> <b class='rojo'>[123]</b> <b class='verde'>[123]</b> <b class='negrita'>.</b>"
     },
     {
         "id":40,
@@ -385,7 +396,8 @@
         "packs":false,
         "pareja":false,
         "nombre":"Filtro del espejo.",
-        "detalles":"#Mano empacada solo con: 1234589 D 245689 (bolas, dragón blanco y bambús respectivamente)."
+        "detalles":"Mano empacada solo con: 1234589 D 245689 (bolas, dragón blanco y bambús respectivamente).",
+        "detallesHTML":"Mano empacada solo con: <b class='azul'>1234589 D</b> <b class='verde'>245689</b> (bolas, dragón blanco y bambús respectivamente)."
     },
     {
         "id":39,
@@ -394,7 +406,7 @@
         "packs":3,
         "pareja":false,
         "nombre":"3 chis consecutivos mixtos.",
-        "detalles":"#EJ : [123] [456] [789]."
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='azul'>[123]</b> <b class='rojo'>[456]</b> <b class='verde'>[789]</b> <b class='negrita'>.</b>"
     },
     {
         "id":38,
@@ -430,7 +442,8 @@
         "packs":3,
         "pareja":false,
         "nombre":"Fichas cosidas.",
-        "detalles":"# EJ : [147] [258] [369]."
+        "detalles":"# EJ : [147] [258] [369].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='azul'>[147]</b> <b class='rojo'>[258]</b> <b class='verde'>[369]</b> <b class='negrita'>.</b>"
     },
     {
         "id":34,
@@ -457,7 +470,8 @@
         "packs":3,
         "pareja":false,
         "nombre":"Triple pong/kong.",
-        "detalles":"# EJ : [111] [111] [1111]."
+        "detalles":"EJ : [111] [111] [1111].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='azul'>[111]</b> <b class='rojo'>[111]</b> <b class='verde'>[1111]</b> <b class='negrita'>.</b>"
     },
     {
         "id":31,
@@ -475,7 +489,8 @@
         "packs":3,
         "pareja":false,
         "nombre":"3 chis escalonados puros.",
-        "detalles":"# EJ : [123] [234] [345] o [123] [345] [567]."
+        "detalles":"EJ : [123] [234] [345] o [123] [345] [567].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='rojo'>[123] [234] [345]</b> <b class='negrita'>o</b> <b class='rojo'>[123] [345] [567]</b> <b class='negrita'>.</b>"
     },
     {
         "id":29,
@@ -484,7 +499,8 @@
         "packs":4,
         "pareja":true,
         "nombre":"2 chis puros de terminales diferentes de las tres familias.",
-        "detalles":"# EJ : [123] [789] [123] [789] y la pareja de 5 de la familia restante."
+        "detalles":"EJ : [123] [789] [123] [789] y la pareja de 5 de la familia restante.",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='azul'>[123] [789]</b> <b class='verde'>[123] [789]</b> y la pareja de 5 de la familia restante."
     },
     {
         "id":28,
@@ -493,7 +509,8 @@
         "packs":3,
         "pareja":false,
         "nombre":"3 chis consecutivos puros.",
-        "detalles":"EJ : [123] [456] [789]."
+        "detalles":"EJ : [123] [456] [789].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='rojo'>[123] [456] [789]</b> <b class='negrita'>.</b>"
     },
     {
         "id":27,
@@ -529,7 +546,8 @@
         "packs":3,
         "pareja":false,
         "nombre":"3 pong/kong consecutivos puros.",
-        "detalles":"# EJ : [1111] [222] [333]."
+        "detalles":"EJ : [1111] [222] [333].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='azul'>[1111] [222] [333]</b> <b class='negrita'>.</b>"
     },
     {
         "id":23,
@@ -538,7 +556,8 @@
         "packs":3,
         "pareja":false,
         "nombre":"Triple chi puro.",
-        "detalles":"# EJ : [123] [123] [123]."
+        "detalles":"# EJ : [123] [123] [123].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='verde'>[123] [123] [123]</b> <b class='negrita'>.</b>"
     },
     {
         "id":22,
@@ -601,7 +620,8 @@
         "packs":4,
         "pareja":false,
         "nombre":"4 chis escalonados puros.",
-        "detalles":"# EJ : [123] [234] [345] [456] o [123] [345] [567] [789]."
+        "detalles":"# EJ : [123] [234] [345] [456] o [123] [345] [567] [789].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='rojo'>[123] [234] [345] [456]</b> <b class='negrita'>o</b> <b class='rojo'>[123] [345] [567] [789]</b> <b class='negrita'>.</b>"
     },
     {
         "id":15,
@@ -610,7 +630,8 @@
         "packs":4,
         "pareja":false,
         "nombre":"4 pong/kong consecutivos puros.",
-        "detalles":"# EJ : [111] [222] [333] [444]."
+        "detalles":"EJ : [111] [222] [333] [444].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='verde'>[111] [2222] [333] [444]</b> <b class='negrita'>.</b>"
     },
     {
         "id":14,
@@ -619,7 +640,9 @@
         "packs":4,
         "pareja":false,
         "nombre":"Cuadruple chi puro.",
-        "detalles":"# EJ : [123] [123] [123] [123]."
+        "detalles":"EJ : [123] [123] [123] [123].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='azul'>[123] [123] [123] [123]</b> <b class='negrita'>.</b>"
+        
     },
     {
         "id":13,
@@ -628,7 +651,8 @@
         "packs":4,
         "pareja":true,
         "nombre":"2 chis puros de terminales diferentes de una familia.",
-        "detalles":"# EJ : [123] [789] [123] [789] [55]."
+        "detalles":"EJ : [123] [789] [123] [789] [55].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='rojo'>[123] [789] [123] [789] [55]</b> <b class='negrita'>.</b>"
     },
     {
         "id":12,
@@ -718,7 +742,8 @@
         "packs":0,
         "pareja":false,
         "nombre":"Filtro de todo verde.",
-        "detalles":"Mano empacada solo 23468 y D de bambú."
+        "detalles":"Mano empacada solo 23468 y D de bambú.",
+        "detallesHTML":"Mano empacada solo con <b class='verde'>23468</b> y <b class='verde'>D</b> de bambú."
     },
     {
         "id":2,
