@@ -39,12 +39,17 @@ export class MainComponent implements OnInit {
 
   packsprint(packs:number,pareja:boolean){
    const parejastring = (pareja:boolean) => { if (pareja == true){ return "P" } else { return "" } };
-   const packisnull = (packs:number) => { if (packs == null){ return "" } else { return packs } } ;
+   const packisnull = (packs:number) => { if (packs == 0){ return "" } else { return packs } } ;
    let arraydevolver:string = "";
    arraydevolver = arraydevolver.concat(`${packisnull(packs)}`);
    arraydevolver = arraydevolver.concat(`${parejastring(pareja)}`);
    return arraydevolver;
   };
+
+  descprint(descstring:string){
+    return descstring;
+  }
+  
 
   ngOnInit(): void {}
 

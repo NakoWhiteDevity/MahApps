@@ -3,7 +3,7 @@
         "id":82,
         "puntos":1,
         "tipos":[],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Flores",
         "detalles":"#Se suman a la mano tras cantar MahJong y antes del cobro de puntos. Tienen el kanji negro."
@@ -12,16 +12,16 @@
         "id":81,
         "puntos":1,
         "tipos":[],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Cerrar del muro",
-        "detalles":null
+        "detalles":""
     },
     {
         "id":80,
         "puntos":1,
         "tipos":[],
-        "packs":null,
+        "packs":0,
         "pareja":true,
         "nombre":"Espera simple.",
         "detalles":"Cerrar con la ficha que forma la pareja. Las esperas se excluyen entre si."
@@ -48,7 +48,7 @@
         "id":77,
         "puntos":1,
         "tipos":[6,8],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Filtro sin honores.",
         "detalles":"Mano sin vientos ni dragones."
@@ -57,7 +57,7 @@
         "id":76,
         "puntos":1,
         "tipos":[6],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Filtro de familia ausente.",
         "detalles":"Mano en la que solo hay 2 de las 3 familias."
@@ -69,7 +69,7 @@
         "packs":1,
         "pareja":false,
         "nombre":"1 Kong expuesto.",
-        "detalles":null
+        "detalles":""
     },
     {
         "id":74,
@@ -120,7 +120,7 @@
         "id":69,
         "puntos":2,
         "tipos":[6,9],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Filtro de todo simples.",
         "detalles":"Mano sin honores ni terminales."
@@ -132,7 +132,7 @@
         "packs":1,
         "pareja":false,
         "nombre":"Kong oculto.",
-        "detalles":null
+        "detalles":""
     },
     {
         "id":67,
@@ -141,7 +141,7 @@
         "packs":2,
         "pareja":false,
         "nombre":"2 pongs ocultos.",
-        "detalles":null
+        "detalles":""
     },
     {
         "id":66,
@@ -156,7 +156,7 @@
         "id":65,
         "puntos":2,
         "tipos":[3,5],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Ficha acaparada.",
         "detalles":"#Usar las 4 fichas de un kong sin declarar para otros fan. Ej: 4 fichas de 1 para [111] y [123]."
@@ -165,7 +165,7 @@
         "id":64,
         "puntos":2,
         "tipos":[1,6,8],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Filtro de todo chis sin honores.",
         "detalles":"Todos tus paquetes son chi."
@@ -174,7 +174,7 @@
         "id":63,
         "puntos":2,
         "tipos":[5],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Mano oculta.",
         "detalles":"Tener todo oculto y cerrar con una ficha descartada."
@@ -204,13 +204,13 @@
         "packs":1,
         "pareja":false,
         "nombre":"1 Pong/kong de dragones.",
-        "detalles":null
+        "detalles":""
     },
     {
         "id":59,
         "puntos":4,
         "tipos":[5],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Ultima ficha.",
         "detalles":"Cerrar con la cuarta ficha de sus tres ya expuestas boca arriba sobre la mesa."
@@ -222,13 +222,13 @@
         "packs":2,
         "pareja":false,
         "nombre":"2 kongs expuestos.",
-        "detalles":null
+        "detalles":""
     },
     {
         "id":57,
         "puntos":4,
         "tipos":[5],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Mano completamente oculta.",
         "detalles":"Mano con TODAS las fichas robadas del muro."
@@ -237,7 +237,7 @@
         "id":56,
         "puntos":4,
         "tipos":[6,10,11],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Filtro de todo paquete y pareja con terminales u honores.",
         "detalles":"Mano con un honor/terminar en cada paquete y en la pareja."
@@ -249,7 +249,7 @@
         "packs":2,
         "pareja":false,
         "nombre":"1 Kong expuesto y 1 kong oculto.",
-        "detalles":null
+        "detalles":""
     },
     {
         "id":54,
@@ -258,13 +258,13 @@
         "packs":2,
         "pareja":false,
         "nombre":"2 pong/kong de dragones.",
-        "detalles":null
+        "detalles":""
     },
     {
         "id":53,
         "puntos":6,
         "tipos":[5],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Mano expuesta.",
         "detalles":"Todo paquete y la pareja ha sido formado por descartes."
@@ -273,7 +273,7 @@
         "id":52,
         "puntos":6,
         "tipos":[6,8,12,13],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Filtro de todas las familias y honores.",
         "detalles":"Mano formada por combinaciones en las que aparecen las 3 familias, y mínimo un dragon y un viento."
@@ -291,7 +291,7 @@
         "id":50,
         "puntos":6,
         "tipos":[6,8,11],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Filtro de mano semipura.",
         "detalles":"Mano que contiene solo fichas de 1 de las 3 familias, en combinación con honores."
@@ -300,7 +300,7 @@
         "id":49,
         "puntos":6,
         "tipos":[4,6],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Filtro de todo pong/kong.",
         "detalles":"Mano formada por 4 pong/kong y la pareja."
@@ -312,13 +312,13 @@
         "packs":2,
         "pareja":false,
         "nombre":"2 kong ocultos.",
-        "detalles":null
+        "detalles":""
     },
     {
         "id":47,
         "puntos":8,
         "tipos":[5],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Robo de kong.",
         "detalles":"Cerrar con el descarte de un jugador posterior a que este pase de pong expuesto a kong."
@@ -327,7 +327,7 @@
         "id":46,
         "puntos":8,
         "tipos":[3,5],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Cerrar con ficha extra.",
         "detalles":"Cerrar con el robo suplementario posterior a realizar kong."
@@ -336,7 +336,7 @@
         "id":45,
         "puntos":8,
         "tipos":[5],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Ultimo descarte.",
         "detalles":"Cerrar con el último descarte posible en la ronda."
@@ -345,7 +345,7 @@
         "id":44,
         "puntos":8,
         "tipos":[5],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Ultima ficha de muro.",
         "detalles":"Cerrar con la última ficha del muro."
@@ -408,7 +408,7 @@
         "id":37,
         "puntos":12,
         "tipos":[6,8],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Filtro de las 4 inferiores.",
         "detalles":"Mano empacada solo con fichas del 1 al 4."
@@ -417,7 +417,7 @@
         "id":36,
         "puntos":12,
         "tipos":[6,8],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Filtro de las 4 superiores.",
         "detalles":"Mano empacada solo con fichas del 6 al 9."
@@ -435,7 +435,7 @@
         "id":34,
         "puntos":12,
         "tipos":[7,8,11],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Cosidas con pocos honores.",
         "detalles":"# 8 o 9 cosidas (fan 35) y el resto honores diferentes. La mano puede ser oculta."
@@ -462,7 +462,7 @@
         "id":31,
         "puntos":16,
         "tipos":[6,9],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Filtro de todo paquete y pareja con un 5.",
         "detalles":"Mano en la que todo paquete y la pareja contiene un 5."
@@ -498,7 +498,7 @@
         "id":27,
         "puntos":24,
         "tipos":[6,8],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Filtro de las 3 inferiores.",
         "detalles":"Mano empacada solo con fichas del 1 al 3."
@@ -507,7 +507,7 @@
         "id":26,
         "puntos":24,
         "tipos":[6,8],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Filtro de las 3 centrales.",
         "detalles":"Mano empacada solo con fichas del 4 al 6."
@@ -516,7 +516,7 @@
         "id":25,
         "puntos":24,
         "tipos":[6,8],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Filtro de las 3 superiores.",
         "detalles":"Mano empacada solo con fichas del 7 al 9."
@@ -543,7 +543,7 @@
         "id":22,
         "puntos":24,
         "tipos":[6,8],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Filtro de mano pura.",
         "detalles":"Mano empacada solo con fichas de una familia."
@@ -552,7 +552,7 @@
         "id":21,
         "puntos":24,
         "tipos":[4,6,9],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Filtro de todo pong/kong de pares.",
         "detalles":"Mano formada por pong/kongs y la pareja de fichas pares."
@@ -561,7 +561,7 @@
         "id":20,
         "puntos":24,
         "tipos":[7,8,12,13],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Cosidas con grandes honores.",
         "detalles":"Mano formada por 7 de las 9 cosidas (fan 35) y los siete honores."
@@ -570,7 +570,7 @@
         "id":19,
         "puntos":24,
         "tipos":[7],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"7 pares.",
         "detalles":"Mano formada por 7 parejas de fichas."
@@ -579,10 +579,10 @@
         "id":18,
         "puntos":32,
         "tipos":[6,10,11],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"filtro de todo honores y terminales.",
-        "detalles":null
+        "detalles":""
     },
     {
         "id":17,
@@ -642,7 +642,7 @@
         "id":11,
         "puntos":64,
         "tipos":[6,11],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Filtro de todo honores.",
         "detalles":"Mano completamente empacada solo con fichas de honores."
@@ -669,7 +669,7 @@
         "id":8,
         "puntos":64,
         "tipos":[6,10],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Cabezas y colas.",
         "detalles":"Mano empacada solo con terminales."
@@ -678,7 +678,7 @@
         "id":7,
         "puntos":88,
         "tipos":[7,10,12,13],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Trece huerfanos.",
         "detalles":"Todos los honores y terminales, y la segunda copia de uno de ellos."
@@ -687,7 +687,7 @@
         "id":6,
         "puntos":88,
         "tipos":[8],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"7 pares consecutivos puros.",
         "detalles":"7 parejas de fichas de la misma familia escalonadas entre si."
@@ -705,7 +705,7 @@
         "id":4,
         "puntos":88,
         "tipos":[7],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"9 puertas.",
         "detalles":"111-2-3-4-5-6-7-8-999, y una copia adicional de cualquiera de las fichas, todo del mismo palo."
@@ -714,7 +714,7 @@
         "id":3,
         "puntos":88,
         "tipos":[6,9,13],
-        "packs":null,
+        "packs":0,
         "pareja":false,
         "nombre":"Filtro de todo verde.",
         "detalles":"Mano empacada solo 23468 y D de bambú."

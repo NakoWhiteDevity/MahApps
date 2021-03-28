@@ -3,9 +3,9 @@ export interface Chinaface {
     id:number;
     puntos:number;
     tipos:string[];
-    packs?:number;
+    packs:number;
     pareja:boolean;
     nombre:string;
-    detalles?:string;
+    detalles:string;
     
 }
