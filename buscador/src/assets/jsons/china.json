@@ -6,7 +6,8 @@
         "packs":0,
         "pareja":false,
         "nombre":"Flores",
-        "detalles":"#Se suman a la mano tras cantar MahJong y antes del cobro de puntos. Tienen el kanji negro."
+        "detalles":"#Se suman a la mano tras cantar MahJong y antes del cobro de puntos. Tienen el kanji negro.",
+        "detallesHTML":"ENTRANDO EN DETALLESHTML"
     },
     {
         "id":81,

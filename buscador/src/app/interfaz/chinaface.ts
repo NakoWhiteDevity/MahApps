@@ -7,5 +7,6 @@ export interface Chinaface {
     pareja:boolean;
     nombre:string;
     detalles:string;
+    detallesHTML?:string;
     
 }
