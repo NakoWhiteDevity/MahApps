@@ -17,7 +17,6 @@
         </div>
         <div class="col nombre">{{jugada.nombre}}</div>
         <!-- Comprobador de detalles o detallesHTML -->
-        <div class="col desc" *ngIf="jugada.detallesHTML" [innerHTML]="descprint(jugada.detallesHTML)"></div>
-        <div class="col desc" *ngIf="!jugada.detallesHTML">{{jugada.detalles}}</div>
+        <div class="col desc" *ngIf="jugada.detallesHTML" [innerHTML]="jugada.detallesHTML"></div><div class="col desc" *ngIf="!jugada.detallesHTML">{{jugada.detalles}}</div>
     </div>
 </div>

@@ -4,11 +4,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './componentes/main/main.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PuntoschildComponent } from './componentes/main/puntoschild/puntoschild.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    PuntoschildComponent,
   ],
   imports: [
     BrowserModule,

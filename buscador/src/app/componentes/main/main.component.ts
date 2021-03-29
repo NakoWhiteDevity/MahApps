@@ -15,8 +15,8 @@ export class MainComponent implements OnInit {
   }
 
   //Funciones transformadoras:
-  tiposprint(arraydetipos:number[]){
-    let arraytraducido:string[] = []
+  tiposprint(arraydetipos:number[]):string[]{
+    let arraytraducido:string[] = [];
     arraydetipos.forEach(tipo => {
       switch(tipo){
         case 1: arraytraducido.push("chi") ; break ;
@@ -37,7 +37,7 @@ export class MainComponent implements OnInit {
     return arraytraducido;
   }
 
-  packsprint(packs:number,pareja:boolean){
+  packsprint(packs:number,pareja:boolean):string{
    const parejastring = (pareja:boolean) => { if (pareja == true){ return "P" } else { return "" } };
    const packisnull = (packs:number) => { if (packs == 0){ return "" } else { return packs } } ;
    let arraydevolver:string = "";
@@ -46,15 +46,6 @@ export class MainComponent implements OnInit {
    return arraydevolver;
   };
 
-  descprint(descstring:string){
-    return descstring;
-  }
-  
-
   ngOnInit(): void {}
-
-  /*
-  
-  */
 
 }
