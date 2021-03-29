@@ -15,25 +15,25 @@ export class MainComponent implements OnInit {
   }
 
   //Funciones transformadoras:
-  tiposprint(arraydetipos:string[]){
+  tiposprint(arraydetipos:number[]){
     let arraytraducido:string[] = []
-    for (let tipo in arraydetipos){
+    arraydetipos.forEach(tipo => {
       switch(tipo){
-        case '1' : arraytraducido.push("chi") ; break ;
-        case '2' : arraytraducido.push("pong") ; break ;
-        case '3' : arraytraducido.push("kong") ; break ;
-        case '4' : arraytraducido.push("pong/kong") ; break ;
-        case '5' : arraytraducido.push("accion") ; break ;
-        case '6' : arraytraducido.push("filtro") ; break ;
-        case '7' : arraytraducido.push("mano oculta") ; break ;
-        case '8' : arraytraducido.push("familias") ; break ;
-        case '9' : arraytraducido.push("simples") ; break ;
-        case '10': arraytraducido.push("terminales") ; break ;
-        case '11': arraytraducido.push("honores") ; break ;
-        case '12': arraytraducido.push("vientos") ; break ;
-        case '13': arraytraducido.push("dragones") ; break ;
+        case 1: arraytraducido.push("chi") ; break ;
+        case 2: arraytraducido.push("pong") ; break ;
+        case 3: arraytraducido.push("kong") ; break ;
+        case 4: arraytraducido.push("ponkon") ; break ;
+        case 5: arraytraducido.push("accion") ; break ;
+        case 6: arraytraducido.push("filtro") ; break ;
+        case 7: arraytraducido.push("manoculta") ; break ;
+        case 8: arraytraducido.push("familias") ; break ;
+        case 9: arraytraducido.push("simples") ; break ;
+        case 10: arraytraducido.push("terminales") ; break ;
+        case 11: arraytraducido.push("honores") ; break ;
+        case 12: arraytraducido.push("vientos") ; break ;
+        case 13: arraytraducido.push("dragones") ; break ;
       }
-    }
+    });
     return arraytraducido;
   }
 
@@ -52,5 +52,9 @@ export class MainComponent implements OnInit {
   
 
   ngOnInit(): void {}
+
+  /*
+  
+  */
 
 }
