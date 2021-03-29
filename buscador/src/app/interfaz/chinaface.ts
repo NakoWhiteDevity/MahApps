@@ -2,7 +2,7 @@ export interface Chinaface {
     
     id:number;
     puntos:number;
-    tipos:string[];
+    tipos:number[];
     packs:number;
     pareja:boolean;
     nombre:string;

@@ -1,18 +1,19 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewChecked, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { Chinaface } from 'src/app/interfaz/chinaface';
 
 @Component({
   selector: 'app-puntoschild',
   templateUrl: './puntoschild.component.html'
 })
-export class PuntoschildComponent implements OnInit {
+export class PuntoschildComponent implements OnInit , AfterViewChecked {
 
   @Input() jugadahija!:Chinaface;
   
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  constructor( private _cdr:ChangeDetectorRef ){}
+  
+  ngAfterViewChecked(){this._cdr.detectChanges();}
+  
+  ngOnInit(): void {}
 
   //Funciones transformadoras:
   tiposprint(arraydetipos:number[]):string[]{
@@ -45,5 +46,16 @@ export class PuntoschildComponent implements OnInit {
    arraydevolver = arraydevolver.concat(`${parejastring(pareja)}`);
    return arraydevolver;
   };
+
+  puntosjugada:number[] = [];
+  separarpuntos(puntos:number):boolean{
+    console.log("PUNTOS:",puntos,"Retropuntos:",this.puntosjugada[this.puntosjugada.length - 2]);
+    this.puntosjugada.push(puntos);
+    if(puntos !== this.puntosjugada[this.puntosjugada.length - 2]){
+      return true;
+    } else {
+      return false;
+    }
+  }
 
 }
