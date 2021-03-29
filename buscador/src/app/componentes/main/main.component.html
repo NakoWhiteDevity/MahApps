@@ -1,22 +1,12 @@
 <div class="container tablafans">
     <div class="row">
-        <div class="col pts header">Pts</div>
+        <!-- <div class="col pts header">Pts</div> -->
         <div class="col nº header">Nº</div>
         <div class="col tipos header tihe">tipos</div>
         <div class="col nombre header nohe">nombre</div>
         <div class="col desc header">descripción</div>
     </div>
-    <div class="row" *ngFor="let jugada of jugadas">
-        <div class="col pts">{{jugada.puntos}}</div>
-        <div class="col nº">{{jugada.id}}</div>
-        <!-- <div class="col tipos">{{jugada.tipos}}</div> -->
-        <!-- <div class="col tipos"><ul><li *ngFor="let tipo of tiposprint(jugada.tipos)">{{tipo}}</li></ul></div> -->
-        <div class="col tipos">
-          <div><img *ngFor="let tipo of tiposprint(jugada.tipos)" src="assets/iconosfamilias/{{tipo}}.png"></div>
-          <p>{{packsprint(jugada.packs,jugada.pareja)}}</p>
-        </div>
-        <div class="col nombre">{{jugada.nombre}}</div>
-        <!-- Comprobador de detalles o detallesHTML -->
-        <div class="col desc" *ngIf="jugada.detallesHTML" [innerHTML]="jugada.detallesHTML"></div><div class="col desc" *ngIf="!jugada.detallesHTML">{{jugada.detalles}}</div>
+    <div *ngFor="let jugadapadre of jugadas">
+        <app-puntoschild [jugadahija]="jugadapadre"></app-puntoschild>
     </div>
 </div>

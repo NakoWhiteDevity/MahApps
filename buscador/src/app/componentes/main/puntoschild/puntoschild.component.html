@@ -1,1 +1,10 @@
-<p>puntoschild works!</p>
+<div class="row">
+    <!-- <div class="col pts">{{jugadahija.puntos}}</div> -->
+    <div class="col nº">{{jugadahija.id}}</div>
+    <div class="col tipos">
+        <div><img *ngFor="let tipo of tiposprint(jugadahija.tipos)" src="assets/iconosfamilias/{{tipo}}.png"></div>
+        <p>{{packsprint(jugadahija.packs,jugadahija.pareja)}}</p>
+    </div>
+    <div class="col nombre">{{jugadahija.nombre}}</div>
+    <div class="col desc" *ngIf="jugadahija.detallesHTML" [innerHTML]="jugadahija.detallesHTML"></div><div class="col desc" *ngIf="!jugadahija.detallesHTML">{{jugadahija.detalles}}</div>
+</div>
