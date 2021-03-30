@@ -1,17 +1,15 @@
-import { AfterViewChecked, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Chinaface } from 'src/app/interfaz/chinaface';
 
 @Component({
   selector: 'app-puntoschild',
   templateUrl: './puntoschild.component.html'
 })
-export class PuntoschildComponent implements OnInit , AfterViewChecked {
+export class PuntoschildComponent implements OnInit{
 
   @Input() jugadahija!:Chinaface;
   
-  constructor( private _cdr:ChangeDetectorRef ){}
-  
-  ngAfterViewChecked(){this._cdr.detectChanges();}
+  constructor(){}
   
   ngOnInit(): void {}
 
@@ -47,15 +45,9 @@ export class PuntoschildComponent implements OnInit , AfterViewChecked {
    return arraydevolver;
   };
 
-  puntosjugada:number[] = [];
-  separarpuntos(puntos:number):boolean{
-    console.log("PUNTOS:",puntos,"Retropuntos:",this.puntosjugada[this.puntosjugada.length - 2]);
-    this.puntosjugada.push(puntos);
-    if(puntos !== this.puntosjugada[this.puntosjugada.length - 2]){
-      return true;
-    } else {
-      return false;
-    }
+  separarpuntos(id:number):boolean{
+    //console.log('id',id);
+    return false;
   }
 
 }
