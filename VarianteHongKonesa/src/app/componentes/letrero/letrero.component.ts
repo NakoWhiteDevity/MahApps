@@ -20,7 +20,7 @@ export class LetreroComponent implements OnInit , AfterViewChecked {
     this.despadre = false;
   }
 
-  //La linea que resuelve el problema: NG0100: Expression has changed after it was checked. Basicamente lo que hace es tras llegar a esta fase del ciclo de vida, aplicar los cambios sucedidos desde el init, en vez de llorarte por los cambios como niño tras hacerle pedorreta.
+  //La linea que resuelve el problema: NG0100: Expression has changed after it was checked. Basicamente lo que hace es tras llegar a esta fase del ciclo de vida, aplicar los cambios sucedidos desde el init, en vez de quejarse.
   ngAfterViewChecked(){this._cdr.detectChanges();}
   
   ngOnInit(){
