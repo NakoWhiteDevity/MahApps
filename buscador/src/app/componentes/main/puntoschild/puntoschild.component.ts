@@ -7,8 +7,7 @@ import { Chinaface } from 'src/app/interfaz/chinaface';
 })
 export class PuntoschildComponent implements OnInit{
 
-  @Input() jugadahija!:Chinaface;
-  @Input() jugadahijapre!:Chinaface;
+  @Input() jugadahija!:Chinaface[];
   
   constructor(){}
   
@@ -46,16 +45,19 @@ export class PuntoschildComponent implements OnInit{
    return arraydevolver;
   };
 
-  separarpuntos(puntosjugadahija:number,jugadaprevia:number):boolean{
+  separarpuntos(jugadahija:Chinaface[]):boolean{
     let caso:boolean;
-    let puntosprevia = jugadaprevia;
-    if (puntosjugadahija == puntosprevia){
-      caso = true;
-    } else {
-      caso = false;
+    switch(jugadahija[1]){
+      case undefined : caso = true ; break ;
+      default :
+      if (jugadahija[0].puntos == jugadahija[1].puntos){
+        caso = false;
+      } else {
+        caso = true;
+      }; break ;
     }
-    console.log(caso);
     return caso;
   }
+
 
 }

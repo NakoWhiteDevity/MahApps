@@ -7,6 +7,6 @@
         <div class="col desc header">descripción</div>
     </div>
     <div *ngFor="let jugadapadre of jugadas ; let i = index">
-        <app-puntoschild [jugadahija]="jugadapadre" [jugadahijapre]="jugadas[i - 1]"></app-puntoschild>
+        <app-puntoschild [jugadahija]="[jugadapadre,jugadas[i-1]]"></app-puntoschild>
     </div>
 </div>
