@@ -6,7 +6,7 @@
         <div class="col nombre header nohe">nombre</div>
         <div class="col desc header">descripción</div>
     </div>
-    <div *ngFor="let jugadapadre of jugadas">
-        <app-puntoschild [jugadahija]="jugadapadre"></app-puntoschild>
+    <div *ngFor="let jugadapadre of jugadas ; let i = index">
+        <app-puntoschild [jugadahija]="jugadapadre" [jugadahijapre]="jugadas[i - 1]"></app-puntoschild>
     </div>
 </div>
