@@ -1,5 +1,5 @@
-<div class="row" [ngClass]="{'margensup':separarpuntos(jugadahija)}">
-    <div class="col pts">{{jugadahija[0].puntos}}</div>
+<div class="row {{separarow(jugadahija)}}">
+    <div *ngIf="separarpuntos(jugadahija)" class="col grupopuntos">Jugadas de {{jugadahija[0].puntos}}</div>
     <div class="col nº">{{jugadahija[0].id}}</div>
     <div class="col tipos">
         <div><img *ngFor="let tipo of tiposprint(jugadahija[0].tipos)" src="assets/iconosfamilias/{{tipo}}.png"></div>

@@ -45,7 +45,7 @@ export class PuntoschildComponent implements OnInit{
    return arraydevolver;
   };
 
-  separarpuntos(jugadahija:Chinaface[]):boolean{
+  separarpuntos(jugadahija:Chinaface[]):string{
     let caso:boolean;
     switch(jugadahija[1]){
       case undefined : caso = true ; break ;
@@ -56,7 +56,34 @@ export class PuntoschildComponent implements OnInit{
         caso = true;
       }; break ;
     }
+    if (caso == true){return "margensup"} else {return ""};
+  }
+
+  estilocolorgrupo(puntos:number):string{
+    let caso!:string;
+    switch(puntos){
+      
+      case 1: caso = "t1" ; break ;
+      case 2: caso = "t2" ; break ;
+      case 4: caso = "t3" ; break ;
+      case 6: caso = "t4" ; break ;
+
+      case 8: caso = "t5" ; break ;
+      case 12: caso = "t6" ; break ;
+      case 16: caso = "t7" ; break ;
+      case 24: caso = "t8" ; break ;
+
+      case 32: caso = "t9" ; break ;
+      case 48: caso = "t10" ; break ;
+      case 64: caso = "t11" ; break ;
+      case 88: caso = "t12" ; break ;
+    
+    }
     return caso;
+  }
+
+  separarow(jugadahija:Chinaface[]){
+    return `${this.separarpuntos(jugadahija)} ${this.estilocolorgrupo(jugadahija[0].puntos)}`;
   }
 
 
