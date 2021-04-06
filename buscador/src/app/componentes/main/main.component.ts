@@ -8,8 +8,6 @@ import { JsonhandlerService } from 'src/app/servicios/jsonhandler.service';
 })
 export class MainComponent{
   
-  //1,2,4,6,8,12,16,24,32,48,64,88.
-  
   jugadas:Chinaface[] = [];
   
   constructor( private _jh:JsonhandlerService ) {
