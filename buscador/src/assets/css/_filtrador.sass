@@ -1,6 +1,4 @@
 .prueba
-    border: 5px solid red
-    border-radius: 10px
     padding: 20px
     display: flex
     justify-content: center
@@ -8,8 +6,8 @@
     flex-direction: column
     flex-wrap: nowrap
     position: fixed
-    right: 50px
-    bottom: 50px
+    right: 5px
+    top: 0px
     i
         font-size: 3rem
         color: white
@@ -18,11 +16,24 @@
         font-size: 1.25rem
         color: white
         font-weight: 700
-    .label-radio
+    .label-radio,.botonfiltrar
+        padding: 5px
+        margin: 5px
+        font-weight: 700
         color: blue
         border: 2px solid blue
+        min-width: 100%
+        text-align: center
     input[type="checkbox"]
         display: none
         &:checked + .label-radio
+            color: yellow
+            border: 2px solid yellow
+    .botonfiltrar
+        margin-top: 50px
+        background-color: transparent
+        color: lightgreen
+        border: 2px solid lightgreen
+        &:hover
             color: yellow
             border: 2px solid yellow
