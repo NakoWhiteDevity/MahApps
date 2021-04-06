@@ -10,10 +10,6 @@
     position: fixed
     right: 50px
     bottom: 50px
-    &:hover
-        cursor: pointer
-        i,p
-            color: red
     i
         font-size: 3rem
         color: white
@@ -22,3 +18,11 @@
         font-size: 1.25rem
         color: white
         font-weight: 700
+    .label-radio
+        color: blue
+        border: 2px solid blue
+    input[type="checkbox"]
+        display: none
+        &:checked + .label-radio
+            color: yellow
+            border: 2px solid yellow
