@@ -12,15 +12,15 @@ export class FiltradorComponent implements OnInit {
   
   constructor( private _fb:FormBuilder ) {
     this.checkboxes = this._fb.group({
-      
+      1:false,2:false,3:false,4:false,5:false,6:false,7:false
     });
   }
 
   ngOnInit(): void {
   }
 
-  loquefuere(){
-
+  submit(){
+    console.log(this.checkboxes.value);
   }
 
 }

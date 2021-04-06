@@ -1,6 +1,6 @@
-<form>
+<form [formGroup]="checkboxes" (ngSubmit)="submit()">
     <div *ngFor="let boton of arraybotones" >
-        <input type="checkbox" id="{{boton[0]}}" ><label for="{{boton[0]}}" class="label-radio">{{boton[1]}}</label>
+        <input type="checkbox" id="{{boton[0]}}" formControlName="{{boton[0]}}"><label for="{{boton[0]}}" class="label-radio">{{boton[1]}}</label>
     </div>
     <button type="submit" class="botonfiltrar">Filtrar</button>
 </form>
