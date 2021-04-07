@@ -49,10 +49,6 @@ export class LetreroComponent implements OnInit , AfterViewChecked {
     this.vientoronda = caso;
   }
 
-  prueba(dato:boolean){
-    console.log(dato);
-  }
-
   manomuerta(){
     let pop = confirm(`¿Se declara la mano ${this._nm.numemano} mano muerta?`);
     if (pop == true){
