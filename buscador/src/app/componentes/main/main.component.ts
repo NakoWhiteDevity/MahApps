@@ -19,7 +19,7 @@ export class MainComponent{
     this._jh.getJSON().subscribe( (resp:Chinaface[]) => doblecopia(resp));
   }
 
-  lellega(evento:any){
+  filtrado(evento:any){
     
     const arrayform = (jugada:Chinaface) => {
       let nuevarray:number[] = [];
@@ -37,8 +37,12 @@ export class MainComponent{
         }
       });
       return caso;
-    }    
-    this.jugadas = this.jugadasReadonly.filter( arrayform );
+    }   
+    
+    switch(evento){
+      case "nuke" : this.jugadas = this.jugadasReadonly ; break ;
+      default: this.jugadas = this.jugadasReadonly.filter( arrayform ) ; break ;
+    }
   }
 
 }
