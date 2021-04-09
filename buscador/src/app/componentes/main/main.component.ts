@@ -19,9 +19,20 @@ export class MainComponent{
     this._jh.getJSON().subscribe( (resp:Chinaface[]) => doblecopia(resp));
   }
 
-  lellega(evento:[]){
-    console.log("Le llega al padre:",evento);
-    this.jugadas = this.jugadasReadonly.filter( jugada => true )
+  lellega(evento:any){
+    
+    const arrayform = (jugada:Chinaface) => {
+      let nuevarray:number[] = [];
+      let jugadarray:number[] = jugada.tipos;
+      for(let flag in evento){
+        if(evento[flag] == true){
+          let nuevaflag = parseInt(flag);
+          nuevarray.push(nuevaflag);
+        }
+      }
+      if(String(nuevarray) === String(jugadarray)) { return true } else { return false }
+    }
+    this.jugadas = this.jugadasReadonly.filter( arrayform );
   }
 
 }
