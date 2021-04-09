@@ -24,14 +24,20 @@ export class MainComponent{
     const arrayform = (jugada:Chinaface) => {
       let nuevarray:number[] = [];
       let jugadarray:number[] = jugada.tipos;
+      let caso:boolean = false;
       for(let flag in evento){
         if(evento[flag] == true){
           let nuevaflag = parseInt(flag);
           nuevarray.push(nuevaflag);
         }
-      }
-      if(String(nuevarray) === String(jugadarray)) { return true } else { return false }
-    }
+      };
+      jugadarray.forEach(tipo => {
+        if (nuevarray.indexOf(tipo) !== -1){
+          caso = true;
+        }
+      });
+      return caso;
+    }    
     this.jugadas = this.jugadasReadonly.filter( arrayform );
   }
 
