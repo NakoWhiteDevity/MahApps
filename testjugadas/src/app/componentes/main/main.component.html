@@ -1,1 +1,13 @@
-Main ase la funsionasion
+<div class="container">
+    <div *ngIf="iterador(indice[0])" class="row">
+        <div class="col">{{iterador(indice[0]).puntos}}</div>
+        <div class="col">{{iterador(indice[0]).nombre}}</div>
+        <div class="col" [innerHTML]="iterador(indice[0]).detallesHTML"></div>
+    </div>
+    <div class="row">
+        <div class="col">     
+            <button (click)="pasarsiguiente()">Cambiar de jugada</button>
+            <p *ngIf="indicetest[0]">Estamos en {{indicetest[0]}}</p>
+        </div>
+    </div>
+</div>
