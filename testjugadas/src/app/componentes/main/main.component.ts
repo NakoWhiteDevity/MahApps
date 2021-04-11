@@ -13,14 +13,16 @@ export class MainComponent implements OnInit{
 
   //82 jugadas.
   jugadasReadonly:Chinaface[] = [];
-  indice:number[] = this.crearindice(); indicetrash:number[] = [];
-  indicetest:number[] = this.crearindicetest(); indicetestrash:number[] = [];
+  indice:number[] = this.crearindice(); 
+  indicetest:number[] = this.crearindicetest();
   
   constructor( private _jh:JsonhandlerService ) {
+    /*
     const copia = (jugadasJSON:Chinaface[]) => {
       this.jugadasReadonly = jugadasJSON;
     }
-    this._jh.getJSON().subscribe( (resp:Chinaface[]) => copia(resp));
+    */
+    this._jh.getJSON().subscribe( (resp:Chinaface[]) => this.jugadasReadonly = resp);
   }
 
   crearindice():number[]{
@@ -40,6 +42,7 @@ export class MainComponent implements OnInit{
       }
     }
     indice = _.shuffle(indice);
+    return indice;
   }
 
   ngOnInit(): void {}
@@ -49,14 +52,12 @@ export class MainComponent implements OnInit{
   }
 
   pasarsiguiente(){
-    let atrash:any = this.indice.shift() ; this.indicetrash.push(atrash) ;
-    let atrashindice:any = this.indicetest.shift() ; this.indicetestrash.push(atrashindice) ;
-    if (this.indicetrash.length == 62){
-      this.indicetrash.forEach(numero => {
-        this.indice.push(numero);
-      });
-      this.indice = _.shuffle(this.indice);
-      this.indicetrash = [];
+    this.indice.shift(); this.indicetest.shift();
+    if (this.indice.length == 22){
+      this.indice = this.crearindice();
+    }
+    if (this.indicetest.length == 1){
+      this.indicetest = this.crearindicetest();
     }
     //console.log(this.indice,this.indicetrash);
   }
