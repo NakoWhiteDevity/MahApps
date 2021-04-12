@@ -1,7 +1,30 @@
-<div>
-    
+<!--
+tutorial de Angular templates:
+https://profile.es/blog/angular-templates-las-directivas-ng-template-ng-container-y-ngtemplateoutlet/
+-->
+
+<div [ngSwitch]="iterador(indice).caso">
+    <ng-container *ngSwitchCase=false>
+        <p>Sin descripcion</p>
+    </ng-container>
+    <ng-container *ngSwitchCase=true [ngSwitch]=randomcondesc()>
+        <p *ngSwitchCase=1>Sin puntos</p>
+        <p *ngSwitchCase=1>Sin fan</p>
+    </ng-container>
 </div>
-<app-sinpuntos></app-sinpuntos>
+
+<!--
+<div *ngIf="iterador(indice[0]).caso == false" [ngSwitch]="randomsinpuntos(1)">
+    <p *ngSwitchCase="2" >Sin fan</p>
+    <p *ngSwitchCase="3" >Sin detalles</p>
+</div>
+<div *ngIf="iterador(indice[0]).caso == true" [ngSwitch]="randomsinpuntos(2)">
+    <p *ngSwitchCase="1">Sin puntos</p>
+    <p *ngSwitchCase="2">Sin Fan</p>
+    <p *ngSwitchCase="3">Sin detalles</p>
+</div>
+-->
+<!-- <app-sinpuntos></app-sinpuntos> -->
 
 <!--
 <div class="container">
