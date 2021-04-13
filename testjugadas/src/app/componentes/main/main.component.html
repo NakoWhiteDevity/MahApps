@@ -3,7 +3,7 @@ tutorial de Angular templates:
 https://profile.es/blog/angular-templates-las-directivas-ng-template-ng-container-y-ngtemplateoutlet/
 -->
 
-<div [ngSwitch]="iterador(indice).caso">
+<div [ngSwitch]="iterador(indice[0]).caso">
     <ng-container *ngSwitchCase=false>
         <p>Sin descripcion</p>
     </ng-container>
