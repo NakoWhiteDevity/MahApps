@@ -1,8 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Chinaface } from 'src/app/interfaces/chinaface';
-//import prueba from 'src/assets/jsons/china.json'
+import chinaJSON from 'src/assets/jsons/china.json'
 
 //Tutorial del que me he servido:
 //https://blog.nubecolectiva.com/como-leer-un-archivo-json-en-una-tabla-de-bootstrap-4-con-angular-8/
@@ -15,9 +13,9 @@ import { Chinaface } from 'src/app/interfaces/chinaface';
 })
 export class JsonhandlerService {
   
-  constructor( private _http:HttpClient ){}
+  jugadas:Chinaface[] = chinaJSON;
   
-  getJSON():Observable<Chinaface[]>{ return this._http.get<Chinaface[]>("../assets/jsons/china.json"); }
+  constructor(){}
 
 }
 

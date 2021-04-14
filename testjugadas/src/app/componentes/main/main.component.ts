@@ -12,17 +12,9 @@ import * as _ from 'underscore';
 export class MainComponent implements OnInit{
 
   //82 jugadas.
-  jugadasReadonly:Chinaface[] = [];
   indice:number[] = this.crearindice();
   
-  constructor( private _jh:JsonhandlerService ) {
-    /*
-    const copia = (jugadasJSON:Chinaface[]) => {
-      this.jugadasReadonly = jugadasJSON;
-    }
-    */
-    this._jh.getJSON().subscribe( (resp:Chinaface[]) => this.jugadasReadonly = resp);
-  }
+  constructor( private _jh:JsonhandlerService ) {}
 
   crearindice():number[]{
     let indice:number[] = [];
@@ -49,8 +41,8 @@ export class MainComponent implements OnInit{
     }
     
     let caso = {
-      jugada:this.jugadasReadonly[i],
-      caso: haydetalles(this.jugadasReadonly[i].detalles)
+      jugada:this._jh.jugadas[i],
+      caso: haydetalles(this._jh.jugadas[i].detalles)
     }
      
     //pasarsiguiente();
