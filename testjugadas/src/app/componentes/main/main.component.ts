@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { JsonhandlerService } from 'src/app/servicios/jsonhandler.service';
-import { Chinaface } from 'src/app/interfaces/chinaface';
+import { Chinaface, iteface } from 'src/app/interfaces/chinaface';
 
 //Linea para importar el módulo de underscore. Tutorial en el commit:
 import * as _ from 'underscore';
@@ -35,14 +35,14 @@ export class MainComponent implements OnInit{
 
   ngOnInit(): void {}
 
-  iterador(i:number){
-    
-    const pasarsiguiente = () => {
-      this.indice.shift();
-      if (this.indice.length == 22){
-        this.indice = this.crearindice();
-      }
+  pasarsiguiente(){
+    this.indice.shift();
+    if (this.indice.length == 22){
+      this.indice = this.crearindice();
     }
+  }
+
+  iterador(i:number):iteface{
     
     const haydetalles = (detalles:string):boolean =>{
       if (detalles == "") { return false } else { return true };
@@ -53,7 +53,7 @@ export class MainComponent implements OnInit{
       caso: haydetalles(this.jugadasReadonly[i].detalles)
     }
      
-    pasarsiguiente();
+    //pasarsiguiente();
     console.log(caso);
     return caso;
   }

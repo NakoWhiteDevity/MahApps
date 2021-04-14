@@ -10,3 +10,8 @@ export interface Chinaface {
     detallesHTML?:string;
     
 }
+
+export interface iteface {
+    jugada:Chinaface,
+    caso:boolean
+}
