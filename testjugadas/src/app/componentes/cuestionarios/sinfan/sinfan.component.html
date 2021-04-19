@@ -1,0 +1,13 @@
+<div class="container sinfan">
+    <div class="row">
+        <div class="col puntos">{{jugadasReadonlyChild.puntos}}</div>
+        <!-- dividir entre detalles HTML -->
+        <ng-container [ngSwitch]="descaso(jugadasReadonlyChild)" >
+            <div class="col detalle" *ngSwitchCase=2 [innerHTML]="jugadasReadonlyChild.detalles"></div>
+            <div class="col detalle" *ngSwitchCase=3 [innerHTML]="jugadasReadonlyChild.detallesHTML"></div>
+        </ng-container>
+    </div>
+    <div class="row" *ngFor="" >
+        <div class="col respuesta"></div>
+    </div>
+</div>

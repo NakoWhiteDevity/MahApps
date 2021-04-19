@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './componentes/main/main.component';
 import { SinpuntosComponent } from './componentes/cuestionarios/sinpuntos/sinpuntos.component';
+import { SinfanComponent } from './componentes/cuestionarios/sinfan/sinfan.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    SinpuntosComponent
+    SinpuntosComponent,
+    SinfanComponent
   ],
   imports: [
     BrowserModule,
