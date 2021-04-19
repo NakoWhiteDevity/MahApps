@@ -8,36 +8,19 @@ https://profile.es/blog/angular-templates-las-directivas-ng-template-ng-containe
         <p>Sin descripcion</p>
     </ng-container>
     <ng-container *ngSwitchCase=true [ngSwitch]=randomcondesc()>
-        <p *ngSwitchCase=1>Sin puntos</p>
+        <app-sinpuntos *ngSwitchCase=1 [jugadasReadonlyChild]="iterador(indice[0]).jugada"></app-sinpuntos>
         <p *ngSwitchCase=2>Sin fan</p>
     </ng-container>
 </div>
 
 <!--
-<div *ngIf="iterador(indice[0]).caso == false" [ngSwitch]="randomsinpuntos(1)">
-    <p *ngSwitchCase="2" >Sin fan</p>
-    <p *ngSwitchCase="3" >Sin detalles</p>
-</div>
-<div *ngIf="iterador(indice[0]).caso == true" [ngSwitch]="randomsinpuntos(2)">
-    <p *ngSwitchCase="1">Sin puntos</p>
-    <p *ngSwitchCase="2">Sin Fan</p>
-    <p *ngSwitchCase="3">Sin detalles</p>
-</div>
--->
-<!-- <app-sinpuntos></app-sinpuntos> -->
-
-<!--
-<div class="container">
-    <div *ngIf="iterador(indice[0])" class="row">
-        <div class="col">{{iterador(indice[0]).puntos}}</div>
-        <div class="col">{{iterador(indice[0]).nombre}}</div>
-        <div class="col" [innerHTML]="iterador(indice[0]).detallesHTML"></div>
-    </div>
-    <div class="row">
-        <div class="col">     
-            <button (click)="pasarsiguiente()">Cambiar de jugada</button>
-            <p *ngIf="indicetest[0]">Estamos en {{indicetest[0]}}</p>
-        </div>
-    </div>
+<div *ngIf="iterador(indice[0])" [ngSwitch]="iterador(indice[0]).caso">
+    <ng-container *ngSwitchCase=false>
+        <p>Sin descripcion</p>
+    </ng-container>
+    <ng-container *ngSwitchCase=true [ngSwitch]=randomcondesc()>
+        <p *ngSwitchCase=1>Sin puntos</p>
+        <p *ngSwitchCase=2>Sin fan</p>
+    </ng-container>
 </div>
 -->

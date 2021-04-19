@@ -1,12 +1,14 @@
 <div class="container sinpuntos">
     <div class="row">
-        <div class="col fan">Fan</div>
-        <div class="col detalle">Detalle</div>
+        <div class="col fan">{{jugadasReadonlyChild.nombre}}</div>
+        <!--<div *ngIf="jugadasReadonlyChild.detallesHTML" class="col detalle" [innerHTML]="jugadasReadonlyChild.detallesHTML"></div>-->
+        <ng-container [ngSwitch]="descaso(jugadasReadonlyChild)">
+            <div class="col detalle funado" *ngSwitchCase=1> Sin detalles </div>
+            <div class="col detalle" *ngSwitchCase=2 [innerHTML]="jugadasReadonlyChild.detalles" ></div>
+            <div class="col detalle" *ngSwitchCase=3 [innerHTML]="jugadasReadonlyChild.detallesHTML"></div>
+        </ng-container>
     </div>
     <div class="row">
-        <button class="col respuesta">1</button>
-        <button class="col respuesta">1</button>
-        <button class="col respuesta">1</button>
-        <button class="col respuesta">1</button>
+        <button *ngFor="let res of barajapuntos(jugadasReadonlyChild.puntos)" (click)="responder(res,jugadasReadonlyChild.puntos)" class="col respuesta">{{res}}</button>
     </div>
 </div>
