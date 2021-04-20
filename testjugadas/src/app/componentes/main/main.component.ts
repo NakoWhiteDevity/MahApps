@@ -46,7 +46,6 @@ export class MainComponent implements OnInit{
     }
      
     //pasarsiguiente();
-    console.log(caso);
     return caso;
   }
 

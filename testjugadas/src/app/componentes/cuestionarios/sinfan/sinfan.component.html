@@ -7,7 +7,7 @@
             <div class="col detalle" *ngSwitchCase=3 [innerHTML]="jugadasReadonlyChild.detallesHTML"></div>
         </ng-container>
     </div>
-    <div class="row" *ngFor="" >
-        <div class="col respuesta"></div>
+    <div class="row" *ngFor="let res of barajafanes(jugadasReadonlyChild)">
+        <div class="col respuesta">{{res}}</div>
     </div>
 </div>

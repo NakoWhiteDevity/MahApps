@@ -15,3 +15,8 @@ export interface iteface {
     jugada:Chinaface,
     caso:boolean
 }
+
+export interface nofanchinaface {
+    posarray:number,
+    jugada:Chinaface
+}

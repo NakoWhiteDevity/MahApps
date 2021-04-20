@@ -64,7 +64,6 @@ export class SinpuntosComponent implements OnInit {
     ]
 
     //Ejecución:
-    console.log(respuesta);
     let arrayquiz:number[] = arraycasos[tier(respuesta) - 1]; arrayquiz = _.shuffle(arrayquiz);
     let indice:number = arrayquiz.indexOf(respuesta);
     let extraccion = arrayquiz.splice(indice,1)[0];
