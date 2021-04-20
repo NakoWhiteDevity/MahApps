@@ -8,6 +8,6 @@
         </ng-container>
     </div>
     <div class="row" *ngFor="let res of barajafanes(jugadasReadonlyChild)">
-        <div class="col respuesta">{{res}}</div>
+        <div class="col respuesta" [innerHTML]="res"></div>
     </div>
 </div>

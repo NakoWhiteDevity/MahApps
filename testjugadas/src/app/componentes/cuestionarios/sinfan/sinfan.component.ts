@@ -52,21 +52,31 @@ export class SinfanComponent implements OnInit {
           this.jugadascopia.splice(indice,1);
         });
         this.jugadascopia = _.shuffle(this.jugadascopia);
-        console.log("funcion discordante:",this.jugadascopia[0]);
         return this.jugadascopia[0];
       }
 
       const construirbaraja = (adyacientes:Chinaface[],discordancia:Chinaface):string[] => {
-        let baraja:Chinaface[] = [];
+        
+        let baraja:string[] = [];
+        
+        const tipodesc = (jugada:Chinaface):string => {
+          let caso!:string;
+          if (jugada.detalles){ caso = jugada.detalles };
+          if (jugada.detallesHTML){ caso = jugada.detallesHTML };
+          return caso;
+        }
+
         adyacientes.forEach(elemento => {
-          baraja.push(elemento);
+          baraja.push(tipodesc(elemento));
         });
-        adyacientes.push(discordancia);
+        baraja.push(tipodesc(discordancia));
+        
         baraja = _.shuffle(baraja) ; return baraja;
+
       }
 
-      let ady:Chinaface[] = adyacentes(objrespuesta().posarray);
-      let dis:Chinaface = discordante(ady);
+      let ady = adyacentes(objrespuesta().posarray);
+      let dis = discordante(ady);
       return construirbaraja(ady,dis);
 
     }
