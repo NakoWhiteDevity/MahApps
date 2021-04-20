@@ -1,0 +1,8 @@
+<div class="container sindesc">
+    <div class="row">
+        <div class="col fan">{{jugadasReadonlyChild.nombre}}</div>
+    </div>
+    <div class="row">
+        <button *ngFor="let res of barajapuntos(jugadasReadonlyChild)"class="col respuesta" [innerHTML]="res"></button>
+    </div>
+</div>

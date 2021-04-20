@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { element } from 'protractor';
 import { Chinaface, nofanchinaface } from 'src/app/interfaces/chinaface';
 import { JsonhandlerService } from 'src/app/servicios/jsonhandler.service';
 import * as _ from 'underscore';

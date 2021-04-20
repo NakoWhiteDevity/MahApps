@@ -9,6 +9,6 @@
         </ng-container>
     </div>
     <div class="row">
-        <button *ngFor="let res of barajapuntos(jugadasReadonlyChild.puntos)" (click)="responder(res,jugadasReadonlyChild.puntos)" class="col respuesta">{{res}}</button>
+        <button *ngFor="let res of barajapuntos(jugadasReadonlyChild.puntos)" class="col respuesta" [innerHTML]="res"></button>
     </div>
 </div>

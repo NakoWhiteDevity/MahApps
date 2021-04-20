@@ -5,7 +5,7 @@ https://profile.es/blog/angular-templates-las-directivas-ng-template-ng-containe
 
 <div *ngIf="iterador(indice[0])" [ngSwitch]="iterador(indice[0]).caso">
     <ng-container *ngSwitchCase=false>
-        <p>Sin descripcion</p>
+        <app-sindesc [jugadasReadonlyChild]="iterador(indice[0]).jugada"></app-sindesc>
     </ng-container>
     <ng-container *ngSwitchCase=true [ngSwitch]=randomcondesc()>
         <app-sinpuntos *ngSwitchCase=1 [jugadasReadonlyChild]="iterador(indice[0]).jugada"></app-sinpuntos>
