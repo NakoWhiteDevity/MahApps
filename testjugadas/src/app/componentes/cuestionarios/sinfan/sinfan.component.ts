@@ -11,7 +11,7 @@ import * as _ from 'underscore';
 export class SinfanComponent implements OnInit {
 
   @Input() jugadasReadonlyChild!:Chinaface;
-  jugadascopia = this._jh.jugadas;
+  jugadascopia = this.jugadascopiasinfan(this._jh.jugadas);
   
   constructor( private _jh:JsonhandlerService ) { }
 
@@ -24,7 +24,15 @@ export class SinfanComponent implements OnInit {
     return caso;
   }
 
-  barajafanes(jugada:Chinaface):Chinaface[]{
+  jugadascopiasinfan(jugadas:Chinaface[]):Chinaface[]{
+    let caso:Chinaface[] = [];
+    this._jh.jugadas.forEach(jugada => {
+      if(jugada.detalles !== ""){ caso.push(jugada) };
+    });
+    return caso
+  }
+
+  barajafanes(jugada:Chinaface):string[]{
     
     //Funcionamiento
     const objrespuesta = ():nofanchinaface => {
@@ -34,13 +42,13 @@ export class SinfanComponent implements OnInit {
       }
     }
 
-    const crearbaraja = (objres:nofanchinaface):Chinaface[] => {
+    const crearbaraja = (objres:nofanchinaface):string[] => {
 
       const adyacentes = (posarray:number):Chinaface[] => {
         let caso!:Chinaface[];
         switch (posarray){
           case 0 : case 1 : caso = [this.jugadascopia[0],this.jugadascopia[1],this.jugadascopia[2]] ; break ;
-          case 81 : case 80 : caso = [this.jugadascopia[81],this.jugadascopia[80],this.jugadascopia[79]] ; break ;
+          case 71 : case 70 : caso = [this.jugadascopia[71],this.jugadascopia[70],this.jugadascopia[69]] ; break ;
           default : caso = [this.jugadascopia[posarray - 1],this.jugadascopia[posarray],this.jugadascopia[posarray + 1]] ; break ;
         }
         return caso;
