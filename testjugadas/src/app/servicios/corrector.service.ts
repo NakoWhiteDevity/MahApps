@@ -12,28 +12,41 @@ export class CorrectorService {
   comprobador(jugadaCorrecta:Chinaface,respuesta:number|string,tiporespuesta:string){
 
     //Funcionamiento:
+    const descaso = (jugada:Chinaface):string => {
+      let caso!:string;
+      if (jugada.detalles !== ""){caso = jugada.detalles;}
+      if (jugada.detallesHTML){caso = jugada.detallesHTML;}
+      return caso;
+    }
+    
     const acierto = (jugada:Chinaface):correface => {
       return {
         jugada:jugada,
-        correcto:true
+        correcto:true,
+        descripcion: descaso(jugadaCorrecta)
       }
     }
 
     const fallo = (jugada:Chinaface,tiporespuesta:string):correface => {
-
-      
-      
       return {
         jugada:jugada,
         correcto:false,
-        fallo:
+        descripcion: descaso(jugadaCorrecta),
+        error: tiporespuesta
       }
     }
     
     //Ejecucion:
     switch(typeof(respuesta)){
       case "number" :
-        if(jugadaCorrecta.puntos == respuesta){ this.corregido = acierto(jugadaCorrecta) } else { //this.corregido = fallo }
+        if(jugadaCorrecta.puntos == respuesta){ this.corregido = acierto(jugadaCorrecta) } else { this.corregido = fallo(jugadaCorrecta,tiporespuesta) } ; break ;
+      case "string" :
+        switch(tiporespuesta){
+          case "fan" :
+            if (jugadaCorrecta.nombre == respuesta) { this.corregido = acierto(jugadaCorrecta) } else { this.corregido = fallo(jugadaCorrecta,tiporespuesta) } ; break ;
+          case "descripcion":
+            if (jugadaCorrecta.detalles == respuesta) { this.corregido = acierto(jugadaCorrecta) } else { this.corregido = fallo(jugadaCorrecta,tiporespuesta) }  ; break ;
+        }
     }
 
   }

@@ -25,7 +25,9 @@ export class MainComponent implements OnInit{
     return indice;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.indice.length);
+  }
 
   pasarsiguiente(){
     this.indice.shift();
