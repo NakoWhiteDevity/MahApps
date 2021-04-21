@@ -4,10 +4,10 @@ import { JsonhandlerService } from 'src/app/servicios/jsonhandler.service';
 import * as _ from 'underscore';
 
 @Component({
-  selector: 'app-sinfan',
-  templateUrl: './sinfan.component.html'
+  selector: 'app-sindescondesc',
+  templateUrl: './sindescondesc.component.html'
 })
-export class SinfanComponent implements OnInit {
+export class SindescondescComponent implements OnInit {
 
   @Input() jugadasReadonlyChild!:Chinaface;
   jugadascopia = this.jugadascopiasinfan(this._jh.jugadas);

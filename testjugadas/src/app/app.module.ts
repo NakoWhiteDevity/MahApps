@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './componentes/main/main.component';
 import { SinpuntosComponent } from './componentes/cuestionarios/sinpuntos/sinpuntos.component';
-import { SinfanComponent } from './componentes/cuestionarios/sinfan/sinfan.component';
+import { SindescondescComponent } from './componentes/cuestionarios/sindescondesc/sindescondesc.component';
 import { SindescComponent } from './componentes/cuestionarios/sindesc/sindesc.component';
 
 @NgModule({
@@ -13,7 +13,7 @@ import { SindescComponent } from './componentes/cuestionarios/sindesc/sindesc.co
     AppComponent,
     MainComponent,
     SinpuntosComponent,
-    SinfanComponent,
+    SindescondescComponent,
     SindescComponent
   ],
   imports: [
