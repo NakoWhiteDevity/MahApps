@@ -20,3 +20,9 @@ export interface nofanchinaface {
     posarray:number,
     jugada:Chinaface
 }
+
+export interface correface{
+    jugada:Chinaface,
+    correcto:boolean,
+    error?:string|number
+}
