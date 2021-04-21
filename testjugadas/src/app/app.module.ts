@@ -7,6 +7,7 @@ import { MainComponent } from './componentes/main/main.component';
 import { SinpuntosComponent } from './componentes/cuestionarios/sinpuntos/sinpuntos.component';
 import { SindescondescComponent } from './componentes/cuestionarios/sindescondesc/sindescondesc.component';
 import { SindescComponent } from './componentes/cuestionarios/sindesc/sindesc.component';
+import { SinfanComponent } from './componentes/cuestionarios/sinfan/sinfan.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SindescComponent } from './componentes/cuestionarios/sindesc/sindesc.co
     MainComponent,
     SinpuntosComponent,
     SindescondescComponent,
-    SindescComponent
+    SindescComponent,
+    SinfanComponent
   ],
   imports: [
     BrowserModule,

@@ -50,7 +50,7 @@ export class MainComponent implements OnInit{
   }
 
   randomcondesc():number{
-    return _.random(1,2);
+    return _.random(1,3);
   }
 
 

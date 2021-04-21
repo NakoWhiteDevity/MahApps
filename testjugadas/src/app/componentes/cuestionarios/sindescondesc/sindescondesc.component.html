@@ -1,9 +1,9 @@
-<div class="container sinfan">
+<div class="container sindescondesc">
     <div class="row">
         <div class="col puntos">{{jugadasReadonlyChild.puntos}} puntos</div>
         <div class="col nombre">nombre: {{jugadasReadonlyChild.nombre}}</div>
     </div>
-    <div class="row respuesta" *ngFor="let res of barajafanes(jugadasReadonlyChild)">
-        <div class="col" [innerHTML]="res"></div>
+    <div class="row" *ngFor="let res of barajafanes(jugadasReadonlyChild)">
+        <button class="col respuesta" [innerHTML]="res"></button>
     </div>
 </div>
