@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Chinaface } from 'src/app/interfaces/chinaface';
+import { CorrectorService } from 'src/app/servicios/corrector.service';
 import { JsonhandlerService } from 'src/app/servicios/jsonhandler.service';
 import * as _ from 'underscore';
 
@@ -14,7 +15,7 @@ export class SindescComponent implements OnInit {
   @Input() jugadasReadonlyChild!:Chinaface;
   jugadascopia = this.jugadascopiasindesc(this._jh.jugadas);
   
-  constructor( private _jh:JsonhandlerService ){}
+  constructor( private _jh:JsonhandlerService, public _c:CorrectorService ){}
 
   ngOnInit(): void {}
 

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Chinaface,correface } from '../interfaces/chinaface';
 
 @Injectable({
@@ -6,7 +7,7 @@ import { Chinaface,correface } from '../interfaces/chinaface';
 })
 export class CorrectorService {
 
-  constructor(){}
+  constructor( private _router:Router ){}
   corregido!:correface;
 
   comprobador(jugadaCorrecta:Chinaface,respuesta:number|string,tiporespuesta:string){
@@ -48,6 +49,8 @@ export class CorrectorService {
             if (jugadaCorrecta.detalles == respuesta) { this.corregido = acierto(jugadaCorrecta) } else { this.corregido = fallo(jugadaCorrecta,tiporespuesta) }  ; break ;
         }
     }
+    
+    this._router.navigate(['/inicio']);
 
   }
 

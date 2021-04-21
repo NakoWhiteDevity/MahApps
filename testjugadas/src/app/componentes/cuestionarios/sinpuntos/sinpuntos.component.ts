@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Chinaface } from 'src/app/interfaces/chinaface';
+import { CorrectorService } from 'src/app/servicios/corrector.service';
 import * as _ from 'underscore';
 
 @Component({
@@ -10,7 +11,7 @@ export class SinpuntosComponent implements OnInit {
 
   @Input() jugadasReadonlyChild!:Chinaface;
   
-  constructor() { }
+  constructor( public _c:CorrectorService ) { }
 
   ngOnInit(): void {
   }

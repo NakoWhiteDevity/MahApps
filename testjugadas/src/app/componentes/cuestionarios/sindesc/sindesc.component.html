@@ -3,6 +3,6 @@
         <div class="col fan">{{jugadasReadonlyChild.nombre}}</div>
     </div>
     <div class="row">
-        <button *ngFor="let res of barajapuntos(jugadasReadonlyChild)" class="col respuesta" [innerHTML]="res"></button>
+        <button *ngFor="let res of barajapuntos(jugadasReadonlyChild)" class="col respuesta" [innerHTML]="res" (click)="_c.comprobador(jugadasReadonlyChild,res,'puntos')" ></button>
     </div>
 </div>

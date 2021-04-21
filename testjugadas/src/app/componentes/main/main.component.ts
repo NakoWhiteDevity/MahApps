@@ -4,6 +4,8 @@ import { Chinaface, iteface } from 'src/app/interfaces/chinaface';
 
 //Linea para importar el módulo de underscore. Tutorial en el commit:
 import * as _ from 'underscore';
+import { TestrastestService } from 'src/app/servicios/testrastest.service';
+import { CorrectorService } from 'src/app/servicios/corrector.service';
 
 @Component({
   selector: 'app-main',
@@ -12,30 +14,16 @@ import * as _ from 'underscore';
 export class MainComponent implements OnInit{
 
   //82 jugadas.
-  indice:number[] = this.crearindice();
+  indice:number[] = this._tat.indice;
   
-  constructor( private _jh:JsonhandlerService ) {}
-
-  crearindice():number[]{
-    let indice:number[] = [];
-    for(let n = 1 ; n <= 82 ; n++){
-      indice.push(n);
-    }
-    indice = _.shuffle(indice);
-    return indice;
-  }
+  constructor( private _jh:JsonhandlerService , private _tat:TestrastestService , public _c:CorrectorService ) {}
 
   ngOnInit(): void {
-    console.log(this.indice.length);
+    console.log(this.indice);
+    this._tat.pasarsiguiente();
+    console.log(this.indice);
   }
-
-  pasarsiguiente(){
-    this.indice.shift();
-    if (this.indice.length == 22){
-      this.indice = this.crearindice();
-    }
-  }
-
+  
   iterador(i:number):iteface{
     
     const haydetalles = (detalles:string):boolean =>{
