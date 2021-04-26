@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Chinaface, nofanchinaface } from 'src/app/interfaces/chinaface';
 import { CorrectorService } from 'src/app/servicios/corrector.service';
 import { JsonhandlerService } from 'src/app/servicios/jsonhandler.service';
+import { TestrastestService } from 'src/app/servicios/testrastest.service';
 import * as _ from 'underscore';
 
 @Component({
@@ -10,15 +11,15 @@ import * as _ from 'underscore';
 })
 export class SindescondescComponent implements OnInit {
 
-  @Input() jugadasReadonlyChild!:Chinaface;
-  jugadascopia = this.jugadascopiasinfan(this._jh.jugadas);
+  jugada:Chinaface = this._tat.aiterar.jugada;
+  jugadascopia = this.jugadascopiasinfan();
   baraja:string[] = this.barajafanes();
   
-  constructor( private _jh:JsonhandlerService , public _c:CorrectorService ) { }
+  constructor( private _jh:JsonhandlerService , public _c:CorrectorService , private _tat: TestrastestService ){}
 
   ngOnInit(): void {}
 
-  jugadascopiasinfan(jugadas:Chinaface[]):Chinaface[]{
+  jugadascopiasinfan():Chinaface[]{
     let caso:Chinaface[] = [];
     this._jh.jugadas.forEach(jugada => {
       if(jugada.detalles !== ""){ caso.push(jugada) };
@@ -28,17 +29,16 @@ export class SindescondescComponent implements OnInit {
 
   barajafanes():string[]{
     
-    let jugada:Chinaface = this.jugadasReadonlyChild;
     
     //Funcionamiento
     const objrespuesta = ():nofanchinaface => {
       return {
-        posarray : this.jugadascopia.indexOf(jugada),
-        jugada : jugada
+        posarray : this.jugadascopia.indexOf(this.jugada),
+        jugada : this.jugada
       }
     }
 
-    const crearbaraja = (objres:nofanchinaface):string[] => {
+    const crearbaraja = ():string[] => {
 
       const adyacentes = (posarray:number):Chinaface[] => {
         let caso!:Chinaface[];
@@ -86,7 +86,7 @@ export class SindescondescComponent implements OnInit {
     }
 
     //Ejecución
-    return crearbaraja(objrespuesta());
+    return crearbaraja();
 
   }
 

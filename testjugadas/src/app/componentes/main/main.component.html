@@ -9,7 +9,7 @@ https://profile.es/blog/angular-templates-las-directivas-ng-template-ng-containe
     </ng-container>
     <ng-container *ngSwitchCase=true [ngSwitch]="this._tat.random[0]">
         <app-sinpuntos *ngSwitchCase=1 [jugadasReadonlyChild]="this._tat.aiterar.jugada"></app-sinpuntos>
-        <app-sindescondesc *ngSwitchCase=2 [jugadasReadonlyChild]="this._tat.aiterar.jugada"></app-sindescondesc>
+        <app-sindescondesc *ngSwitchCase=2 ></app-sindescondesc>
         <app-sinfan *ngSwitchCase=3 [jugadasReadonlyChild]="this._tat.aiterar.jugada"></app-sinfan>
     </ng-container>
 </div>
