@@ -13,7 +13,13 @@ import chinaJSON from 'src/assets/jsons/china.json'
 })
 export class JsonhandlerService {
   
-  jugadas:Chinaface[] = chinaJSON;
+  //jugadas:Chinaface[] = chinaJSON;
+  jugadas:Chinaface[] = this.diagnosticador();
+
+  diagnosticador():Chinaface[]{
+    let caso:Chinaface[] = []; caso.push(chinaJSON[1]);
+    return caso;
+  }
   
   constructor(){}
 

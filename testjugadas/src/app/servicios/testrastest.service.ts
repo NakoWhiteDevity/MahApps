@@ -10,7 +10,8 @@ export class TestrastestService {
 
   indice:number[] = this.crearindice();
   random:number[] = this.crearrandoms();
-  aiterar:iteface = this.iterador(this.indice[0]);
+  //aiterar:iteface = this.iterador(this.indice[0]);
+  aiterar:iteface = this.iterador(0);
 
   constructor( private _jh:JsonhandlerService ){}
 
@@ -48,9 +49,9 @@ export class TestrastestService {
       jugada:this._jh.jugadas[i],
       caso: haydetalles(this._jh.jugadas[i].detalles)
     }
-     
-    //pasarsiguiente();
+
     return caso;
+  
   }
 
 

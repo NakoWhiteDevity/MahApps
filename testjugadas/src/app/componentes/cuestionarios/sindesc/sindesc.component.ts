@@ -13,14 +13,14 @@ export class SindescComponent implements OnInit {
   //1,2,4,6,8,32
   
   @Input() jugadasReadonlyChild!:Chinaface;
-  jugadascopia = this.jugadascopiasindesc(this._jh.jugadas);
+  jugadascopia = this.jugadascopiasindesc();
   baraja:number[] = this.barajapuntos();
   
   constructor( private _jh:JsonhandlerService, public _c:CorrectorService ){}
 
   ngOnInit(): void {}
 
-  jugadascopiasindesc(jugadas:Chinaface[]):Chinaface[]{
+  jugadascopiasindesc():Chinaface[]{
     let caso:Chinaface[] = [];
     this._jh.jugadas.forEach(jugada => {
       if(jugada.detalles == ""){ caso.push(jugada) };
@@ -29,7 +29,7 @@ export class SindescComponent implements OnInit {
   }
 
   barajapuntos():number[]{
-    let jugada = this.jugadasReadonlyChild;
+    console.log(this.jugadasReadonlyChild);
     let arraypuntos:number[] = [1,2,4,6,8,32]; arraypuntos = _.shuffle(arraypuntos) ;
     let preguntarray:number[] = [jugada.puntos];
     let indice:number = arraypuntos.indexOf(jugada.puntos) ; arraypuntos.splice(indice,1);
