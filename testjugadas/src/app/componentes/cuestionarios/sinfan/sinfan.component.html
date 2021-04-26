@@ -1,9 +1,9 @@
 <div class="container sinfan">
     <div class="row">
         <div class="col puntos">{{jugadasReadonlyChild.puntos}}</div>
-        <div class="col desc" [innerHTML]="tipodesc(jugadasReadonlyChild)"></div>
+        <div class="col desc" [innerHTML]="descripcion"></div>
     </div>
-    <div class="row" *ngFor="let res of barajafanes(jugadasReadonlyChild)">
+    <div class="row" *ngFor="let res of baraja">
         <button class="col respuesta" [innerHTML]="res" (click)="_c.comprobador(jugadasReadonlyChild,res,'fan')" ></button>
     </div>
 </div>

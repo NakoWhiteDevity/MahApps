@@ -1,8 +1,8 @@
 <div class="container sindesc">
     <div class="row">
-        <div class="col fan">{{jugadasReadonlyChild.nombre}}</div>
+        <div class="col fan" [innerHTML]="jugadasReadonlyChild.nombre"></div>
     </div>
     <div class="row">
-        <button *ngFor="let res of barajapuntos(jugadasReadonlyChild)" class="col respuesta" [innerHTML]="res" (click)="_c.comprobador(jugadasReadonlyChild,res,'puntos')" ></button>
+        <button *ngFor="let res of baraja" class="col respuesta" [innerHTML]="res" (click)="_c.comprobador(jugadasReadonlyChild,res,'puntos')" ></button>
     </div>
 </div>

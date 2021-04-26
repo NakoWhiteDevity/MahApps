@@ -12,6 +12,8 @@ export class SinfanComponent implements OnInit {
 
   @Input() jugadasReadonlyChild!:Chinaface;
   jugadascopia = this.jugadascopiassinfan(this._jh.jugadas);
+  baraja:string[] = this.barajafanes();
+  descripcion:string = this.tipodesc();
   
   constructor( private _jh:JsonhandlerService , public _c:CorrectorService ) { }
 
@@ -23,7 +25,8 @@ export class SinfanComponent implements OnInit {
     return caso;
   }
 
-  tipodesc(jugada:Chinaface):string{
+  tipodesc():string{
+    let jugada:Chinaface = this.jugadasReadonlyChild;
     let caso!:string;
     if (jugada.detalles){ caso = jugada.detalles };
     if (jugada.detallesHTML){ caso = jugada.detallesHTML };
@@ -33,9 +36,11 @@ export class SinfanComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  barajafanes(jugada:Chinaface):string[]{
+  barajafanes():string[]{
 
     //Funcionamiento:
+    let jugada:Chinaface = this.jugadasReadonlyChild;
+
     const construirbaraja = (jugadapreguntada:Chinaface):string[] => {
       
       this.jugadascopia = _.shuffle(this.jugadascopia);

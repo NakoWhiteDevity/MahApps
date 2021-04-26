@@ -14,6 +14,7 @@ export class SindescComponent implements OnInit {
   
   @Input() jugadasReadonlyChild!:Chinaface;
   jugadascopia = this.jugadascopiasindesc(this._jh.jugadas);
+  baraja:number[] = this.barajapuntos();
   
   constructor( private _jh:JsonhandlerService, public _c:CorrectorService ){}
 
@@ -27,7 +28,8 @@ export class SindescComponent implements OnInit {
     return caso;
   }
 
-  barajapuntos(jugada:Chinaface):number[]{
+  barajapuntos():number[]{
+    let jugada = this.jugadasReadonlyChild;
     let arraypuntos:number[] = [1,2,4,6,8,32]; arraypuntos = _.shuffle(arraypuntos) ;
     let preguntarray:number[] = [jugada.puntos];
     let indice:number = arraypuntos.indexOf(jugada.puntos) ; arraypuntos.splice(indice,1);

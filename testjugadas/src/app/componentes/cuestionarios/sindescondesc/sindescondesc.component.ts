@@ -12,17 +12,11 @@ export class SindescondescComponent implements OnInit {
 
   @Input() jugadasReadonlyChild!:Chinaface;
   jugadascopia = this.jugadascopiasinfan(this._jh.jugadas);
+  baraja:string[] = this.barajafanes();
   
   constructor( private _jh:JsonhandlerService , public _c:CorrectorService ) { }
 
   ngOnInit(): void {}
-
-  descaso(jugada:Chinaface):number{
-    let caso!:number;
-    if (jugada.detalles !== ""){caso = 2;}
-    if (jugada.detallesHTML){caso = 3;}
-    return caso;
-  }
 
   jugadascopiasinfan(jugadas:Chinaface[]):Chinaface[]{
     let caso:Chinaface[] = [];
@@ -32,7 +26,9 @@ export class SindescondescComponent implements OnInit {
     return caso
   }
 
-  barajafanes(jugada:Chinaface):string[]{
+  barajafanes():string[]{
+    
+    let jugada:Chinaface = this.jugadasReadonlyChild;
     
     //Funcionamiento
     const objrespuesta = ():nofanchinaface => {

@@ -10,13 +10,16 @@ import * as _ from 'underscore';
 export class SinpuntosComponent implements OnInit {
 
   @Input() jugadasReadonlyChild!:Chinaface;
+  casodesc:number = this.descaso();
+  baraja:number[] = this.barajapuntos();
   
   constructor( public _c:CorrectorService ) { }
 
   ngOnInit(): void {
   }
 
-  descaso(jugada:Chinaface):number{
+  descaso():number{
+    let jugada:Chinaface = this.jugadasReadonlyChild;
     let caso!:number;
     if (jugada.detalles == ""){caso = 1;}
     if (jugada.detalles !== ""){caso = 2;}
@@ -24,10 +27,12 @@ export class SinpuntosComponent implements OnInit {
     return caso;
   }
 
-  barajapuntos(respuesta:number):number[]{
+  barajapuntos():number[]{
     //1,2,4,6,8,12,16,24,32,48,64,88;
 
     //funciones y recursos:
+    let respuesta:number = this.jugadasReadonlyChild.puntos;
+    
     const tier = (puntuacion:number):number => {
       let caso!:number;
       switch(puntuacion){
@@ -72,11 +77,6 @@ export class SinpuntosComponent implements OnInit {
     return finalarray;
   }
 
-  responder(respuesta:number,solucion:number){
-    if (respuesta == solucion){
-      console.log("respuesta correcta.");
-    } else {
-      console.warn("respuesta incorrecta");
-    }
-  }
+
+
 }

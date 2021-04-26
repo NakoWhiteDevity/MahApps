@@ -3,25 +3,13 @@ tutorial de Angular templates:
 https://profile.es/blog/angular-templates-las-directivas-ng-template-ng-container-y-ngtemplateoutlet/
 -->
 
-<div *ngIf="iterador(indice[0])" [ngSwitch]="iterador(indice[0]).caso">
+<div *ngIf="this._tat.aiterar" [ngSwitch]="this._tat.aiterar.caso">
     <ng-container *ngSwitchCase=false>
-        <app-sindesc [jugadasReadonlyChild]="iterador(indice[0]).jugada"></app-sindesc>
+        <app-sindesc [jugadasReadonlyChild]="this._tat.aiterar.jugada"></app-sindesc>
     </ng-container>
-    <ng-container *ngSwitchCase=true [ngSwitch]=randomcondesc()>
-        <app-sinpuntos *ngSwitchCase=1 [jugadasReadonlyChild]="iterador(indice[0]).jugada"></app-sinpuntos>
-        <app-sindescondesc *ngSwitchCase=2 [jugadasReadonlyChild]="iterador(indice[0]).jugada"></app-sindescondesc>
-        <app-sinfan *ngSwitchCase=3 [jugadasReadonlyChild]="iterador(indice[0]).jugada"></app-sinfan>
+    <ng-container *ngSwitchCase=true [ngSwitch]="this._tat.random[0]">
+        <app-sinpuntos *ngSwitchCase=1 [jugadasReadonlyChild]="this._tat.aiterar.jugada"></app-sinpuntos>
+        <app-sindescondesc *ngSwitchCase=2 [jugadasReadonlyChild]="this._tat.aiterar.jugada"></app-sindescondesc>
+        <app-sinfan *ngSwitchCase=3 [jugadasReadonlyChild]="this._tat.aiterar.jugada"></app-sinfan>
     </ng-container>
 </div>
-
-<!--
-<div *ngIf="iterador(indice[0])" [ngSwitch]="iterador(indice[0]).caso">
-    <ng-container *ngSwitchCase=false>
-        <p>Sin descripcion</p>
-    </ng-container>
-    <ng-container *ngSwitchCase=true [ngSwitch]=randomcondesc()>
-        <p *ngSwitchCase=1>Sin puntos</p>
-        <p *ngSwitchCase=2>Sin fan</p>
-    </ng-container>
-</div>
--->
