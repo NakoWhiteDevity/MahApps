@@ -3,13 +3,13 @@ tutorial de Angular templates:
 https://profile.es/blog/angular-templates-las-directivas-ng-template-ng-container-y-ngtemplateoutlet/
 -->
 
-<div *ngIf="iterable" [ngSwitch]="iterable.caso">
+<div *ngIf="this._tat.aiterar" [ngSwitch]="this._tat.aiterar.caso">
     <ng-container *ngSwitchCase=false>
-        <app-sindesc [jugadasReadonlyChild]="iterable.jugadas"></app-sindesc>
+        <app-sindesc></app-sindesc>
     </ng-container>
-    <ng-container *ngSwitchCase=true [ngSwitch]="random">
-        <app-sinpuntos *ngSwitchCase=1 [jugadasReadonlyChild]="iterable.jugada"></app-sinpuntos>
-        <app-sindescondesc *ngSwitchCase=2 [jugadasReadonlyChild]="iterable.jugada"></app-sindescondesc>
-        <app-sinfan *ngSwitchCase=3 [jugadasReadonlyChild]="iterable.jugada"></app-sinfan>
+    <ng-container *ngSwitchCase=true [ngSwitch]="this._tat.random[0]">
+        <app-sinpuntos *ngSwitchCase=1 [jugadasReadonlyChild]="this._tat.aiterar.jugada"></app-sinpuntos>
+        <app-sindescondesc *ngSwitchCase=2 [jugadasReadonlyChild]="this._tat.aiterar.jugada"></app-sindescondesc>
+        <app-sinfan *ngSwitchCase=3 [jugadasReadonlyChild]="this._tat.aiterar.jugada"></app-sinfan>
     </ng-container>
 </div>

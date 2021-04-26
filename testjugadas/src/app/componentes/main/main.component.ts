@@ -13,10 +13,7 @@ export class MainComponent implements OnInit{
 
   //82 jugadas.
   
-  iterable:iteface = this._tat.aiterar;
-  random:number = this._tat.random[0];
-  
-  constructor( private _tat:TestrastestService ) {}
+  constructor( public _tat:TestrastestService ) {}
 
   ngOnInit(): void {}
 
