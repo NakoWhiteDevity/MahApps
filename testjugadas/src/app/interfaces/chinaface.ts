@@ -24,6 +24,5 @@ export interface nofanchinaface {
 export interface correface{
     jugada:Chinaface,
     correcto:boolean,
-    descripcion:string,
-    error?:string|number
+    error?:string
 }

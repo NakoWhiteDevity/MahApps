@@ -37,6 +37,7 @@ export class TestrastestService {
     this.indice.shift(); this.random.shift();
     if(this.indice.length == 22){ this.indice = this.crearindice() };
     if(this.random.length == 2){ this.random = this.crearrandoms() };
+    this.aiterar = this.iterador(this.indice[0]);
   }
 
   iterador(i:number):iteface{

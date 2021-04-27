@@ -1,38 +1,34 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import { Chinaface,correface } from '../interfaces/chinaface';
+import { TestrastestService } from './testrastest.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CorrectorService {
 
-  constructor( private _router:Router ){}
+  constructor( private _tat:TestrastestService ){}
+  
   corregido!:correface;
+  inarow:number = 0;
 
   comprobador(jugadaCorrecta:Chinaface,respuesta:number|string,tiporespuesta:string){
 
     //Funcionamiento:
-    const descaso = (jugada:Chinaface):string => {
-      let caso!:string;
-      if (jugada.detalles !== ""){caso = jugada.detalles;}
-      if (jugada.detallesHTML){caso = jugada.detallesHTML;}
-      return caso;
-    }
     
     const acierto = (jugada:Chinaface):correface => {
+      this.inarow++;
       return {
         jugada:jugada,
         correcto:true,
-        descripcion: descaso(jugadaCorrecta)
       }
     }
 
     const fallo = (jugada:Chinaface,tiporespuesta:string):correface => {
+      this.inarow = 0;
       return {
         jugada:jugada,
         correcto:false,
-        descripcion: descaso(jugadaCorrecta),
         error: tiporespuesta
       }
     }
@@ -49,8 +45,8 @@ export class CorrectorService {
             if (jugadaCorrecta.detalles == respuesta) { this.corregido = acierto(jugadaCorrecta) } else { this.corregido = fallo(jugadaCorrecta,tiporespuesta) }  ; break ;
         }
     }
-    
-    this._router.navigate(['/inicio']);
+
+    this._tat.pasarsiguiente();
 
   }
 

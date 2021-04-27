@@ -13,3 +13,34 @@ https://profile.es/blog/angular-templates-las-directivas-ng-template-ng-containe
         <app-sinfan *ngSwitchCase=3 ></app-sinfan>
     </ng-container>
 </div>
+
+<!--
+<div *ngIf="this._c.corregido">
+    <div [innerHTML]="this._c.inarow"></div>
+    <div *ngIf="this._c.corregido.correcto">
+        <p>Correcto: </p><p> {{this._c.corregido.jugada | json}} </p>    
+    </div>
+    <div *ngIf="!this._c.corregido.correcto" >
+        <p>Falso: </p><p> {{this._c.corregido.error}} </p>
+    </div>
+</div>
+-->
+
+<div *ngIf="this._c.corregido" class="retro container">
+    <div class="row">
+        <div class="col inarow" [innerHTML]="this._c.inarow"></div>
+    </div>
+    <ng-container [ngSwitch]="this._c.corregido.correcto">
+        <div *ngSwitchCase=true class="col correcto">
+            <p class="puntos" [innerHTML]="this._c.corregido.jugada.puntos"></p>
+            <p class="fan" [innerHTML]="this._c.corregido.jugada.nombre"></p>
+            <p class="desc"> Funcion que nos ponga las clases cuando tiene estilos </p>
+        </div>
+        <div *ngSwitchCase=false class="col error">
+            
+        </div>
+    </ng-container>
+</div>
+
+
+
