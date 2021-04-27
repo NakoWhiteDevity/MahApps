@@ -35,6 +35,8 @@ export class TestrastestService {
 
   //Recuerda que ya no esta implantado esta funcion en el main:
   pasarsiguiente(){
+    console.log("Entra en pasar siguiente.");
+    console.log(this.indice.length,this.random.length);
     this.indice.shift(); this.random.shift();
     if(this.indice.length == 22){ this.indice = this.crearindice() };
     if(this.random.length == 2){ this.random = this.crearrandoms() };

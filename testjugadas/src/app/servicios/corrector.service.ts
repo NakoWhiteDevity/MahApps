@@ -48,12 +48,16 @@ export class CorrectorService {
     //Ejecucion:
     switch(typeof(respuesta)){
       case "number" :
+        console.log("entra en número");
         if(jugadaCorrecta.puntos == respuesta){ this.corregido = acierto(jugadaCorrecta) } else { this.corregido = fallo(jugadaCorrecta,tiporespuesta) } ; break ;
       case "string" :
+        console.log("entra en string");
         switch(tiporespuesta){
           case "fan" :
+            console.log("entra en fan");
             if (jugadaCorrecta.nombre == respuesta) { this.corregido = acierto(jugadaCorrecta) } else { this.corregido = fallo(jugadaCorrecta,tiporespuesta) } ; break ;
           case "descripcion":
+            console.log("entra en descripcion");
             let transformada:string = tipodesc(jugadaCorrecta);
             if (transformada == respuesta) { this.corregido = acierto(jugadaCorrecta) } else { this.corregido = fallo(jugadaCorrecta,tiporespuesta) }  ; break ;
         }
