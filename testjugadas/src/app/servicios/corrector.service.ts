@@ -16,20 +16,32 @@ export class CorrectorService {
 
     //Funcionamiento:
     
+    const tipodesc = (jugada:Chinaface):string => {
+      let caso!:string;
+      if (jugada.detalles){ caso = jugada.detalles };
+      if (jugada.detallesHTML){ caso = jugada.detallesHTML };
+      this._tat.pasarsiguiente();
+      return caso;
+    }
+    
     const acierto = (jugada:Chinaface):correface => {
       this.inarow++;
+      this._tat.pasarsiguiente();
       return {
         jugada:jugada,
         correcto:true,
+        descripcion: tipodesc(jugada)
       }
     }
 
     const fallo = (jugada:Chinaface,tiporespuesta:string):correface => {
       this.inarow = 0;
+      this._tat.pasarsiguiente();
       return {
         jugada:jugada,
         correcto:false,
-        error: tiporespuesta
+        error: tiporespuesta,
+        descripcion: tipodesc(jugada)
       }
     }
     
@@ -42,11 +54,10 @@ export class CorrectorService {
           case "fan" :
             if (jugadaCorrecta.nombre == respuesta) { this.corregido = acierto(jugadaCorrecta) } else { this.corregido = fallo(jugadaCorrecta,tiporespuesta) } ; break ;
           case "descripcion":
-            if (jugadaCorrecta.detalles == respuesta) { this.corregido = acierto(jugadaCorrecta) } else { this.corregido = fallo(jugadaCorrecta,tiporespuesta) }  ; break ;
+            let transformada:string = tipodesc(jugadaCorrecta);
+            if (transformada == respuesta) { this.corregido = acierto(jugadaCorrecta) } else { this.corregido = fallo(jugadaCorrecta,tiporespuesta) }  ; break ;
         }
     }
-
-    this._tat.pasarsiguiente();
 
   }
 
