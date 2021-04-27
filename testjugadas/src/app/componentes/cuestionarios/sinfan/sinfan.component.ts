@@ -1,7 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Chinaface } from 'src/app/interfaces/chinaface';
 import { CorrectorService } from 'src/app/servicios/corrector.service';
 import { JsonhandlerService } from 'src/app/servicios/jsonhandler.service';
+import { TestrastestService } from 'src/app/servicios/testrastest.service';
 import * as _ from 'underscore';
 
 @Component({
@@ -10,12 +11,12 @@ import * as _ from 'underscore';
 })
 export class SinfanComponent implements OnInit {
 
-  @Input() jugadasReadonlyChild!:Chinaface;
+  jugada:Chinaface = this._tat.aiterar.jugada;
   jugadascopia = this.jugadascopiassinfan(this._jh.jugadas);
   baraja:string[] = this.barajafanes();
   descripcion:string = this.tipodesc();
   
-  constructor( private _jh:JsonhandlerService , public _c:CorrectorService ) { }
+  constructor( private _jh:JsonhandlerService , public _c:CorrectorService , private _tat:TestrastestService ) { }
 
   jugadascopiassinfan(jugadas:Chinaface[]):Chinaface[]{
     let caso:Chinaface[] = [];
@@ -26,7 +27,7 @@ export class SinfanComponent implements OnInit {
   }
 
   tipodesc():string{
-    let jugada:Chinaface = this.jugadasReadonlyChild;
+    let jugada:Chinaface = this.jugada;
     let caso!:string;
     if (jugada.detalles){ caso = jugada.detalles };
     if (jugada.detallesHTML){ caso = jugada.detallesHTML };
@@ -37,9 +38,6 @@ export class SinfanComponent implements OnInit {
   }
 
   barajafanes():string[]{
-
-    //Funcionamiento:
-    let jugada:Chinaface = this.jugadasReadonlyChild;
 
     const construirbaraja = (jugadapreguntada:Chinaface):string[] => {
       
@@ -52,7 +50,7 @@ export class SinfanComponent implements OnInit {
     }
 
     //Ejecucion:
-    return construirbaraja(jugada);
+    return construirbaraja(this.jugada);
 
   }
 

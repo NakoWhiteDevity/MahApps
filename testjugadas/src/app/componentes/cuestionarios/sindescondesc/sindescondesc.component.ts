@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Chinaface, nofanchinaface } from 'src/app/interfaces/chinaface';
 import { CorrectorService } from 'src/app/servicios/corrector.service';
 import { JsonhandlerService } from 'src/app/servicios/jsonhandler.service';
@@ -61,7 +61,7 @@ export class SindescondescComponent implements OnInit {
 
       const construirbaraja = (adyacientes:Chinaface[],discordancia:Chinaface):string[] => {
         
-        let baraja:string[] = [];
+        let prebaraja:string[] = [];
         
         const tipodesc = (jugada:Chinaface):string => {
           let caso!:string;
@@ -71,11 +71,11 @@ export class SindescondescComponent implements OnInit {
         }
 
         adyacientes.forEach(elemento => {
-          baraja.push(tipodesc(elemento));
+          prebaraja.push(tipodesc(elemento));
         });
-        baraja.push(tipodesc(discordancia));
+        prebaraja.push(tipodesc(discordancia));
         
-        baraja = _.shuffle(baraja) ; return baraja;
+        prebaraja = _.shuffle(prebaraja) ; return prebaraja ;
 
       }
 

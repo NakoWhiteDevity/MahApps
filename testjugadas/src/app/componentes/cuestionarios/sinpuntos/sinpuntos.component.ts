@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { Chinaface } from 'src/app/interfaces/chinaface';
 import { CorrectorService } from 'src/app/servicios/corrector.service';
+import { TestrastestService } from 'src/app/servicios/testrastest.service';
 import * as _ from 'underscore';
 
 @Component({
@@ -9,17 +10,16 @@ import * as _ from 'underscore';
 })
 export class SinpuntosComponent implements OnInit {
 
-  @Input() jugadasReadonlyChild!:Chinaface;
+  jugada:Chinaface = this._tat.aiterar.jugada;
   casodesc:number = this.descaso();
   baraja:number[] = this.barajapuntos();
   
-  constructor( public _c:CorrectorService ) { }
+  constructor( public _c:CorrectorService , private _tat: TestrastestService ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   descaso():number{
-    let jugada:Chinaface = this.jugadasReadonlyChild;
+    let jugada:Chinaface = this.jugada;
     let caso!:number;
     if (jugada.detalles == ""){caso = 1;}
     if (jugada.detalles !== ""){caso = 2;}
@@ -31,7 +31,7 @@ export class SinpuntosComponent implements OnInit {
     //1,2,4,6,8,12,16,24,32,48,64,88;
 
     //funciones y recursos:
-    let respuesta:number = this.jugadasReadonlyChild.puntos;
+    let respuesta:number = this.jugada.puntos;
     
     const tier = (puntuacion:number):number => {
       let caso!:number;

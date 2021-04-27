@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import * as _ from 'underscore';
 import { JsonhandlerService } from './jsonhandler.service';
-import { Chinaface, iteface } from 'src/app/interfaces/chinaface';
+import { iteface } from 'src/app/interfaces/chinaface';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +10,8 @@ export class TestrastestService {
 
   indice:number[] = this.crearindice();
   random:number[] = this.crearrandoms();
-  //aiterar:iteface = this.iterador(this.indice[0]);
-  aiterar:iteface = this.iterador(0);
+  //Desactivando la linea de shuffle de crear índice, que el aleatoriador de en caso de haber descripción reciba directamente el componente, y apuntando desde el índice la jugada, podemos comprobar los componentes uno a uno mi rey.
+  aiterar:iteface = this.iterador(this.indice[0]);
 
   constructor( private _jh:JsonhandlerService ){}
 
