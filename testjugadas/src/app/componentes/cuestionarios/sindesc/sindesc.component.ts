@@ -17,7 +17,9 @@ export class SindescComponent implements OnInit {
   
   constructor( public _c:CorrectorService, private _tat: TestrastestService ){}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log("Sin desc:",this.jugada);
+  }
 
   barajapuntos():number[]{
     let arraypuntos:number[] = [1,2,4,6,8,32]; arraypuntos = _.shuffle(arraypuntos) ;

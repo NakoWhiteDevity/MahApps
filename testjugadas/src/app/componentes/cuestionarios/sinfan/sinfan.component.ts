@@ -35,6 +35,7 @@ export class SinfanComponent implements OnInit {
   }
   
   ngOnInit(): void {
+    console.log("Sinfan:",this.jugada);
   }
 
   barajafanes():string[]{

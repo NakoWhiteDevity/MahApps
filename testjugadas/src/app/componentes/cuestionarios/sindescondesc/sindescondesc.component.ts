@@ -17,7 +17,9 @@ export class SindescondescComponent implements OnInit {
   
   constructor( private _jh:JsonhandlerService , public _c:CorrectorService , private _tat: TestrastestService ){}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log("Sin descondesc:",this.jugada);
+  }
 
   jugadascopiasinfan():Chinaface[]{
     let caso:Chinaface[] = [];

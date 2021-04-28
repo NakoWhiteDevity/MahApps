@@ -16,7 +16,9 @@ export class SinpuntosComponent implements OnInit {
   
   constructor( public _c:CorrectorService , private _tat: TestrastestService ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log("Sin puntos:",this.jugada);
+  }
 
   descaso():number{
     let jugada:Chinaface = this.jugada;
