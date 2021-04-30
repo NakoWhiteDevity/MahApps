@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { Chinaface } from 'src/app/interfaces/chinaface';
 import { CorrectorService } from 'src/app/servicios/corrector.service';
 import { TestrastestService } from 'src/app/servicios/testrastest.service';
@@ -8,7 +8,7 @@ import * as _ from 'underscore';
   selector: 'app-sindesc',
   templateUrl: './sindesc.component.html'
 })
-export class SindescComponent implements OnInit {
+export class SindescComponent implements OnInit{
 
   //1,2,4,6,8,32
   
