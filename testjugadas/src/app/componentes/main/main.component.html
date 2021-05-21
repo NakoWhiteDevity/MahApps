@@ -3,7 +3,7 @@ tutorial de Angular templates:
 https://profile.es/blog/angular-templates-las-directivas-ng-template-ng-container-y-ngtemplateoutlet/
 -->
 
-<div *ngIf="this._tat.aiterar | async" [ngSwitch]="this._tat.aiterar.caso | async">
+<div *ngIf="this._tat.aiterar" [ngSwitch]="this._tat.aiterar.caso">
     <ng-container *ngSwitchCase=false>
         <app-sindesc></app-sindesc>
     </ng-container>
@@ -14,7 +14,7 @@ https://profile.es/blog/angular-templates-las-directivas-ng-template-ng-containe
     </ng-container>
 </div>
 
-<div *ngIf="this._c.corregido | async" class="retro container">
+<div *ngIf="this._c.corregido" class="retro container">
     <div class="row">
         <div class="col inarow" [innerHTML]="this._c.inarow"></div>
     <ng-container [ngSwitch]="this._c.corregido.correcto">
