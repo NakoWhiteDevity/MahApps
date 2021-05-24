@@ -16,7 +16,11 @@ export class SindescondescComponent implements OnInit {
   baraja:string[] = this.barajafanes();
   
   constructor( private _jh:JsonhandlerService , public _c:CorrectorService , private _tat: TestrastestService ){
-    this._tat.obsjugada$.subscribe(resp => this.jugada = resp.jugada);
+    this._tat.obsjugada$.subscribe(resp => {
+      this.jugada = resp.jugada;
+      //Igualaciones tomando en consideración la nueva jugada:
+      this.baraja = this.barajafanes();
+    });
   }
 
   ngOnInit(): void {}

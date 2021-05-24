@@ -15,7 +15,12 @@ export class SinpuntosComponent implements OnInit {
   baraja:number[] = this.barajapuntos();
   
   constructor( public _c:CorrectorService , private _tat: TestrastestService ){
-    this._tat.obsjugada$.subscribe(resp => this.jugada = resp.jugada);
+    this._tat.obsjugada$.subscribe(resp => {
+      this.jugada = resp.jugada;
+      //Igualaciones tomando en consideración la nueva jugada:
+      this.casodesc = this.descaso();
+      this.baraja = this.barajapuntos();
+    });
   }
 
   ngOnInit(): void {}

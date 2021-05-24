@@ -3,11 +3,11 @@ tutorial de Angular templates:
 https://profile.es/blog/angular-templates-las-directivas-ng-template-ng-container-y-ngtemplateoutlet/
 -->
 
-<div *ngIf="this._tat.aiterar" [ngSwitch]="this._tat.aiterar.caso">
+<div *ngIf="iterado" [ngSwitch]="iterado.caso">
     <ng-container *ngSwitchCase=false>
         <app-sindesc></app-sindesc>
     </ng-container>
-    <ng-container *ngSwitchCase=true [ngSwitch]="this._tat.randomN">
+    <ng-container *ngSwitchCase=true [ngSwitch]="randomain">
         <app-sinpuntos *ngSwitchCase=1 ></app-sinpuntos>
         <app-sindescondesc *ngSwitchCase=2 ></app-sindescondesc>
         <app-sinfan *ngSwitchCase=3 ></app-sinfan>

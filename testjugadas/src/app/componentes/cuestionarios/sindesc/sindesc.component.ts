@@ -10,13 +10,17 @@ import * as _ from 'underscore';
 })
 export class SindescComponent implements OnInit{
 
-  //1,2,4,6,8,32
+  //Componente donde se pregunta acerca de las jugadas sin descripción.
   
   jugada:Chinaface = this._tat.aiterar.jugada;
   baraja:number[] = this.barajapuntos();
   
   constructor( public _c:CorrectorService, private _tat: TestrastestService ){
-    this._tat.obsjugada$.subscribe(resp => this.jugada = resp.jugada);
+    this._tat.obsjugada$.subscribe(resp => {
+      this.jugada = resp.jugada;
+      //Igualaciones tomando en consideración la nueva jugada:
+      this.baraja = this.barajapuntos();
+    });
   }
 
   ngOnInit(): void {}

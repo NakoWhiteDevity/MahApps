@@ -12,15 +12,20 @@ import * as _ from 'underscore';
 export class SinfanComponent implements OnInit {
 
   jugada:Chinaface = this._tat.aiterar.jugada;
-  jugadascopia = this.jugadascopiassinfan(this._jh.jugadas);
+  jugadascopia = this.jugadascopiassinfan();
   baraja:string[] = this.barajafanes();
   descripcion:string = this.tipodesc();
   
   constructor( private _jh:JsonhandlerService , public _c:CorrectorService , private _tat:TestrastestService ){
-    this._tat.obsjugada$.subscribe(resp => this.jugada = resp.jugada);
+    this._tat.obsjugada$.subscribe(resp => {
+      this.jugada = resp.jugada;
+      //Igualaciones tomando en consideración la nueva jugada:
+      this.baraja = this.barajafanes();
+      this.descripcion = this.tipodesc();
+    });
   }
 
-  jugadascopiassinfan(jugadas:Chinaface[]):Chinaface[]{
+  jugadascopiassinfan():Chinaface[]{
     let caso:Chinaface[] = [];
     this._jh.jugadas.forEach( jugada => {
       if(jugada.detalles !== ""){ caso.push(jugada) }
