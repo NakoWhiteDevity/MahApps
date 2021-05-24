@@ -11,12 +11,14 @@ import * as _ from 'underscore';
 })
 export class SinfanComponent implements OnInit {
 
-  jugada:Chinaface = this._tat.aiterar.jugada;
+  jugada!:Chinaface;
   jugadascopia = this.jugadascopiassinfan(this._jh.jugadas);
   baraja:string[] = this.barajafanes();
   descripcion:string = this.tipodesc();
   
-  constructor( private _jh:JsonhandlerService , public _c:CorrectorService , private _tat:TestrastestService ) { }
+  constructor( private _jh:JsonhandlerService , public _c:CorrectorService , private _tat:TestrastestService ){
+    this._tat.obsjugada$.subscribe(resp => this.jugada = resp.jugada);
+  }
 
   jugadascopiassinfan(jugadas:Chinaface[]):Chinaface[]{
     let caso:Chinaface[] = [];

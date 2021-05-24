@@ -11,11 +11,13 @@ import * as _ from 'underscore';
 })
 export class SindescondescComponent implements OnInit {
 
-  jugada:Chinaface = this._tat.aiterar.jugada;
+  jugada!:Chinaface;
   jugadascopia = this.jugadascopiasinfan();
   baraja:string[] = this.barajafanes();
   
-  constructor( private _jh:JsonhandlerService , public _c:CorrectorService , private _tat: TestrastestService ){}
+  constructor( private _jh:JsonhandlerService , public _c:CorrectorService , private _tat: TestrastestService ){
+    this._tat.obsjugada$.subscribe(resp => this.jugada = resp.jugada);
+  }
 
   ngOnInit(): void {
     console.log("Sin descondesc:",this.jugada);
