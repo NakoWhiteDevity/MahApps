@@ -15,10 +15,6 @@ export class MainComponent implements OnInit{
   
   constructor( public _tat:TestrastestService , public _c:CorrectorService ) {}
 
-  ngOnInit(): void {
-    console.log("Esto solo se arranca una ves.");
-    this._tat.obsjugada$.next(this._tat.iterador(this._tat.indice[0]));
-    this._tat.obsrandom$.next(this._tat.random[0]);
-  }
+  ngOnInit(): void {}
 
 }

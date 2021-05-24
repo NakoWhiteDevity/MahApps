@@ -12,8 +12,8 @@ export class TestrastestService {
   indice:number[] = this.crearindice();
   random:number[] = this.crearrandoms();
   //Desactivando la linea de shuffle de crear índice, que el aleatoriador de en caso de haber descripción reciba directamente el componente, y apuntando desde el índice la jugada, podemos comprobar los componentes uno a uno mi rey.
-  aiterar!:iteface;
-  randomN!:number;
+  aiterar:iteface = this.iterador(this.indice[0]);
+  randomN:number = this.random[0];
 
   //Observables:
   obsjugada$ = new Subject<iteface>();
@@ -46,11 +46,8 @@ export class TestrastestService {
     this.indice.shift(); this.random.shift();
     if(this.indice.length == 22){ this.indice = this.crearindice() };
     if(this.random.length == 2){ this.random = this.crearrandoms() };
-    // En esta linea se puede meter el next de los sujetos~~~
-    console.log("pasarsiguiente:",this.aiterar,this.randomN);
     this.obsjugada$.next(this.iterador(this.indice[0]));
     this.obsrandom$.next(this.random[0]);
-    //this.aiterar = this.iterador(this.indice[0]); this.randomN = this.random[0];
   }
 
   iterador(i:number):iteface{

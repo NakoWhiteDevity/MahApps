@@ -11,7 +11,7 @@ import * as _ from 'underscore';
 })
 export class SindescondescComponent implements OnInit {
 
-  jugada!:Chinaface;
+  jugada:Chinaface = this._tat.aiterar.jugada;
   jugadascopia = this.jugadascopiasinfan();
   baraja:string[] = this.barajafanes();
   
@@ -19,9 +19,7 @@ export class SindescondescComponent implements OnInit {
     this._tat.obsjugada$.subscribe(resp => this.jugada = resp.jugada);
   }
 
-  ngOnInit(): void {
-    console.log("Sin descondesc:",this.jugada);
-  }
+  ngOnInit(): void {}
 
   jugadascopiasinfan():Chinaface[]{
     let caso:Chinaface[] = [];

@@ -11,7 +11,7 @@ import * as _ from 'underscore';
 })
 export class SinfanComponent implements OnInit {
 
-  jugada!:Chinaface;
+  jugada:Chinaface = this._tat.aiterar.jugada;
   jugadascopia = this.jugadascopiassinfan(this._jh.jugadas);
   baraja:string[] = this.barajafanes();
   descripcion:string = this.tipodesc();
@@ -36,9 +36,7 @@ export class SinfanComponent implements OnInit {
     return caso;
   }
   
-  ngOnInit(): void {
-    console.log("Sinfan:",this.jugada);
-  }
+  ngOnInit(): void {}
 
   barajafanes():string[]{
 

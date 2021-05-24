@@ -10,7 +10,7 @@ import * as _ from 'underscore';
 })
 export class SinpuntosComponent implements OnInit {
 
-  jugada!:Chinaface;
+  jugada:Chinaface = this._tat.aiterar.jugada;
   casodesc:number = this.descaso();
   baraja:number[] = this.barajapuntos();
   
@@ -18,9 +18,7 @@ export class SinpuntosComponent implements OnInit {
     this._tat.obsjugada$.subscribe(resp => this.jugada = resp.jugada);
   }
 
-  ngOnInit(): void {
-    console.log("Sin puntos:",this.jugada);
-  }
+  ngOnInit(): void {}
 
   descaso():number{
     let jugada:Chinaface = this.jugada;

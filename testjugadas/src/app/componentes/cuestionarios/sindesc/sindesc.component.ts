@@ -12,16 +12,14 @@ export class SindescComponent implements OnInit{
 
   //1,2,4,6,8,32
   
-  jugada!:Chinaface;
+  jugada:Chinaface = this._tat.aiterar.jugada;
   baraja:number[] = this.barajapuntos();
   
   constructor( public _c:CorrectorService, private _tat: TestrastestService ){
     this._tat.obsjugada$.subscribe(resp => this.jugada = resp.jugada);
   }
 
-  ngOnInit(): void {
-    console.log("Sin desc:",this.jugada);
-  }
+  ngOnInit(): void {}
 
   barajapuntos():number[]{
     let arraypuntos:number[] = [1,2,4,6,8,32]; arraypuntos = _.shuffle(arraypuntos) ;
