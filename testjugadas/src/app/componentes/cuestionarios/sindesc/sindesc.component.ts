@@ -13,13 +13,12 @@ export class SindescComponent implements OnInit{
   //Componente donde se pregunta acerca de las jugadas sin descripción.
   
   jugada:Chinaface = this._tat.aiterar.jugada;
-  baraja:number[] = this.barajapuntos();
+  baraja!:number[];
   
   constructor( public _c:CorrectorService, private _tat: TestrastestService ){
     this._tat.obsjugada$.subscribe(resp => {
       this.jugada = resp.jugada;
-      //Igualaciones tomando en consideración la nueva jugada:
-      this.baraja = this.barajapuntos();
+      if(resp.caso == false){ this.baraja = this.barajapuntos(); }
     });
   }
 

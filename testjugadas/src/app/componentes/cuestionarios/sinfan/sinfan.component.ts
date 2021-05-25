@@ -12,7 +12,6 @@ import * as _ from 'underscore';
 export class SinfanComponent implements OnInit {
 
   jugada:Chinaface = this._tat.aiterar.jugada;
-  jugadascopia = this.jugadascopiassinfan();
   baraja:string[] = this.barajafanes();
   descripcion:string = this.tipodesc();
   
@@ -47,10 +46,10 @@ export class SinfanComponent implements OnInit {
 
     const construirbaraja = (jugadapreguntada:Chinaface):string[] => {
       
-      this.jugadascopia = _.shuffle(this.jugadascopia);
-      let indice:number = this.jugadascopia.indexOf(jugadapreguntada);
-      this.jugadascopia.splice(indice,1);
-      let baraja:string[] = [jugadapreguntada.nombre,this.jugadascopia[0].nombre,this.jugadascopia[1].nombre,this.jugadascopia[2].nombre] ; baraja = _.shuffle(baraja);
+      const jugadascopia = _.shuffle(this.jugadascopiassinfan());
+      let indice:number = jugadascopia.indexOf(jugadapreguntada);
+      jugadascopia.splice(indice,1);
+      let baraja:string[] = [jugadapreguntada.nombre,jugadascopia[0].nombre,jugadascopia[1].nombre,jugadascopia[2].nombre] ; baraja = _.shuffle(baraja);
       return baraja;
 
     }

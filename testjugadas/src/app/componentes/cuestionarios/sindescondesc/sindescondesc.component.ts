@@ -12,15 +12,26 @@ import * as _ from 'underscore';
 export class SindescondescComponent implements OnInit {
 
   jugada:Chinaface = this._tat.aiterar.jugada;
-  jugadascopia = this.jugadascopiasinfan();
   baraja:string[] = this.barajafanes();
   
   constructor( private _jh:JsonhandlerService , public _c:CorrectorService , private _tat: TestrastestService ){
+
+    /*
+    this._tat.obsrandom$.subscribe(resp => {
+      console.log(resp);
+      this.randomactual = resp;
+    });
+
     this._tat.obsjugada$.subscribe(resp => {
       this.jugada = resp.jugada;
-      //Igualaciones tomando en consideración la nueva jugada:
-      this.baraja = this.barajafanes();
+      if(this.randomactual == 2){
+        this.baraja = this.barajafanes();
+      }
     });
+    */
+
+    this._tat.obsjugada$.subscribe(resp => this.jugada = resp.jugada);
+
   }
 
   ngOnInit(): void {}
@@ -35,6 +46,7 @@ export class SindescondescComponent implements OnInit {
 
   barajafanes():string[]{
     
+    /*
     
     //Funcionamiento
     const objrespuesta = ():nofanchinaface => {
@@ -63,7 +75,7 @@ export class SindescondescComponent implements OnInit {
         });
         this.jugadascopia = _.shuffle(this.jugadascopia);
         return this.jugadascopia[0];
-      }
+      }this.
 
       const construirbaraja = (adyacientes:Chinaface[],discordancia:Chinaface):string[] => {
         
@@ -94,6 +106,25 @@ export class SindescondescComponent implements OnInit {
     //Ejecución
     return crearbaraja();
 
+    */
+
+    const tipodesc = (jugada:Chinaface):string => {
+      let caso!:string;
+      if (jugada.detalles){ caso = jugada.detalles };
+      if (jugada.detallesHTML){ caso = jugada.detallesHTML };
+      return caso;
+    }
+    
+    const construirbaraja = (jugadapreguntada:Chinaface):string[] => {
+      const jugadascopia = _.shuffle(this.jugadascopiasinfan());
+      let indice:number = jugadascopia.indexOf(jugadapreguntada);
+      jugadascopia.splice(indice,1);
+      let baraja:string[] = [tipodesc(jugadapreguntada),tipodesc(jugadascopia[0]),tipodesc(jugadascopia[1]),tipodesc(jugadascopia[2])] ; baraja = _.shuffle(baraja);
+      return baraja;
+    }
+
+    return construirbaraja(this.jugada);
+  
   }
 
 }
