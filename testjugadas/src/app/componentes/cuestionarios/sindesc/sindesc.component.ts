@@ -3,7 +3,7 @@ import { Chinaface } from 'src/app/interfaces/chinaface';
 import { CorrectorService } from 'src/app/servicios/corrector.service';
 import { TestrastestService } from 'src/app/servicios/testrastest.service';
 import * as _ from 'underscore';
-import { filter } from 'rxjs/operators';
+import { filter , tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-sindesc',
@@ -13,13 +13,16 @@ export class SindescComponent implements OnInit{
 
   //Condición : que el caso sea falso.
   
-  jugada:Chinaface = this._tat.aiterar.jugada;
-  baraja!:number[];
+  jugada:Chinaface = this._tat.iterador(this._tat.indice[0]).jugada;
+  baraja:number[] = this.barajapuntos();
 
   constructor( public _c:CorrectorService , private _tat:TestrastestService ){
     this._tat.obsjugada$.pipe(
       filter(resp => !resp.caso)
-    ).subscribe(resp => this.jugada = resp.jugada);
+    ).subscribe(resp => {
+      this.jugada = resp.jugada;
+      this.baraja = this.barajapuntos();
+    });
   }
 
   ngOnInit(): void {}

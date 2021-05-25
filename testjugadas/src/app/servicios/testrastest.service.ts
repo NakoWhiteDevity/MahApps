@@ -12,17 +12,13 @@ export class TestrastestService {
   indice:number[] = this.crearindice();
   random:number[] = this.crearrandoms();
   //Desactivando la linea de shuffle de crear índice, que el aleatoriador de en caso de haber descripción reciba directamente el componente, y apuntando desde el índice la jugada, podemos comprobar los componentes uno a uno mi rey.
-  aiterar:iteface = this.iterador(this.indice[0]);
-  randomN:number = this.random[0];
+
 
   //Observables:
   obsjugada$ = new Subject<iteface>();
   obsrandom$ = new Subject<number>();
 
-  constructor( private _jh:JsonhandlerService ){
-    this.obsjugada$.subscribe(resp => this.aiterar = resp);
-    this.obsrandom$.subscribe(resp => this.randomN = resp);
-  }
+  constructor( private _jh:JsonhandlerService ){}
 
   crearindice():number[]{
     let indice:number[] = [];
@@ -36,7 +32,16 @@ export class TestrastestService {
   crearrandoms():number[]{
     let randoms:number[] = [];
     for(let n = 1 ; n <= 100 ; n++){
-      randoms.push(_.random(1,3));
+      //randoms.push(_.random(1,3));
+      if(randoms.length == 0){
+        randoms.push(_.random(1,3))
+      } else {
+        switch(randoms[randoms.length - 1]){
+          case 1 : randoms.push(_.random(2,3)) ; break ;
+          case 3 : randoms.push(_.random(1,2)) ; break ;
+          case 2 : if (_.random(1,2) == 2){ randoms.push(3) } else {randoms.push(1) } ; break ;
+        }
+      }
     }
     return randoms;
   }
@@ -46,6 +51,7 @@ export class TestrastestService {
     this.indice.shift(); this.random.shift();
     if(this.indice.length == 22){ this.indice = this.crearindice() };
     if(this.random.length == 2){ this.random = this.crearrandoms() };
+    console.log(this.iterador(this.indice[0]).jugada.id,this.random[0]);;
     this.obsjugada$.next(this.iterador(this.indice[0]));
     this.obsrandom$.next(this.random[0]);
   }

@@ -13,9 +13,9 @@ export class SinpuntosComponent implements OnInit {
 
   //Condicion : que el random del observable sea 1.
   
-  jugada:Chinaface = this._tat.aiterar.jugada;
-  casodesc!:number;
-  baraja!:number[];
+  jugada:Chinaface = this._tat.iterador(this._tat.indice[0]).jugada;
+  casodesc:number = this.descaso();
+  baraja:number[] = this.barajapuntos();
 
   constructor( public _c:CorrectorService , private _tat : TestrastestService ){
     let random!:number;
@@ -26,7 +26,7 @@ export class SinpuntosComponent implements OnInit {
       this.jugada = resp.jugada;
       this.casodesc = this.descaso();
       this.baraja = this.barajapuntos();
-    })
+    });
   }
 
   ngOnInit(): void {}

@@ -14,10 +14,10 @@ export class SinfanComponent implements OnInit {
 
   //Condicion : que el random del observable sea 3.
   
-  jugada:Chinaface = this._tat.aiterar.jugada;
-  baraja!:string[];
-  descripcion!:string;
-  
+  jugada:Chinaface = this._tat.iterador(this._tat.indice[0]).jugada;
+  baraja:string[] = this.barajafanes();
+  descripcion:string = this.tipodesc();
+
   constructor( private _jh:JsonhandlerService , public _c:CorrectorService , private _tat:TestrastestService ){
     let random!:number;
     this._tat.obsrandom$.subscribe(resp => random = resp);
@@ -27,7 +27,7 @@ export class SinfanComponent implements OnInit {
       this.jugada = resp.jugada;
       this.baraja = this.barajafanes();
       this.descripcion = this.tipodesc();
-    })
+    });
   }
 
   jugadascopiassinfan():Chinaface[]{

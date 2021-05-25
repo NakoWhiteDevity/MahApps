@@ -4,7 +4,7 @@ import { CorrectorService } from 'src/app/servicios/corrector.service';
 import { JsonhandlerService } from 'src/app/servicios/jsonhandler.service';
 import { TestrastestService } from 'src/app/servicios/testrastest.service';
 import * as _ from 'underscore';
-import { filter } from 'rxjs/operators';
+import { filter , tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-sindescondesc',
@@ -14,18 +14,19 @@ export class SindescondescComponent implements OnInit {
 
   //Condicion : que el random del observable sea 2.
   
-  jugada:Chinaface = this._tat.aiterar.jugada;
-  baraja!:string[];
-  
+  jugada:Chinaface = this._tat.iterador(this._tat.indice[0]).jugada;
+  baraja:string[] = this.barajafanes();
+
   constructor( private _jh:JsonhandlerService , public _c:CorrectorService , private _tat : TestrastestService ){
     let random!:number;
     this._tat.obsrandom$.subscribe(resp => random = resp);
     this._tat.obsjugada$.pipe(
       filter( resp => random == 2 )
-    ).subscribe(resp => this.jugada = resp.jugada)
+    ).subscribe(resp => {
+      this.jugada = resp.jugada;
+      this.baraja = this.barajafanes();
+    });
   }
-
-
 
   ngOnInit(): void {}
 
