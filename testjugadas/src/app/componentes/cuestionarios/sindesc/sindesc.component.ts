@@ -3,6 +3,7 @@ import { Chinaface } from 'src/app/interfaces/chinaface';
 import { CorrectorService } from 'src/app/servicios/corrector.service';
 import { TestrastestService } from 'src/app/servicios/testrastest.service';
 import * as _ from 'underscore';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-sindesc',
@@ -10,16 +11,15 @@ import * as _ from 'underscore';
 })
 export class SindescComponent implements OnInit{
 
-  //Componente donde se pregunta acerca de las jugadas sin descripción.
+  //Condición : que el caso sea falso.
   
   jugada:Chinaface = this._tat.aiterar.jugada;
   baraja!:number[];
-  
-  constructor( public _c:CorrectorService, private _tat: TestrastestService ){
-    this._tat.obsjugada$.subscribe(resp => {
-      this.jugada = resp.jugada;
-      if(resp.caso == false){ this.baraja = this.barajapuntos(); }
-    });
+
+  constructor( public _c:CorrectorService , private _tat:TestrastestService ){
+    this._tat.obsjugada$.pipe(
+      filter(resp => !resp.caso)
+    ).subscribe(resp => this.jugada = resp.jugada);
   }
 
   ngOnInit(): void {}

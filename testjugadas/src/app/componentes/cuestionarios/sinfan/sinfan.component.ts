@@ -4,6 +4,7 @@ import { CorrectorService } from 'src/app/servicios/corrector.service';
 import { JsonhandlerService } from 'src/app/servicios/jsonhandler.service';
 import { TestrastestService } from 'src/app/servicios/testrastest.service';
 import * as _ from 'underscore';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-sinfan',
@@ -11,17 +12,22 @@ import * as _ from 'underscore';
 })
 export class SinfanComponent implements OnInit {
 
+  //Condicion : que el random del observable sea 3.
+  
   jugada:Chinaface = this._tat.aiterar.jugada;
-  baraja:string[] = this.barajafanes();
-  descripcion:string = this.tipodesc();
+  baraja!:string[];
+  descripcion!:string;
   
   constructor( private _jh:JsonhandlerService , public _c:CorrectorService , private _tat:TestrastestService ){
-    this._tat.obsjugada$.subscribe(resp => {
+    let random!:number;
+    this._tat.obsrandom$.subscribe(resp => random = resp);
+    this._tat.obsjugada$.pipe(
+      filter(resp => random == 3)
+    ).subscribe(resp => {
       this.jugada = resp.jugada;
-      //Igualaciones tomando en consideración la nueva jugada:
       this.baraja = this.barajafanes();
       this.descripcion = this.tipodesc();
-    });
+    })
   }
 
   jugadascopiassinfan():Chinaface[]{

@@ -3,6 +3,7 @@ import { Chinaface } from 'src/app/interfaces/chinaface';
 import { CorrectorService } from 'src/app/servicios/corrector.service';
 import { TestrastestService } from 'src/app/servicios/testrastest.service';
 import * as _ from 'underscore';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-sinpuntos',
@@ -10,17 +11,22 @@ import * as _ from 'underscore';
 })
 export class SinpuntosComponent implements OnInit {
 
-  jugada:Chinaface = this._tat.aiterar.jugada;
-  casodesc:number = this.descaso();
-  baraja:number[] = this.barajapuntos();
+  //Condicion : que el random del observable sea 1.
   
-  constructor( public _c:CorrectorService , private _tat: TestrastestService ){
-    this._tat.obsjugada$.subscribe(resp => {
+  jugada:Chinaface = this._tat.aiterar.jugada;
+  casodesc!:number;
+  baraja!:number[];
+
+  constructor( public _c:CorrectorService , private _tat : TestrastestService ){
+    let random!:number;
+    this._tat.obsrandom$.subscribe(resp => random = resp);
+    this._tat.obsjugada$.pipe(
+      filter( resp => random == 1 )
+    ).subscribe(resp => {
       this.jugada = resp.jugada;
-      //Igualaciones tomando en consideración la nueva jugada:
       this.casodesc = this.descaso();
       this.baraja = this.barajapuntos();
-    });
+    })
   }
 
   ngOnInit(): void {}
