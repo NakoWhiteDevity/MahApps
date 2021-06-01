@@ -1,1 +1,35 @@
-<p>main works!</p>
+<!--
+tutorial de Angular templates:
+https://profile.es/blog/angular-templates-las-directivas-ng-template-ng-container-y-ngtemplateoutlet/
+-->
+
+<div class="container menucoleccion">
+    <div class="row">
+        <div class="col titulocentrado">MahApps</div>
+    </div>
+    <div class="row coleccion">
+        <div class="col subapp" [class.seleccionado]="conmutador.buscador" (click)="accionconmutadora('buscador')" >Buscador</div>
+        <div class="col subapp" [class.seleccionado]="conmutador.quiz" (click)="accionconmutadora('quiz')">Quiz</div>
+        <div class="col subapp" [class.seleccionado]="conmutador.letrero" (click)="accionconmutadora('letrero')">Letrero</div>
+    </div>
+    <div *ngIf="objeto == true" class="row seleccion">
+        
+        <!--
+        <div class="col opcion">Uno</div>
+        <div class="col opcion">Dos</div>
+        -->
+
+        <ng-container>
+            <div class="col opcion">Uno</div>
+        </ng-container>
+
+        <ng-container>
+            <div class="col opcion">Dos</div>
+        </ng-container>
+
+        <ng-container>
+            <div class="col opcion">Tres</div>
+        </ng-container>
+    
+    </div>
+</div>
