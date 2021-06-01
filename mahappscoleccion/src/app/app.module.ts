@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';  
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -14,9 +15,11 @@ const APP_ROUTING: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     RouterModule.forRoot(APP_ROUTING)
   ],
