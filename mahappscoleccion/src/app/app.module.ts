@@ -1,8 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { MainComponent } from './componentes/main/main.component';
+
+
+const APP_ROUTING: Routes = [
+  { path:'' , component : MainComponent },
+  { path: '', pathMatch: 'full', redirectTo : '' },
+  { path: '**', pathMatch: 'full', redirectTo : '' }
+];
+
 
 @NgModule({
   declarations: [
@@ -10,7 +18,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule.forRoot(APP_ROUTING)
   ],
   providers: [],
   bootstrap: [AppComponent]
