@@ -13,11 +13,6 @@ https://profile.es/blog/angular-templates-las-directivas-ng-template-ng-containe
         <div class="col subapp" [class.seleccionado]="funcionamiento.conmutadores.letrero" (click)="accionconmutadora('letrero')">Letrero</div>
     </div>
     <div *ngIf="true" class="row seleccion">
-        
-        <!--
-        <div class="col opcion">Uno</div>
-        <div class="col opcion">Dos</div>
-        -->
 
         <ng-container *ngIf="funcionamiento.conmutadores.buscador">
             <ng-container *ngFor="let item of funcionamiento.opciones.buscador">
@@ -25,12 +20,16 @@ https://profile.es/blog/angular-templates-las-directivas-ng-template-ng-containe
             </ng-container>
         </ng-container>
 
-        <ng-container *ngIf="funcionamiento.conmutadores.quiz" >
-            <div class="col opcion">quiz</div>
+        <ng-container *ngIf="funcionamiento.conmutadores.quiz">
+            <ng-container *ngFor="let item of funcionamiento.opciones.quiz">
+                <a class="col opcion" [class.deshabilitado]="item[1] == ''"  href="{{item[1]}}"><div>{{item[0]}}</div></a>
+            </ng-container>
         </ng-container>
 
-        <ng-container *ngIf="funcionamiento.conmutadores.letrero" >
-            <div class="col opcion">Letrero</div>
+        <ng-container *ngIf="funcionamiento.conmutadores.letrero">
+            <ng-container *ngFor="let item of funcionamiento.opciones.letrero">
+                <a class="col opcion" [class.deshabilitado]="item[1] == ''"  href="{{item[1]}}"><div>{{item[0]}}</div></a>
+            </ng-container>
         </ng-container>
     
     </div>
