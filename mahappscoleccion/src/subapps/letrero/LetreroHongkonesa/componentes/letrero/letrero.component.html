@@ -1,0 +1,32 @@
+<div class="container" [ngClass]="{'deshabilitado':despadre}">
+    <div class="row">
+        <div class="col-8 tarjetaspuntos">
+            
+            <div *ngFor="let jugador of listajugadores" class="row tarjeta {{jugador.superaa | posicion}} {{jugador.viento | viento}}">
+                <div class="col-2 viento" [ngSwitch]="jugador.viento" >
+                    <div class="simbolo" *ngSwitchCase="'E'" >東</div><div class="nombre" *ngSwitchCase="'E'">Este</div>
+                    <div class="simbolo" *ngSwitchCase="'S'" >南</div><div class="nombre" *ngSwitchCase="'S'">Sur</div>
+                    <div class="simbolo" *ngSwitchCase="'W'" >西</div><div class="nombre" *ngSwitchCase="'W'">Oeste</div>
+                    <div class="simbolo" *ngSwitchCase="'N'" >北</div><div class="nombre" *ngSwitchCase="'N'">Norte</div>
+                </div>
+                <div class="col-4 jugador">{{jugador.nombre}}</div>
+                <div class="col puntos">{{jugador.puntos | puntos}}</div>
+            </div>
+        
+        </div>
+        <div class="col-4 controles">
+            <div class="numeronda container">
+                <div class="row">
+                    <div class="col viento {{vientoronda[0]}}">{{vientoronda[1]}}</div>
+                    <div class="col ronda">{{numemano}}/16</div>
+                </div>
+                <app-manosplus class="manosplus"></app-manosplus>
+                <div class="row">
+                    <button class="col botonhu btn" (click)="iratabla()" [disabled]="despadre">MahJong!</button>
+                    <button class="col botonhu btn" (click)="manomuerta()" [disabled]="despadre">Mano Muerta</button>
+                </div>
+                <app-cambiosillas (deshijo)="deshabilita($event)"></app-cambiosillas>
+            </div>
+        </div>
+    </div>
+<app-reseteador></app-reseteador>

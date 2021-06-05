@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col tarjetaspuntosfin">
+            <div *ngFor="let jugador of squad" class="row tarjeta {{jugador.superaa | posicion}} {{jugador.viento | viento}}">
+                <div class="col jugador">{{jugador.nombre}}</div>
+                <div class="col puntos">{{jugador.puntos | puntos}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="row ganador">
+        <div class="col"><p>¡{{ganador}} ha ganado la partida!</p></div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="container sindescondesc">
+    <div class="row">
+        <div class="col puntos" [innerHTML]="jugada.puntos"></div>
+        <div class="col nombre" [innerHTML]="jugada.nombre"></div>
+    </div>
+    <div class="row" *ngFor="let res of baraja">
+        <button class="col respuesta" [innerHTML]="res" (click)="_c.comprobador(jugada,res,'descripcion')" ></button>
+    </div>
+</div>

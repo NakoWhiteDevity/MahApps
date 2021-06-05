@@ -1,0 +1,10 @@
+<div class="row {{separarow(jugadahija)}}">
+    <div *ngIf="separarpuntos(jugadahija)" class="col grupopuntos">Jugadas de {{jugadahija[0].puntos}}</div>
+    <div class="col nº">{{jugadahija[0].id}}</div>
+    <div class="col tipos">
+        <div><img *ngFor="let tipo of tiposprint(jugadahija[0].tipos)" src="assets/iconosfamilias/{{tipo}}.png"></div>
+        <p>{{packsprint(jugadahija[0].packs,jugadahija[0].pareja)}}</p>
+    </div>
+    <div class="col nombre">{{jugadahija[0].nombre}}</div>
+    <div class="col desc" *ngIf="jugadahija[0].detallesHTML" [innerHTML]="jugadahija[0].detallesHTML"></div><div class="col desc" *ngIf="!jugadahija[0].detallesHTML">{{jugadahija[0].detalles}}</div>
+</div>

@@ -1,0 +1,13 @@
+<div class="container sinpuntos">
+    <div class="row">
+        <div class="col fan" [innerHTML]="jugada.nombre"></div>
+        <ng-container [ngSwitch]="casodesc">
+            <div class="col detalle funado" *ngSwitchCase=1> Sin detalles </div>
+            <div class="col detalle" *ngSwitchCase=2 [innerHTML]="jugada.detalles"></div>
+            <div class="col detalle" *ngSwitchCase=3 [innerHTML]="jugada.detallesHTML"></div>
+        </ng-container>
+    </div>
+    <div class="row">
+        <button *ngFor="let res of baraja" class="col respuesta" [innerHTML]="res" (click)="_c.comprobador(jugada,res,'puntos')" ></button>
+    </div>
+</div>

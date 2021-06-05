@@ -1,0 +1,51 @@
+<!--
+tutorial de Angular templates:
+https://profile.es/blog/angular-templates-las-directivas-ng-template-ng-container-y-ngtemplateoutlet/
+-->
+
+<div *ngIf="iterado" [ngSwitch]="iterado.caso">
+    <ng-container *ngSwitchCase=false>
+        <app-sindesc></app-sindesc>
+    </ng-container>
+    <ng-container *ngSwitchCase=true [ngSwitch]="randomain">
+        <app-sinpuntos *ngSwitchCase=1 ></app-sinpuntos>
+        <app-sindescondesc *ngSwitchCase=2 ></app-sindescondesc>
+        <app-sinfan *ngSwitchCase=3 ></app-sinfan>
+    </ng-container>
+</div>
+
+<div *ngIf="this._c.corregido" class="retro container">
+    <div class="row">
+        <div class="col inarow" [innerHTML]="this._c.inarow"></div>
+    <ng-container [ngSwitch]="this._c.corregido.correcto">
+        <div *ngSwitchCase=true class="col correcto">
+            <p class="puntos" [innerHTML]="this._c.corregido.jugada.puntos"></p>
+            <p class="fan" [innerHTML]="this._c.corregido.jugada.nombre"></p>
+            <p class="desc" *ngIf="this._c.corregido.descripcion" [innerHTML]="this._c.corregido.descripcion"></p>
+        </div>
+        <div *ngSwitchCase=false class="col error" [ngSwitch]="this._c.corregido.error" >
+
+            <ng-container *ngSwitchCase="'puntos'" >
+                <p class="puntos erroritem" [innerHTML]="this._c.corregido.jugada.puntos"></p>
+                <p class="fan" [innerHTML]="this._c.corregido.jugada.nombre"></p>
+                <p class="desc" *ngIf="this._c.corregido.descripcion" [innerHTML]="this._c.corregido.descripcion"></p>
+            </ng-container>
+
+            <ng-container *ngSwitchCase="'fan'" >
+                <p class="puntos" [innerHTML]="this._c.corregido.jugada.puntos"></p>
+                <p class="fan erroritem" [innerHTML]="this._c.corregido.jugada.nombre"></p>
+                <p class="desc" *ngIf="this._c.corregido.descripcion" [innerHTML]="this._c.corregido.descripcion"></p>
+            </ng-container>
+
+            <ng-container *ngSwitchCase="'descripcion'" >
+                <p class="puntos" [innerHTML]="this._c.corregido.jugada.puntos"></p>
+                <p class="fan" [innerHTML]="this._c.corregido.jugada.nombre"></p>
+                <p class="desc erroritem" *ngIf="this._c.corregido.descripcion" [innerHTML]="this._c.corregido.descripcion"></p>
+            </ng-container>
+
+        </div>
+    </ng-container>
+</div>
+
+
+
