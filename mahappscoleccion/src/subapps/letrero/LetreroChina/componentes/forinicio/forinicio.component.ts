@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { GenerarjugadoresService } from '../../servicios/generarjugadores.service';
 import { ValidarformularioinicioService } from '../../servicios/validarformularioinicio.service';
 
@@ -20,6 +20,7 @@ export class ForinicioComponent implements OnInit{
       jugador3 : ['',[Validators.required,Validators.minLength(3),Validators.maxLength(10)]],
       jugador4 : ['',[Validators.required,Validators.minLength(3),Validators.maxLength(10)]]
     });
+    console.log(_router.url);
   }
 
   ngOnInit(){
@@ -31,7 +32,7 @@ export class ForinicioComponent implements OnInit{
   mostrar(){
     if (this._vfi.sonValidos(this.forinicio.value,this.forinicio.valid)){
       this._gj.crearJugadores(this.forinicio.value);
-      this._router.navigate(['sillas'])
+      this._router.navigate(['letreroChina','sillas'])
     } else {
       //El formulario no entra correctamente:
       console.log("se debe de reiniciar el formulario");

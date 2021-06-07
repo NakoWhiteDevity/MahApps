@@ -19,7 +19,7 @@ import { MainComponent } from './componentes/main/main.component';
 const APP_ROUTING: Routes = [
   { path:'' , component : MainComponent },
   { path:'buscadorChina' , children:buscadorChinaRoutes },
-  { path:'letreroChina' , children:letreroChinaRoute },
+  { path:'letreroChina' , children:letreroChinaRoute }
 ];
 
 
