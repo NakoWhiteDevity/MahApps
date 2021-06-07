@@ -25,13 +25,13 @@ export class ForinicioComponent implements OnInit{
   ngOnInit(){
     let squadstorage = this._gj.checkStorage();
     if (squadstorage[1] == true){ localStorage.clear() ; window.location.reload() ; };
-    if (squadstorage[0] !== null){ this._router.navigate(['/letrero']) ; }
+    if (squadstorage[0] !== null){ this._router.navigate(['letrero']) ; }
   }
 
   mostrar(){
     if (this._vfi.sonValidos(this.forinicio.value,this.forinicio.valid)){
       this._gj.crearJugadores(this.forinicio.value);
-      this._router.navigate(['/sillas']);
+      this._router.navigate(['sillas'])
     } else {
       //El formulario no entra correctamente:
       console.log("se debe de reiniciar el formulario");

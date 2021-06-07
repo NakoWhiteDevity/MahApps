@@ -7,8 +7,8 @@ import { MainComponent } from './componentes/main/main.component';
 
 //Buscadores:
   //China:
-    import { AppModule as buscadorChina } from '../subapps/buscador/buscadorChino/app.module';
-    import { APP_ROUTING as buscadorChinaRoutes } from '../subapps/buscador/buscadorChino/app.module';
+  import { AppModule as buscadorChina } from '../subapps/buscador/buscadorChino/app.module';
+  import { APP_ROUTING as buscadorChinaRoutes } from '../subapps/buscador/buscadorChino/app.module';
   
 //Letreros:
   //China
@@ -20,8 +20,6 @@ const APP_ROUTING: Routes = [
   { path:'' , component : MainComponent },
   { path:'buscadorChina' , children:buscadorChinaRoutes },
   { path:'letreroChina' , children:letreroChinaRoute },
-  { path: '', redirectTo:'',pathMatch:"full"},
-  { path: '**', redirectTo:'',pathMatch:"full"}
 ];
 
 

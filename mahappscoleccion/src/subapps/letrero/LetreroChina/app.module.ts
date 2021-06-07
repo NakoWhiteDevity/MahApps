@@ -15,13 +15,14 @@ import { FindejuegoComponent } from './componentes/findejuego/findejuego.compone
 import { ReseteadorComponent } from './componentes/comun/reseteador/reseteador.component';
 
 export const APP_ROUTING: Routes = [
-  { path:'inicio',component:ForinicioComponent },
-  { path:'sillas',component:RepartesillasComponent },
-  { path:'letrero',component:LetreroComponent },
-  { path:'tabla',component:FormahjongComponent },
-  { path:'findejuego',component:FindejuegoComponent },
-  { path: '', pathMatch: 'full', redirectTo : 'inicio' },
-  { path: '**', pathMatch: 'full', redirectTo : 'inicio' }
+  { path:'',component:AppComponent,children:[
+    { path:'inicio',component:ForinicioComponent },
+    { path:'sillas',component:RepartesillasComponent },
+    { path:'letrero',component:LetreroComponent },
+    { path:'tabla',component:FormahjongComponent },
+    { path:'findejuego',component:FindejuegoComponent },
+    { path: '', redirectTo:'inicio',pathMatch:"full"}
+  ]}
 ];
 
 @NgModule({
@@ -40,7 +41,7 @@ export const APP_ROUTING: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forChild(APP_ROUTING),
+    RouterModule,
     FormsModule,
     ReactiveFormsModule
   ],
