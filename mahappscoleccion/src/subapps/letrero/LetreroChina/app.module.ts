@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
+import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ForinicioComponent } from './componentes/forinicio/forinicio.component';
 import { FormsModule , ReactiveFormsModule } from '@angular/forms';
@@ -13,6 +13,16 @@ import { FormahjongComponent } from './componentes/formahjong/formahjong.compone
 import { RidfinalPipe } from './tuberias/ridfinal.pipe';
 import { FindejuegoComponent } from './componentes/findejuego/findejuego.component';
 import { ReseteadorComponent } from './componentes/comun/reseteador/reseteador.component';
+
+export const APP_ROUTING: Routes = [
+  { path:'inicio',component:ForinicioComponent },
+  { path:'sillas',component:RepartesillasComponent },
+  { path:'letrero',component:LetreroComponent },
+  { path:'tabla',component:FormahjongComponent },
+  { path:'findejuego',component:FindejuegoComponent },
+  { path: '', pathMatch: 'full', redirectTo : 'inicio' },
+  { path: '**', pathMatch: 'full', redirectTo : 'inicio' }
+];
 
 @NgModule({
   declarations: [
@@ -30,7 +40,7 @@ import { ReseteadorComponent } from './componentes/comun/reseteador/reseteador.c
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    RouterModule.forChild(APP_ROUTING),
     FormsModule,
     ReactiveFormsModule
   ],
