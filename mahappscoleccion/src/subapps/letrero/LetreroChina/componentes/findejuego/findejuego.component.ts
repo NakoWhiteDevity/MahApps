@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GenerarjugadoresService } from 'src/app/servicios/generarjugadores.service';
+import { GenerarjugadoresService } from '../../servicios/generarjugadores.service';
 
 @Component({
   selector: 'app-findejuego',

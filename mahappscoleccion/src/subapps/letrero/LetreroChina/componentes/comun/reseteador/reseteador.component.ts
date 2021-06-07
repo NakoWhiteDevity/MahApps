@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { GenerarjugadoresService } from 'src/app/servicios/generarjugadores.service';
+import { GenerarjugadoresService } from '../../../servicios/generarjugadores.service';
 
 @Component({
   selector: 'app-reseteador',

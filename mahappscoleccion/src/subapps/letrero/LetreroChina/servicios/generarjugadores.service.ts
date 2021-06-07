@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';import { Router } from '@angular/router';
 ;
-import { Jugador } from 'src/app/modulos/jugador.class'
+import { Jugador } from '../modulos/jugador.class'
 import { NumemanoService } from './numemano.service';
 
 //https://desarrolloweb.com/articulos/recorridos-propiedades-objetos-javascript-forin.html

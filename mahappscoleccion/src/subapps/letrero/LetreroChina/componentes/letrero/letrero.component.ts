@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Jugador } from 'src/app/modulos/jugador.class';
-import { GenerarjugadoresService } from 'src/app/servicios/generarjugadores.service';
-import { NumemanoService } from 'src/app/servicios/numemano.service';
+import { Jugador } from '../../modulos/jugador.class';
+import { GenerarjugadoresService } from '../../servicios/generarjugadores.service';
+import { NumemanoService } from '../../servicios/numemano.service';
 
 @Component({
   selector: 'app-letrero',

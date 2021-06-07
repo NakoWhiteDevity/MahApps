@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { GenerarjugadoresService } from 'src/app/servicios/generarjugadores.service';
-import { ValidarformularioinicioService } from 'src/app/servicios/validarformularioinicio.service';
+import { GenerarjugadoresService } from '../../servicios/generarjugadores.service';
+import { ValidarformularioinicioService } from '../../servicios/validarformularioinicio.service';
 
 @Component({
   selector: 'app-forinicio',
