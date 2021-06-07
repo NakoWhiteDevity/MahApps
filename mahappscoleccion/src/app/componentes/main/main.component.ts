@@ -15,7 +15,7 @@ export class MainComponent implements OnInit {
     },
     opciones : {
       buscador : [
-        ["variante china",""],
+        ["variante china","buscadorChina"],
         ["variante hongkonesa",""],
         ["variante japonesa",""]
       ],

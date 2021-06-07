@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Chinaface } from 'src/app/interfaz/chinaface';
-import { JsonhandlerService } from 'src/app/servicios/jsonhandler.service';
+import { Chinaface } from '../../interfaz/chinaface';
+import { JsonhandlerService } from '../../servicios/jsonhandler.service';
 
 @Component({
   selector: 'app-main',

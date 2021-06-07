@@ -31,7 +31,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/coleccion/estilos.sass"
+              "src/assets/coleccion/estilos.sass",
+              "src/assets/buscador/css/estilos.sass"
             ],
             "scripts": []
           },

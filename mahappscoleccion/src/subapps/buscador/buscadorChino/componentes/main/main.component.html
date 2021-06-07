@@ -1,13 +1,15 @@
-<div class="container tablafans">
-    <div class="row">
-        <!-- <div class="col pts header">Pts</div> -->
-        <div class="col nº header">Nº</div>
-        <div class="col tipos header tihe">tipos</div>
-        <div class="col nombre header nohe">nombre</div>
-        <div class="col desc header">descripción</div>
+<div class="body">
+    <div class="container tablafans">
+        <div class="row">
+            <!-- <div class="col pts header">Pts</div> -->
+            <div class="col nº header">Nº</div>
+            <div class="col tipos header tihe">tipos</div>
+            <div class="col nombre header nohe">nombre</div>
+            <div class="col desc header">descripción</div>
+        </div>
+        <div *ngFor="let jugadapadre of jugadas ; let i = index">
+            <app-puntoschild [jugadahija]="[jugadapadre,jugadas[i-1]]"></app-puntoschild>
+        </div>
     </div>
-    <div *ngFor="let jugadapadre of jugadas ; let i = index">
-        <app-puntoschild [jugadahija]="[jugadapadre,jugadas[i-1]]"></app-puntoschild>
-    </div>
+    <app-filtrador class="prueba" (arrayhijo)="filtrado($event)"></app-filtrador>
 </div>
-<app-filtrador class="prueba" (arrayhijo)="filtrado($event)"></app-filtrador>

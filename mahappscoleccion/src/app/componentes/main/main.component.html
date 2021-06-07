@@ -16,19 +16,19 @@ https://profile.es/blog/angular-templates-las-directivas-ng-template-ng-containe
 
         <ng-container *ngIf="funcionamiento.conmutadores.buscador">
             <ng-container *ngFor="let item of funcionamiento.opciones.buscador">
-                <a class="col opcion" [class.deshabilitado]="item[1] == ''"  href="{{item[1]}}"><div>{{item[0]}}</div></a>
+                <a class="col opcion" [class.deshabilitado]="item[1] == ''" routerLink="{{item[1]}}"><div>{{item[0]}}</div></a>
             </ng-container>
         </ng-container>
 
         <ng-container *ngIf="funcionamiento.conmutadores.quiz">
             <ng-container *ngFor="let item of funcionamiento.opciones.quiz">
-                <a class="col opcion" [class.deshabilitado]="item[1] == ''"  href="{{item[1]}}"><div>{{item[0]}}</div></a>
+                <a class="col opcion" [class.deshabilitado]="item[1] == ''" routerLink="{{item[1]}}"><div>{{item[0]}}</div></a>
             </ng-container>
         </ng-container>
 
         <ng-container *ngIf="funcionamiento.conmutadores.letrero">
             <ng-container *ngFor="let item of funcionamiento.opciones.letrero">
-                <a class="col opcion" [class.deshabilitado]="item[1] == ''"  href="{{item[1]}}"><div>{{item[0]}}</div></a>
+                <a class="col opcion" [class.deshabilitado]="item[1] == ''" routerLink="{{item[1]}}"><div>{{item[0]}}</div></a>
             </ng-container>
         </ng-container>
     

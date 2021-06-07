@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Chinaface } from 'src/app/interfaz/chinaface';
+import { Chinaface } from '../../../interfaz/chinaface';
 
 @Component({
   selector: 'app-puntoschild',

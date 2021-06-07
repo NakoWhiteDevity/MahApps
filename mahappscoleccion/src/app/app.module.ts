@@ -5,11 +5,17 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { MainComponent } from './componentes/main/main.component';
 
+//Buscadores:
+  //China:
+    import { AppModule as buscadorChina } from '../subapps/buscador/buscadorChino/app.module';
+    import { APP_ROUTING as buscadorChinaRoutes } from '../subapps/buscador/buscadorChino/app.module';
+
 
 const APP_ROUTING: Routes = [
   { path:'' , component : MainComponent },
-  { path: '', pathMatch: 'full', redirectTo : '' },
-  { path: '**', pathMatch: 'full', redirectTo : '' }
+  { path:'buscadorChina' , children:buscadorChinaRoutes },
+  { path: '', redirectTo:'',pathMatch:"full"},
+  { path: '**', redirectTo:'',pathMatch:"full"}
 ];
 
 
@@ -21,6 +27,7 @@ const APP_ROUTING: Routes = [
   imports: [
     CommonModule,
     BrowserModule,
+    buscadorChina,
     RouterModule.forRoot(APP_ROUTING)
   ],
   providers: [],
