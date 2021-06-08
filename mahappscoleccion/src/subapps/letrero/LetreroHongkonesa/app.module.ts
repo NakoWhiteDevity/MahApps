@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
+import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ForinicioComponent } from './componentes/forinicio/forinicio.component';
 import { FormsModule , ReactiveFormsModule } from '@angular/forms';
@@ -15,6 +15,17 @@ import { FindejuegoComponent } from './componentes/findejuego/findejuego.compone
 import { ReseteadorComponent } from './componentes/comun/reseteador/reseteador.component';
 import { ManosplusComponent } from './componentes/comun/manosplus/manosplus.component';
 import { CambiosillasComponent } from './componentes/comun/cambiosillas/cambiosillas.component';
+
+export const APP_ROUTING: Routes = [
+  { path:'',component:AppComponent,children:[
+    { path:'inicio',component:ForinicioComponent },
+    { path:'sillas',component:RepartesillasComponent },
+    { path:'letrero',component:LetreroComponent },
+    { path:'tabla',component:FormahjongComponent },
+    { path:'findejuego',component:FindejuegoComponent },
+    { path:'',redirectTo:'inicio',pathMatch:'full' }
+  ]}
+];
 
 @NgModule({
   declarations: [
@@ -34,11 +45,11 @@ import { CambiosillasComponent } from './componentes/comun/cambiosillas/cambiosi
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    RouterModule,
     FormsModule,
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 export class AppModule {}

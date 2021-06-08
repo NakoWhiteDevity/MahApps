@@ -26,7 +26,7 @@ export class MainComponent implements OnInit {
       ],
       letrero : [
         ["variante china","letreroChina"],
-        ["variante hongkonesa",""],
+        ["variante hongkonesa","letreroHongkonesa"],
         ["variante japonesa",""]
       ]
     }
