@@ -34,7 +34,7 @@ export class LetreroComponent implements OnInit , AfterViewChecked {
   }
   
   iratabla(){
-    this._router.navigate(['/tabla']);
+    this._router.navigate(['letreroChina','tabla']);
   }
   
   vientoderonda(){
@@ -106,7 +106,7 @@ export class LetreroComponent implements OnInit , AfterViewChecked {
     //La lista de jugadores es el objeto que consume el letrero para renderizar luego el letrero. Igualalo a la colección que quieres crear para usarla.
     this.listajugadores = trueEvaluables;
     this._gj.squadfin = trueEvaluables;
-    if (this.numemano == 17) {this._router.navigate(['/findejuego']);};
+    if (this.numemano == 17) {this._router.navigate(['letreroChina','findejuego']);};
     this.vientoderonda();
     //this.cambiodesillas();
   }

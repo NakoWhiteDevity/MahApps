@@ -25,7 +25,7 @@ export class RepartesillasComponent {
   }
 
   iraletrero(){
-    this._router.navigate(['/letrero']);
+    this._router.navigate(['letreroChina','letrero']);
   }
 
 }

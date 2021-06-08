@@ -33,7 +33,7 @@ export class FormahjongComponent implements OnInit {
   }
   
   iraletrero(){
-    this._router.navigate(['/letrero']);
+    this._router.navigate(['letreroChina','letrero']);
   }
 
   //Esta funcion cambia el nombre del label de la segunda pregunta a de muro, para no tener que decir que la ultima ficha la cedio el jugador que gano la ronda.
@@ -76,11 +76,11 @@ export class FormahjongComponent implements OnInit {
         this._gj.setStorage(JSON.stringify(this._gj.squad));
         this._mp.manosplus.push("EW");
         localStorage.setItem('plus',`${this._mp.manosplus}`);
-        this._router.navigate(['/letrero']);
+        this._router.navigate(['letreroChina','letrero']);
       } else {
         this._gj.setStorage(JSON.stringify(this._gj.squad));
         this._nm.incrementarnumemano();
-        this._router.navigate(['/letrero']);
+        this._router.navigate(['letreroChina','letrero']);
       }
     
     }

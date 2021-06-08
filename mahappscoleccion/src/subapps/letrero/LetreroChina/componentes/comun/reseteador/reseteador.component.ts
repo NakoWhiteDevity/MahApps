@@ -14,7 +14,7 @@ export class ReseteadorComponent{
     let pop = confirm("¿Desea borrar la partida y comenzar una nueva?")
     if(pop == true){
       localStorage.setItem('nuke',"true");
-      this._router.navigate(['/forinicio']);
+      this._router.navigate(['letreroChina','forinicio']);
       //window.location.reload();
     } else {
       return
