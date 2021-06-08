@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Chinaface } from 'src/app/interfaces/chinaface';
-import chinaJSON from 'src/assets/jsons/china.json'
+import { Chinaface } from '../interfaces/chinaface';
+import chinaJSON from 'src/assets/quiz/jsons/china.json'
 
 //Tutorial del que me he servido:
 //https://blog.nubecolectiva.com/como-leer-un-archivo-json-en-una-tabla-de-bootstrap-4-con-angular-8/

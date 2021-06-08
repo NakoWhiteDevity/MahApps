@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import * as _ from 'underscore';
 import { JsonhandlerService } from './jsonhandler.service';
-import { iteface } from 'src/app/interfaces/chinaface';
+import { iteface } from '../interfaces/chinaface';
 import { Subject } from 'rxjs';
 
 @Injectable({

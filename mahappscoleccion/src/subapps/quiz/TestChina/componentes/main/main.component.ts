@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 //Linea para importar el módulo de underscore. Tutorial en el commit:
 import * as _ from 'underscore';
-import { TestrastestService } from 'src/app/servicios/testrastest.service';
-import { CorrectorService } from 'src/app/servicios/corrector.service';
-import { iteface } from 'src/app/interfaces/chinaface';
+import { TestrastestService } from '../../servicios/testrastest.service';
+import { CorrectorService } from '../../servicios/corrector.service';
+import { iteface } from '../../interfaces/chinaface';
 
 @Component({
   selector: 'app-main',

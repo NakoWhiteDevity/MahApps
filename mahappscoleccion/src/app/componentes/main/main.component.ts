@@ -20,7 +20,7 @@ export class MainComponent implements OnInit {
         ["variante japonesa",""]
       ],
       quiz : [
-        ["variante china",""],
+        ["variante china","quizChina"],
         ["variante hongkonesa",""],
         ["variante japonesa",""]
       ],

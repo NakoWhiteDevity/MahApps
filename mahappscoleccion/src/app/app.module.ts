@@ -18,12 +18,19 @@ import { MainComponent } from './componentes/main/main.component';
   import { AppModule as letreroHongkonesa } from '../subapps/letrero/LetreroHongkonesa/app.module';
   import { APP_ROUTING as letreroHongkonesaroute } from '../subapps/letrero/LetreroHongkonesa/app.module';
 
+//Quiz:
+  //China
+  import { AppModule as quizChina } from '../subapps/quiz/TestChina/app.module';
+  import { APP_ROUTING as quizChinaroutes } from '../subapps/quiz/TestChina/app.module';
+
+
 
 const APP_ROUTING: Routes = [
   { path:'' , component : MainComponent },
   { path:'buscadorChina' , children:buscadorChinaRoutes },
   { path:'letreroChina' , children:letreroChinaRoute },
-  { path:'letreroHongkonesa' , children:letreroHongkonesaroute }
+  { path:'letreroHongkonesa' , children:letreroHongkonesaroute },
+  { path:'quizChina' , children:quizChinaroutes }
 ];
 
 
@@ -38,6 +45,7 @@ const APP_ROUTING: Routes = [
     buscadorChina,
     letreroChina,
     letreroHongkonesa,
+    quizChina,
     RouterModule.forRoot(APP_ROUTING)
   ],
   providers: [],

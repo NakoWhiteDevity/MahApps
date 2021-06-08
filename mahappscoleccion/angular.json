@@ -34,7 +34,8 @@
               "src/assets/coleccion/estilos.sass",
               "src/assets/buscador/css/estilos.sass",
               "src/assets/letreros/chino/css/estilos.sass",
-              "src/assets/letreros/hongkones/css/estilos.sass"
+              "src/assets/letreros/hongkones/css/estilos.sass",
+              "src/assets/quiz/css/estilos.sass"
             ],
             "scripts": []
           },

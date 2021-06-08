@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Chinaface, nofanchinaface } from 'src/app/interfaces/chinaface';
-import { CorrectorService } from 'src/app/servicios/corrector.service';
-import { JsonhandlerService } from 'src/app/servicios/jsonhandler.service';
-import { TestrastestService } from 'src/app/servicios/testrastest.service';
+import { Chinaface } from '../../../interfaces/chinaface';
+import { CorrectorService } from '../../../servicios/corrector.service';
+import { JsonhandlerService } from '../../../servicios/jsonhandler.service';
+import { TestrastestService } from '../../../servicios/testrastest.service';
 import * as _ from 'underscore';
 import { filter , tap } from 'rxjs/operators';
 
