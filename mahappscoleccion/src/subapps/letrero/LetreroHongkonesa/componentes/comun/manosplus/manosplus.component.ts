@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ManosplusService } from 'src/app/servicios/manosplus.service';
-import { NumemanoService } from 'src/app/servicios/numemano.service';
+import { ManosplusService } from '../../../servicios/manosplus.service';
+import { NumemanoService } from '../../../servicios/numemano.service';
 
 @Component({
   selector: 'app-manosplus',

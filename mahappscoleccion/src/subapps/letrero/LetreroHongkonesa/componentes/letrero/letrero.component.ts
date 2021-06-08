@@ -1,9 +1,9 @@
 import { AfterViewChecked, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Jugador } from 'src/app/modulos/jugador.class';
-import { GenerarjugadoresService } from 'src/app/servicios/generarjugadores.service';
-import { ManosplusService } from 'src/app/servicios/manosplus.service';
-import { NumemanoService } from 'src/app/servicios/numemano.service';
+import { Jugador } from '../../modulos/jugador.class';
+import { GenerarjugadoresService } from '../../servicios/generarjugadores.service';
+import { ManosplusService } from '../../servicios/manosplus.service';
+import { NumemanoService } from '../../servicios/numemano.service';
 
 @Component({
   selector: 'app-letrero',
@@ -34,7 +34,7 @@ export class LetreroComponent implements OnInit , AfterViewChecked {
   }
   
   iratabla(){
-    this._router.navigate(['letreroChina','tabla']);
+    this._router.navigate(['letreroHongkonesa','tabla']);
   }
   
   vientoderonda(){

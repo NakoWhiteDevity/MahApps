@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';import { Router } from '@angular/router';
 ;
-import { Jugador } from 'src/app/modulos/jugador.class'
+import { Jugador } from '../modulos/jugador.class'
 import { ManosplusService } from './manosplus.service';
 import { NumemanoService } from './numemano.service';
 

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { GenerarjugadoresService } from 'src/app/servicios/generarjugadores.service';
-import { Jugador } from 'src/app/modulos/jugador.class';
+import { Jugador } from '../../modulos/jugador.class';
 
 @Component({
   selector: 'app-repartesillas',
@@ -25,7 +24,7 @@ export class RepartesillasComponent {
   }
 
   iraletrero(){
-    this._router.navigate(['letreroChina','letrero']);
+    this._router.navigate(['letreroHongkonesa','letrero']);
   }
 
 }

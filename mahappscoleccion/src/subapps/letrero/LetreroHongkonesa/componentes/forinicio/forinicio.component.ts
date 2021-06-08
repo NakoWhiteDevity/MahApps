@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { GenerarjugadoresService } from 'src/app/servicios/generarjugadores.service';
-import { ValidarformularioinicioService } from 'src/app/servicios/validarformularioinicio.service';
+import { GenerarjugadoresService } from '../../servicios/generarjugadores.service';
+import { ValidarformularioinicioService } from '../../servicios/validarformularioinicio.service';
 
 @Component({
   selector: 'app-forinicio',
@@ -25,13 +25,13 @@ export class ForinicioComponent implements OnInit{
   ngOnInit(){
     let squadstorage = this._gj.checkStorage();
     if (squadstorage[1] == true){ localStorage.clear() ; window.location.reload() ; };
-    if (squadstorage[0] !== null){ this._router.navigate(['letreroChina','letrero']) ; }
+    if (squadstorage[0] !== null){ this._router.navigate(['letreroHongkonesa','letrero']) ; }
   }
 
   mostrar(){
     if (this._vfi.sonValidos(this.forinicio.value,this.forinicio.valid)){
       this._gj.crearJugadores(this.forinicio.value);
-      this._router.navigate(['letreroChina','sillas']);
+      this._router.navigate(['letreroHongkonesa','sillas']);
     } else {
       //El formulario no entra correctamente:
       console.log("se debe de reiniciar el formulario");

@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Jugador } from 'src/app/modulos/jugador.class';
-import { GenerarjugadoresService } from 'src/app/servicios/generarjugadores.service';
-import { ManosplusService } from 'src/app/servicios/manosplus.service';
-import { NumemanoService } from 'src/app/servicios/numemano.service';
+import { Jugador } from '../../modulos/jugador.class';
+import { GenerarjugadoresService } from '../../servicios/generarjugadores.service';
+import { ManosplusService } from '../../servicios/manosplus.service';
+import { NumemanoService } from '../../servicios/numemano.service';
 
 @Component({
   selector: 'app-formahjong',
@@ -33,7 +33,7 @@ export class FormahjongComponent implements OnInit {
   }
   
   iraletrero(){
-    this._router.navigate(['letreroChina','letrero']);
+    this._router.navigate(['letreroHongkonesa','letrero']);
   }
 
   //Esta funcion cambia el nombre del label de la segunda pregunta a de muro, para no tener que decir que la ultima ficha la cedio el jugador que gano la ronda.
@@ -76,11 +76,11 @@ export class FormahjongComponent implements OnInit {
         this._gj.setStorage(JSON.stringify(this._gj.squad));
         this._mp.manosplus.push("EW");
         localStorage.setItem('plus',`${this._mp.manosplus}`);
-        this._router.navigate(['letreroChina','letrero']);
+        this._router.navigate(['letreroHongkonesa','letrero']);
       } else {
         this._gj.setStorage(JSON.stringify(this._gj.squad));
         this._nm.incrementarnumemano();
-        this._router.navigate(['letreroChina','letrero']);
+        this._router.navigate(['letreroHongkonesa','letrero']);
       }
     
     }

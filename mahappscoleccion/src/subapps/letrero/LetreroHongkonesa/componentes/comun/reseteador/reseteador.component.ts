@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { GenerarjugadoresService } from 'src/app/servicios/generarjugadores.service';
+import { GenerarjugadoresService } from '../../../servicios/generarjugadores.service';
 
 @Component({
   selector: 'app-reseteador',
@@ -14,7 +14,7 @@ export class ReseteadorComponent{
     let pop = confirm("¿Desea borrar la partida y comenzar una nueva?")
     if(pop == true){
       localStorage.setItem('nuke',"true");
-      this._router.navigate(['letreroChina','forinicio']);
+      this._router.navigate(['letreroHongkonesa','forinicio']);
       //window.location.reload();
     } else {
       return

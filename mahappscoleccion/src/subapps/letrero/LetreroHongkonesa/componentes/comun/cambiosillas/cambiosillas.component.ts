@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { NumemanoService } from 'src/app/servicios/numemano.service';
+import { NumemanoService } from '../../../servicios/numemano.service';
 
 @Component({
   selector: 'app-cambiosillas',
