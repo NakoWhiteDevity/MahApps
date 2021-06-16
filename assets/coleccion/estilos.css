@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  color: black;
+}
+
+.funado {
+  display: none;
+}
+
+.subapp, .opcion {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.menucoleccion {
+  margin-top: 15vh;
+}
+
+.menucoleccion .titulocentrado {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0px;
+  font-size: 3rem;
+  font-weight: 700;
+  background-color: green;
+}
+
+.menucoleccion .coleccion {
+  background-color: red;
+  min-height: 100px;
+}
+
+.menucoleccion .coleccion .seleccionado {
+  color: white;
+  border: 2px solid white !important;
+}
+
+.menucoleccion .coleccion .subapp {
+  margin: 10px;
+  max-height: 100px;
+  font-size: 2rem;
+  font-weight: 700;
+  border: 2px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menucoleccion .seleccion {
+  background-color: blue;
+  min-height: 100px;
+}
+
+.menucoleccion .seleccion .opcion {
+  margin: 10px;
+  max-height: 100px;
+  border: 2px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.menucoleccion .seleccion .opcion div {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.menucoleccion .seleccion .deshabilitado {
+  pointer-events: none;
+  cursor: default;
+  border: 2px solid grey;
+}
+
+.menucoleccion .seleccion .deshabilitado div {
+  color: grey;
+}
+/*# sourceMappingURL=estilos.css.map */

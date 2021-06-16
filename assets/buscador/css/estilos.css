@@ -1,0 +1,259 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  color: white;
+}
+
+.body {
+  background: darkcyan;
+  padding: 20px 0px;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.funado {
+  display: none;
+}
+
+.tablafans .grupopuntos {
+  min-width: 100%;
+  text-align: center;
+}
+
+.tablafans .margensup {
+  margin-top: 30px;
+}
+
+.tablafans ul {
+  list-style-type: none;
+  margin-left: -80px;
+}
+
+.tablafans p {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+
+.tablafans .pts, .tablafans .nº, .tablafans .tipos, .tablafans .nombre, .tablafans .desc {
+  font-size: 0.8rem;
+}
+
+.tablafans .header {
+  font-size: 1.2rem !important;
+  font-weight: 700;
+}
+
+.tablafans .header, .tablafans .pts, .tablafans .nº, .tablafans .nohe, .tablafans .tihe {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+.tablafans .col {
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.tablafans .row {
+  min-height: 30px;
+  max-width: 95%;
+}
+
+.tablafans .row .pts, .tablafans .row .nº {
+  max-width: 3%;
+}
+
+.tablafans .row .tipos {
+  max-width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tablafans .row .nombre {
+  max-width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: justify;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tablafans .row .desc {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: justify;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tablafans .negrita, .tablafans .azul, .tablafans .rojo, .tablafans .verde {
+  font-size: 0.8rem;
+}
+
+.tablafans .azul {
+  color: blue;
+}
+
+.tablafans .rojo {
+  color: red;
+}
+
+.tablafans .verde {
+  color: lightgreen;
+}
+
+.tablafans .tipos img {
+  max-width: 20px;
+}
+
+.tablafans .t1 {
+  background-color: #04438940;
+}
+
+.tablafans .t2 {
+  background-color: #FCFF4B40;
+}
+
+.tablafans .t3 {
+  background-color: #FFAD0540;
+}
+
+.tablafans .t4 {
+  background-color: #7CAFC440;
+}
+
+.tablafans .t5 {
+  background-color: #5995ED40;
+}
+
+.tablafans .t6 {
+  background-color: #55D6BE40;
+}
+
+.tablafans .t7 {
+  background-color: #ECF0F140;
+}
+
+.tablafans .t8 {
+  background-color: #6F1A0740;
+}
+
+.tablafans .t9 {
+  background-color: #2B211840;
+}
+
+.tablafans .t10 {
+  background-color: #2B211840;
+}
+
+.tablafans .t11 {
+  background-color: #FAA91640;
+}
+
+.tablafans .t12 {
+  background-color: #AEF78E40;
+}
+
+.prueba {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: fixed;
+  right: 5px;
+  top: 0px;
+}
+
+.prueba i {
+  font-size: 3rem;
+  color: white;
+}
+
+.prueba p {
+  margin: 0px 15px;
+  font-size: 1.25rem;
+  color: white;
+  font-weight: 700;
+}
+
+.prueba .label-radio, .prueba .botonfiltrar {
+  padding: 2px;
+  margin: 2px;
+  font-weight: 700;
+  color: blue;
+  border: 2px solid blue;
+  min-width: 100%;
+  text-align: center;
+}
+
+.prueba input[type="checkbox"] {
+  display: none;
+}
+
+.prueba input[type="checkbox"]:checked + .label-radio {
+  color: yellow;
+  border: 2px solid yellow;
+}
+
+.prueba .botonfiltrar {
+  margin-top: 50px;
+  background-color: transparent;
+  color: lightgreen;
+  border: 2px solid lightgreen;
+}
+
+.prueba .botonfiltrar:hover {
+  color: yellow;
+  border: 2px solid yellow;
+}
+
+.prueba .botonlimpiar {
+  padding: 2px;
+  margin: 2px;
+  font-weight: 700;
+  min-width: 100%;
+  background-color: transparent;
+  color: pink;
+  border: 2px solid pink;
+}
+
+.prueba .botonlimpiar:hover {
+  color: yellow;
+  border: 2px solid yellow;
+}
+/*# sourceMappingURL=estilos.css.map */

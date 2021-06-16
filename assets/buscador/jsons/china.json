@@ -1,0 +1,767 @@
+[
+    {
+        "id":82,
+        "puntos":1,
+        "tipos":[],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Flores",
+        "detalles":"Se suman a la mano tras cantar MahJong y antes del cobro de puntos. Tienen el kanji negro.",
+        "detallesHTML":"Se suman a la mano tras cantar MahJong y antes del cobro de puntos.<b class='negrita'>Tiene el kanji negro.</b>"
+
+    },
+    {
+        "id":81,
+        "puntos":1,
+        "tipos":[],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Cerrar del muro",
+        "detalles":""
+    },
+    {
+        "id":80,
+        "puntos":1,
+        "tipos":[],
+        "packs":0,
+        "pareja":true,
+        "nombre":"Espera simple.",
+        "detalles":"Cerrar con la ficha que forma la pareja. Las esperas se excluyen entre si."
+    },
+    {
+        "id":79,
+        "puntos":1,
+        "tipos":[1,5],
+        "packs":1,
+        "pareja":false,
+        "nombre":"Espera cerrada.",
+        "detalles":"Cerrar con la ficha central que esperaba un chi un solo paquete. Las esperas se excluyen entre si.",
+        "detallesHTML":"Cerrar con la ficha central que esperaba un chi <b class='negrita'>un solo paquete</b>. Las esperas se excluyen entre si."
+    },
+    {
+        "id":78,
+        "puntos":1,
+        "tipos":[1,5],
+        "packs":1,
+        "pareja":false,
+        "nombre":"Espera de borde.",
+        "detalles":"Cerrar con el 3 o 7 de un chi terminal un solo paquete. Las esperas se excluyen entre si.",
+        "detallesHTML":"Cerrar con el 3 o 7 de un chi terminal <b class='negrita'>un solo paquete</b>. Las esperas se excluyen entre si."
+    },
+    {
+        "id":77,
+        "puntos":1,
+        "tipos":[6,8],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Filtro sin honores.",
+        "detalles":"Mano sin vientos ni dragones."
+    },
+    {
+        "id":76,
+        "puntos":1,
+        "tipos":[6],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Filtro de familia ausente.",
+        "detalles":"Mano en la que solo hay 2 de las 3 familias."
+    },
+    {
+        "id":75,
+        "puntos":1,
+        "tipos":[3],
+        "packs":1,
+        "pareja":false,
+        "nombre":"1 Kong expuesto.",
+        "detalles":""
+    },
+    {
+        "id":74,
+        "puntos":1,
+        "tipos":[2,10],
+        "packs":1,
+        "pareja":false,
+        "nombre":"1 Pong de viento/terminales.",
+        "detalles":"En caso de ser de viento, ni propio ni dominante."
+    },
+    {
+        "id":73,
+        "puntos":1,
+        "tipos":[1,10],
+        "packs":2,
+        "pareja":false,
+        "nombre":"2 chis puros de terminales diferentes.",
+        "detalles":"EJ : [123] [789].",
+        "detallesHTML":"<b class='negrita'>EJ : </b><b class='rojo'>[123] [789] <b class='negrita'>.</b>"
+    },
+    {
+        "id":72,
+        "puntos":1,
+        "tipos":[1,8],
+        "packs":2,
+        "pareja":false,
+        "nombre":"2 chis consecutivos puros.",
+        "detalles":"EJ : [123] [456].",
+        "detallesHTML":"<b class='negrita'>EJ : </b><b class='verde'>[123] [456] <b class='negrita'>.</b>"
+    },
+    {
+        "id":71,
+        "puntos":1,
+        "tipos":[1,8],
+        "packs":2,
+        "pareja":false,
+        "nombre":"Doble chi mixto.",
+        "detalles":"EJ : [123] [123].",
+        "detallesHTML":"<b class='negrita'>EJ : </b><b class='azul'>[123]</b> <b class='rojo'>[123]</b> <b class='negrita'>.</b>"
+    },
+    {
+        "id":70,
+        "puntos":1,
+        "tipos":[1,8],
+        "packs":2,
+        "pareja":false,
+        "nombre":"Doble chi puro.",
+        "detalles":"EJ : [123] [123].",
+        "detallesHTML": "<b class='negrita'>EJ :</b> <b class='azul'>[123] [123]</b> <b class='negrita'>.</b>"
+    },
+    {
+        "id":69,
+        "puntos":2,
+        "tipos":[6,9],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Filtro de todo simples.",
+        "detalles":"Mano sin honores ni terminales."
+    },
+    {
+        "id":68,
+        "puntos":2,
+        "tipos":[3],
+        "packs":1,
+        "pareja":false,
+        "nombre":"Kong oculto.",
+        "detalles":""
+    },
+    {
+        "id":67,
+        "puntos":2,
+        "tipos":[2],
+        "packs":2,
+        "pareja":false,
+        "nombre":"2 pongs ocultos.",
+        "detalles":""
+    },
+    {
+        "id":66,
+        "puntos":2,
+        "tipos":[2,8],
+        "packs":2,
+        "pareja":false,
+        "nombre":"Doble pong.",
+        "detalles":"EJ : [222] [222].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='rojo'>[123] [123]</b> <b class='negrita'>.</b>"
+    },
+    {
+        "id":65,
+        "puntos":2,
+        "tipos":[3,5],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Ficha acaparada.",
+        "detalles":"Usar las 4 fichas de un kong sin declarar para otros fan. Ej: 4 fichas de 1 para [111] y [123].",
+        "detallesHTML":"Usar las 4 fichas de un kong sin declarar para otros fan. <b class='negrita'>Ej: 4 fichas de 1 para</b> <b class='rojo'>[111]</b> <b class='negrita'>y</b> <b class='rojo'>[123]</b> <b class='negrita'>.</b>"
+    },
+    {
+        "id":64,
+        "puntos":2,
+        "tipos":[1,6,8],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Filtro de todo chis sin honores.",
+        "detalles":"Todos tus paquetes son chi."
+    },
+    {
+        "id":63,
+        "puntos":2,
+        "tipos":[5],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Mano oculta.",
+        "detalles":"Tener todo oculto y cerrar con una ficha descartada."
+    },
+    {
+        "id":62,
+        "puntos":2,
+        "tipos":[4,12],
+        "packs":1,
+        "pareja":false,
+        "nombre":"1 Pong/kong de viento propio.",
+        "detalles":"El viento el cual eres en partida."
+    },
+    {
+        "id":61,
+        "puntos":2,
+        "tipos":[4,12],
+        "packs":1,
+        "pareja":false,
+        "nombre":"1 Pong/kong de viento dominante.",
+        "detalles":"El viento de la ronda, mostrado en el indicador de vientos."
+    },
+    {
+        "id":60,
+        "puntos":2,
+        "tipos":[4,13],
+        "packs":1,
+        "pareja":false,
+        "nombre":"1 Pong/kong de dragones.",
+        "detalles":""
+    },
+    {
+        "id":59,
+        "puntos":4,
+        "tipos":[5],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Ultima ficha.",
+        "detalles":"Cerrar con la cuarta ficha de sus tres ya expuestas boca arriba sobre la mesa."
+    },
+    {
+        "id":58,
+        "puntos":4,
+        "tipos":[3],
+        "packs":2,
+        "pareja":false,
+        "nombre":"2 kongs expuestos.",
+        "detalles":""
+    },
+    {
+        "id":57,
+        "puntos":4,
+        "tipos":[5],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Mano completamente oculta.",
+        "detalles":"Mano con TODAS las fichas robadas del muro."
+    },
+    {
+        "id":56,
+        "puntos":4,
+        "tipos":[6,10,11],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Filtro de todo paquete y pareja con terminales u honores.",
+        "detalles":"Mano con un honor/terminar en cada paquete y en la pareja."
+    },
+    {
+        "id":55,
+        "puntos":6,
+        "tipos":[3],
+        "packs":2,
+        "pareja":false,
+        "nombre":"1 Kong expuesto y 1 kong oculto.",
+        "detalles":""
+    },
+    {
+        "id":54,
+        "puntos":6,
+        "tipos":[4,13],
+        "packs":2,
+        "pareja":false,
+        "nombre":"2 pong/kong de dragones.",
+        "detalles":""
+    },
+    {
+        "id":53,
+        "puntos":6,
+        "tipos":[5],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Mano expuesta.",
+        "detalles":"Todo paquete y la pareja ha sido formado por descartes."
+    },
+    {
+        "id":52,
+        "puntos":6,
+        "tipos":[6,8,12,13],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Filtro de todas las familias y honores.",
+        "detalles":"Mano formada por combinaciones en las que aparecen las 3 familias, y mínimo un dragon y un viento."
+    },
+    {
+        "id":51,
+        "puntos":6,
+        "tipos":[1,8],
+        "packs":3,
+        "pareja":false,
+        "nombre":"3 chis escalonados mixtos.",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='rojo'>[123] [234] [345]</b> <b class='negrita'>.</b>"
+    },
+    {
+        "id":50,
+        "puntos":6,
+        "tipos":[6,8,11],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Filtro de mano semipura.",
+        "detalles":"Mano que contiene solo fichas de 1 de las 3 familias, en combinación con honores."
+    },
+    {
+        "id":49,
+        "puntos":6,
+        "tipos":[4,6],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Filtro de todo pong/kong.",
+        "detalles":"Mano formada por 4 pong/kong y la pareja."
+    },
+    {
+        "id":48,
+        "puntos":8,
+        "tipos":[3],
+        "packs":2,
+        "pareja":false,
+        "nombre":"2 kong ocultos.",
+        "detalles":""
+    },
+    {
+        "id":47,
+        "puntos":8,
+        "tipos":[5],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Robo de kong.",
+        "detalles":"Cerrar con el descarte de un jugador posterior a que este pase de pong expuesto a kong."
+    },
+    {
+        "id":46,
+        "puntos":8,
+        "tipos":[3,5],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Cerrar con ficha extra.",
+        "detalles":"Cerrar con el robo suplementario posterior a realizar kong."
+    },
+    {
+        "id":45,
+        "puntos":8,
+        "tipos":[5],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Ultimo descarte.",
+        "detalles":"Cerrar con el último descarte posible en la ronda."
+    },
+    {
+        "id":44,
+        "puntos":8,
+        "tipos":[5],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Ultima ficha de muro.",
+        "detalles":"Cerrar con la última ficha del muro."
+    },
+    {
+        "id":43,
+        "puntos":8,
+        "tipos":[],
+        "packs":4,
+        "pareja":true,
+        "nombre":"Mano del pollo.",
+        "detalles":"Mano que no posee ningún punto (flores aparte) tras empacarla completamente."
+    },
+    {
+        "id":42,
+        "puntos":8,
+        "tipos":[4,8],
+        "packs":3,
+        "pareja":false,
+        "nombre":"3 pong/kong consecutivos mixtos.",
+        "detalles":"EJ : [111] [2222] [333].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='rojo'>[111] [2222] [333]</b> <b class='negrita'>.</b>"
+    },
+    {
+        "id":41,
+        "puntos":8,
+        "tipos":[1,8],
+        "packs":3,
+        "pareja":false,
+        "nombre":"Triple chi mixto.",
+        "detalles":"EJ : [123] [123] [123].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='azul'>[123]</b> <b class='rojo'>[123]</b> <b class='verde'>[123]</b> <b class='negrita'>.</b>"
+    },
+    {
+        "id":40,
+        "puntos":8,
+        "tipos":[6,8,13],
+        "packs":false,
+        "pareja":false,
+        "nombre":"Filtro del espejo.",
+        "detalles":"Mano empacada solo con: 1234589 D 245689 (bolas, dragón blanco y bambús respectivamente).",
+        "detallesHTML":"Mano empacada solo con: <b class='azul'>1234589 D</b> <b class='verde'>245689</b> (bolas, dragón blanco y bambús respectivamente)."
+    },
+    {
+        "id":39,
+        "puntos":8,
+        "tipos":[1,8],
+        "packs":3,
+        "pareja":false,
+        "nombre":"3 chis consecutivos mixtos.",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='azul'>[123]</b> <b class='rojo'>[456]</b> <b class='verde'>[789]</b> <b class='negrita'>.</b>"
+    },
+    {
+        "id":38,
+        "puntos":12,
+        "tipos":[4,12],
+        "packs":3,
+        "pareja":false,
+        "nombre":"3 pong/kong de vientos.",
+        "detalles":"3 Pong/Kong de vientos."
+    },
+    {
+        "id":37,
+        "puntos":12,
+        "tipos":[6,8],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Filtro de las 4 inferiores.",
+        "detalles":"Mano empacada solo con fichas del 1 al 4."
+    },
+    {
+        "id":36,
+        "puntos":12,
+        "tipos":[6,8],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Filtro de las 4 superiores.",
+        "detalles":"Mano empacada solo con fichas del 6 al 9."
+    },
+    {
+        "id":35,
+        "puntos":12,
+        "tipos":[7,8],
+        "packs":3,
+        "pareja":false,
+        "nombre":"Fichas cosidas.",
+        "detalles":"# EJ : [147] [258] [369].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='azul'>[147]</b> <b class='rojo'>[258]</b> <b class='verde'>[369]</b> <b class='negrita'>.</b>"
+    },
+    {
+        "id":34,
+        "puntos":12,
+        "tipos":[7,8,11],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Cosidas con pocos honores.",
+        "detalles":"# 8 o 9 cosidas (fan 35) y el resto honores diferentes. La mano puede ser oculta."
+    },
+    {
+        "id":33,
+        "puntos":16,
+        "tipos":[2],
+        "packs":3,
+        "pareja":false,
+        "nombre":"3 pongs ocultos.",
+        "detalles":"# Mano que incluye 3 pong ocultos (no cuentan los kongs ocultos)."
+    },
+    {
+        "id":32,
+        "puntos":16,
+        "tipos":[4,8],
+        "packs":3,
+        "pareja":false,
+        "nombre":"Triple pong/kong.",
+        "detalles":"EJ : [111] [111] [1111].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='azul'>[111]</b> <b class='rojo'>[111]</b> <b class='verde'>[1111]</b> <b class='negrita'>.</b>"
+    },
+    {
+        "id":31,
+        "puntos":16,
+        "tipos":[6,9],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Filtro de todo paquete y pareja con un 5.",
+        "detalles":"Mano en la que todo paquete y la pareja contiene un 5."
+    },
+    {
+        "id":30,
+        "puntos":16,
+        "tipos":[1,8],
+        "packs":3,
+        "pareja":false,
+        "nombre":"3 chis escalonados puros.",
+        "detalles":"EJ : [123] [234] [345] o [123] [345] [567].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='rojo'>[123] [234] [345]</b> <b class='negrita'>o</b> <b class='rojo'>[123] [345] [567]</b> <b class='negrita'>.</b>"
+    },
+    {
+        "id":29,
+        "puntos":16,
+        "tipos":[1,8],
+        "packs":4,
+        "pareja":true,
+        "nombre":"2 chis puros de terminales diferentes de las tres familias.",
+        "detalles":"EJ : [123] [789] [123] [789] y la pareja de 5 de la familia restante.",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='azul'>[123] [789]</b> <b class='verde'>[123] [789]</b> y la pareja de 5 de la familia restante."
+    },
+    {
+        "id":28,
+        "puntos":16,
+        "tipos":[1,8],
+        "packs":3,
+        "pareja":false,
+        "nombre":"3 chis consecutivos puros.",
+        "detalles":"EJ : [123] [456] [789].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='rojo'>[123] [456] [789]</b> <b class='negrita'>.</b>"
+    },
+    {
+        "id":27,
+        "puntos":24,
+        "tipos":[6,8],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Filtro de las 3 inferiores.",
+        "detalles":"Mano empacada solo con fichas del 1 al 3."
+    },
+    {
+        "id":26,
+        "puntos":24,
+        "tipos":[6,8],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Filtro de las 3 centrales.",
+        "detalles":"Mano empacada solo con fichas del 4 al 6."
+    },
+    {
+        "id":25,
+        "puntos":24,
+        "tipos":[6,8],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Filtro de las 3 superiores.",
+        "detalles":"Mano empacada solo con fichas del 7 al 9."
+    },
+    {
+        "id":24,
+        "puntos":24,
+        "tipos":[4,8],
+        "packs":3,
+        "pareja":false,
+        "nombre":"3 pong/kong consecutivos puros.",
+        "detalles":"EJ : [1111] [222] [333].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='azul'>[1111] [222] [333]</b> <b class='negrita'>.</b>"
+    },
+    {
+        "id":23,
+        "puntos":24,
+        "tipos":[1],
+        "packs":3,
+        "pareja":false,
+        "nombre":"Triple chi puro.",
+        "detalles":"# EJ : [123] [123] [123].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='verde'>[123] [123] [123]</b> <b class='negrita'>.</b>"
+    },
+    {
+        "id":22,
+        "puntos":24,
+        "tipos":[6,8],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Filtro de mano pura.",
+        "detalles":"Mano empacada solo con fichas de una familia."
+    },
+    {
+        "id":21,
+        "puntos":24,
+        "tipos":[4,6,9],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Filtro de todo pong/kong de pares.",
+        "detalles":"Mano formada por pong/kongs y la pareja de fichas pares."
+    },
+    {
+        "id":20,
+        "puntos":24,
+        "tipos":[7,8,12,13],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Cosidas con grandes honores.",
+        "detalles":"Mano formada por 7 de las 9 cosidas (fan 35) y los siete honores."
+    },
+    {
+        "id":19,
+        "puntos":24,
+        "tipos":[7],
+        "packs":0,
+        "pareja":false,
+        "nombre":"7 pares.",
+        "detalles":"Mano formada por 7 parejas de fichas."
+    },
+    {
+        "id":18,
+        "puntos":32,
+        "tipos":[6,10,11],
+        "packs":0,
+        "pareja":false,
+        "nombre":"filtro de todo honores y terminales.",
+        "detalles":""
+    },
+    {
+        "id":17,
+        "puntos":32,
+        "tipos":[3],
+        "packs":3,
+        "pareja":false,
+        "nombre":"3 kongs.",
+        "detalles":"Pueden ser ocultos y/o mostrados."
+    },
+    {
+        "id":16,
+        "puntos":32,
+        "tipos":[1,8],
+        "packs":4,
+        "pareja":false,
+        "nombre":"4 chis escalonados puros.",
+        "detalles":"# EJ : [123] [234] [345] [456] o [123] [345] [567] [789].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='rojo'>[123] [234] [345] [456]</b> <b class='negrita'>o</b> <b class='rojo'>[123] [345] [567] [789]</b> <b class='negrita'>.</b>"
+    },
+    {
+        "id":15,
+        "puntos":48,
+        "tipos":[4,8],
+        "packs":4,
+        "pareja":false,
+        "nombre":"4 pong/kong consecutivos puros.",
+        "detalles":"EJ : [111] [222] [333] [444].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='verde'>[111] [2222] [333] [444]</b> <b class='negrita'>.</b>"
+    },
+    {
+        "id":14,
+        "puntos":48,
+        "tipos":[1,8],
+        "packs":4,
+        "pareja":false,
+        "nombre":"Cuadruple chi puro.",
+        "detalles":"EJ : [123] [123] [123] [123].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='azul'>[123] [123] [123] [123]</b> <b class='negrita'>.</b>"
+        
+    },
+    {
+        "id":13,
+        "puntos":64,
+        "tipos":[1],
+        "packs":4,
+        "pareja":true,
+        "nombre":"2 chis puros de terminales diferentes de una familia.",
+        "detalles":"EJ : [123] [789] [123] [789] [55].",
+        "detallesHTML":"<b class='negrita'>EJ :</b> <b class='rojo'>[123] [789] [123] [789] [55]</b> <b class='negrita'>.</b>"
+    },
+    {
+        "id":12,
+        "puntos":64,
+        "tipos":[3],
+        "packs":4,
+        "pareja":false,
+        "nombre":"Tesoro escondido.",
+        "detalles":"4 pong/kong ocultos."
+    },
+    {
+        "id":11,
+        "puntos":64,
+        "tipos":[6,11],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Filtro de todo honores.",
+        "detalles":"Mano completamente empacada solo con fichas de honores."
+    },
+    {
+        "id":10,
+        "puntos":64,
+        "tipos":[4,13],
+        "packs":2,
+        "pareja":true,
+        "nombre":"Tres pequeños dragones.",
+        "detalles":"Dos pong/kong y la pareja de dragones."
+    },
+    {
+        "id":9,
+        "puntos":64,
+        "tipos":[4,12],
+        "packs":3,
+        "pareja":true,
+        "nombre":"Cuatro pequeños vientos.",
+        "detalles":"Tres pong/kong y la pareja de vientos."
+    },
+    {
+        "id":8,
+        "puntos":64,
+        "tipos":[6,10],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Cabezas y colas.",
+        "detalles":"Mano empacada solo con terminales."
+    },
+    {
+        "id":7,
+        "puntos":88,
+        "tipos":[7,10,12,13],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Trece huerfanos.",
+        "detalles":"Todos los honores y terminales, y la segunda copia de uno de ellos."
+    },
+    {
+        "id":6,
+        "puntos":88,
+        "tipos":[8],
+        "packs":0,
+        "pareja":false,
+        "nombre":"7 pares consecutivos puros.",
+        "detalles":"7 parejas de fichas de la misma familia escalonadas entre si."
+    },
+    {
+        "id":5,
+        "puntos":88,
+        "tipos":[3],
+        "packs":4,
+        "pareja":false,
+        "nombre":"4 kongs.",
+        "detalles":"Pueden ser ocultos y/o expuestos."
+    },
+    {
+        "id":4,
+        "puntos":88,
+        "tipos":[7],
+        "packs":0,
+        "pareja":false,
+        "nombre":"9 puertas.",
+        "detalles":"111-2-3-4-5-6-7-8-999, y una copia adicional de cualquiera de las fichas, todo del mismo palo."
+    },
+    {
+        "id":3,
+        "puntos":88,
+        "tipos":[6,9,13],
+        "packs":0,
+        "pareja":false,
+        "nombre":"Filtro de todo verde.",
+        "detalles":"Mano empacada solo 23468 y D de bambú.",
+        "detallesHTML":"Mano empacada solo con <b class='verde'>23468</b> y <b class='verde'>D</b> de bambú."
+    },
+    {
+        "id":2,
+        "puntos":88,
+        "tipos":[4,13],
+        "packs":3,
+        "pareja":false,
+        "nombre":"Tres grandes dragones.",
+        "detalles":"3 pong/kong de dragones."
+    },
+    {
+        "id":1,
+        "puntos":88,
+        "tipos":[4,12],
+        "packs":4,
+        "pareja":false,
+        "nombre":"4 grandes vientos.",
+        "detalles":"4 pong/kong de cada uno de los vientos."
+    }
+
+]

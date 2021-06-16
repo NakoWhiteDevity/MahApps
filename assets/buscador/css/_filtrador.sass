@@ -1,0 +1,50 @@
+.prueba
+    padding: 20px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    flex-wrap: nowrap
+    position: fixed
+    right: 5px
+    top: 0px
+    i
+        font-size: 3rem
+        color: white
+    p
+        margin: 0px 15px
+        font-size: 1.25rem
+        color: white
+        font-weight: 700
+    .label-radio,.botonfiltrar
+        padding: 2px
+        margin: 2px
+        font-weight: 700
+        color: blue
+        border: 2px solid blue
+        min-width: 100%
+        text-align: center
+    input[type="checkbox"]
+        display: none
+        &:checked + .label-radio
+            color: yellow
+            border: 2px solid yellow
+    .botonfiltrar
+        margin-top: 50px
+        background-color: transparent
+        color: lightgreen
+        border: 2px solid lightgreen
+        &:hover
+            color: yellow
+            border: 2px solid yellow
+    .botonlimpiar
+        padding: 2px
+        margin: 2px
+        font-weight: 700
+        min-width: 100%
+        background-color: transparent
+        color: pink
+        border: 2px solid pink
+        &:hover
+            color: yellow
+            border: 2px solid yellow

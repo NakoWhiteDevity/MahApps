@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  color: white;
+}
+
+.body {
+  background: darkcyan;
+  padding: 10px 0px;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.funado {
+  display: none;
+}
+
+.sinpuntos .fan, .sinpuntos .detalle, .sinpuntos .respuesta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid white;
+  min-height: 100px;
+}
+
+.sinpuntos .fan {
+  max-width: 30%;
+  margin-right: 10px;
+}
+
+.sinpuntos .respuesta {
+  margin: 50px 20px;
+  background-color: transparent;
+}
+
+.sinfan .puntos, .sinfan .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100px;
+  border: 2px solid white;
+  margin: 15px;
+}
+
+.sinfan .puntos {
+  max-width: 20%;
+}
+
+.sinfan .respuesta {
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid white;
+  background-color: transparent;
+}
+
+.sindescondesc .puntos, .sindescondesc .nombre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100px;
+  border: 2px solid white;
+  margin: 15px;
+}
+
+.sindescondesc .puntos {
+  max-width: 20%;
+}
+
+.sindescondesc .respuesta {
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid white;
+  background-color: transparent;
+}
+
+.sindesc .fan, .sindesc .respuesta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid white;
+  min-height: 100px;
+}
+
+.sindesc .respuesta {
+  margin: 50px 20px;
+  background-color: transparent;
+}
+
+.retro .inarow {
+  max-width: 5%;
+}
+
+.retro .puntos, .retro .fan, .retro .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid white;
+  padding-left: 5px;
+}
+
+.retro .correcto {
+  margin-top: 10px;
+}
+
+.retro .correcto .puntos, .retro .correcto .fan, .retro .correcto .desc {
+  border: 2px solid green;
+}
+
+.retro .error {
+  margin-top: 10px;
+}
+
+.retro .erroritem {
+  border: 2px solid red;
+}
+/*# sourceMappingURL=estilos.css.map */
